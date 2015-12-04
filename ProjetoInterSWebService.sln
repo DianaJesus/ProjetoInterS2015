@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PiPorDataWebService", "PiPorDataWebService\PiPorDataWebService.csproj", "{9B08F506-23DB-4806-B562-4DBDED4BE3F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginForm", "LoginForm\LoginForm.csproj", "{E49F3B3C-9373-4E6A-81BC-7F9EAA1D7AC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9B08F506-23DB-4806-B562-4DBDED4BE3F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B08F506-23DB-4806-B562-4DBDED4BE3F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B08F506-23DB-4806-B562-4DBDED4BE3F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E49F3B3C-9373-4E6A-81BC-7F9EAA1D7AC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E49F3B3C-9373-4E6A-81BC-7F9EAA1D7AC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E49F3B3C-9373-4E6A-81BC-7F9EAA1D7AC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E49F3B3C-9373-4E6A-81BC-7F9EAA1D7AC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

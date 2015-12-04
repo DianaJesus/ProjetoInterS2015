@@ -9,7 +9,7 @@ using System.Text;
 namespace PiPorDataWebService
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
-    [ServiceContract]
+    /*[ServiceContract]
     public interface IService1
     {
 
@@ -43,5 +43,68 @@ namespace PiPorDataWebService
             get { return stringValue; }
             set { stringValue = value; }
         }
+    }*/
+
+
+    [ServiceContract]
+    public interface IService1
+    {
+        // AUTHENTICATION
+        [WebInvoke(Method = "POST", UriTemplate = "/signup?token={token}")]
+        [OperationContract]
+        void SignUp(Utilizador utilizador, string token);
+
+        [WebInvoke(Method = "POST", UriTemplate = "/login?username={username}&password={password}")]
+        [OperationContract]
+        string LogIn(string username, string password);
+
+        [WebInvoke(Method = "POST", UriTemplate = "/logout")]
+        [OperationContract]
+        void LogOut(string token);
+
+        [OperationContract]
+        [WebInvoke(Method = "GET", UriTemplate = "/isadmin?token={token}")]
+        bool IsAdmin(string token);
+
+        [OperationContract]
+        [WebInvoke(Method = "GET", UriTemplate = "/isloggedin?token={token}")]
+        bool IsLoggedIn(string token);
+
+
+
+    }
+
+    [DataContract]
+    public class Utilizador
+    {
+        private string username;
+        private string password;
+        private bool admin;
+        public Utilizador(string username, string password, bool admin)
+        {
+            this.admin = admin;
+            this.username = username;
+            this.password = password;
+        }
+        [DataMember]
+        public bool Admin
+        {
+            get { return admin; }
+            set { admin = value; }
+        }
+        [DataMember]
+        public string Username
+        {
+            get { return username; }
+            set { username = value; }
+
+        }
+        [DataMember]
+        public string Password
+        {
+            get { return password; }
+            set { password = value; }
+        }
     }
 }
+

@@ -186,23 +186,7 @@ namespace PiPorDataWebService
             return composite;
         }
     }*/
-        private void cenas()
-        {
-
-        }
-        private void cenas2()
-        {
-
-        }
-        private void cenas3()
-        {
-
-        }
-
-        private void cenas4()
-        {
-
-        }
+       
     }
 
 

@@ -7,6 +7,7 @@ using System.ServiceModel.Web;
 using System.Text;
 using System.IO;
 using System.Web.Hosting;
+using System.Xml;
 
 namespace PiPorDataWebService
 {
@@ -30,7 +31,7 @@ namespace PiPorDataWebService
 
             // default administrator
             utilizadores.Add("admin", new Utilizador("admin", "admin", true));
-            FILEPATH = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, "App_Data", "bookstore.xml");
+            FILEPATH = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, "App_Data", "XmlTestexml.xml");
         }
 
 
@@ -165,6 +166,41 @@ namespace PiPorDataWebService
             return tokenObject;
         }
 
+        public List<Funcionario> GetNumFunc(string token)
+        {
+            var soma = 0;
+            var var = 0;
+            var var1 = 0;
+            var var2 = 0;
+            var var3 = 0;
+            checkAuthentication(token, false);
+            XmlDocument doc = new XmlDocument();
+            doc.Load(FILEPATH);
+            XmlNodeList anosNode = doc.SelectNodes("/Projeto/Anos/PessoalAoServico");
+            List<Funcionario> funcionarios = new List<Funcionario>();
+            foreach (XmlNode anoNode in anosNode)
+            {
+                XmlNode catMedNode = anoNode.SelectSingleNode("Medicos");
+                    XmlNode catEnfNode = anoNode.SelectSingleNode("PessoalDeEnfermagem");
+                XmlNode catEnferNode = anoNode.SelectSingleNode("Enfermeiros");
+                  XmlNode catTerNode = anoNode.SelectSingleNode("TecnicosDiagnosticoTerapeutica");
+                 //  var += Int32.Parse(catMedNode.InnerText) + Int32.Parse(catEnferNode.InnerText) + Int32.Parse(catEnferNode.InnerText) + 
+                 //   Int32.Parse(catTerNode.InnerText) ;
+                var += Int32.Parse(catMedNode.InnerText);
+                var1 += Int32.Parse(catEnfNode.InnerText);
+                var2 += Int32.Parse(catEnferNode.InnerText);
+                var3 += Int32.Parse(catTerNode.InnerText);
+                soma = var + var1 + var2 + var3;
+                Funcionario func = new Funcionario(soma);
+                 
+                funcionarios.Add(func);
+            }
+            return funcionarios;
+         
+
+        }
+
+     
 
         /*public string GetData(int value)
         {
@@ -186,7 +222,7 @@ namespace PiPorDataWebService
             return composite;
         }
     }*/
-       
+
     }
 
 

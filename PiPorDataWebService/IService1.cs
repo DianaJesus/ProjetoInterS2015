@@ -71,8 +71,16 @@ namespace PiPorDataWebService
         bool IsLoggedIn(string token);
 
 
+        [OperationContract(Name = "GetNumFuncionarios")]
+        [WebInvoke(Method = "GET", UriTemplate = "/funcionarios/token={token}")]
+        List<Funcionario> GetNumFunc(string token);
+        
 
     }
+
+
+    
+
 
     [DataContract]
     public class Utilizador
@@ -104,6 +112,36 @@ namespace PiPorDataWebService
         {
             get { return password; }
             set { password = value; }
+        }
+    }
+
+    [DataContract]
+    public class Funcionario
+    {
+        private int soma;
+        private string categoria;
+
+        public Funcionario(string categoria)
+        {
+            this.categoria = categoria;
+        }
+        public Funcionario(int soma)
+        {
+            this.soma = soma;
+
+        }
+
+        [DataMember]
+        public string Categoria
+        {
+            get { return categoria; }
+            set { categoria= value; }
+        }
+        [DataMember]
+        public int Soma
+        {
+            get { return soma; }
+            set { soma = value; }
         }
     }
 }

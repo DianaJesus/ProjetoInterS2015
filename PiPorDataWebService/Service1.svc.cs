@@ -9,6 +9,7 @@ using System.IO;
 using System.Web.Hosting;
 using System.Xml;
 
+
 namespace PiPorDataWebService
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
@@ -191,7 +192,7 @@ namespace PiPorDataWebService
                 var2 += Int32.Parse(catEnferNode.InnerText);
                 var3 += Int32.Parse(catTerNode.InnerText);
                 soma = var + var1 + var2 + var3;
-                Funcionario func = new Funcionario(soma);
+                Funcionario func = new Funcionario(null, soma);
                  
                 funcionarios.Add(func);
             }
@@ -200,7 +201,132 @@ namespace PiPorDataWebService
 
         }
 
-     
+
+
+
+        public List<Funcionario> GetNumFunc(string categoria, string token)
+        {
+           
+            var var = 0;
+           
+            checkAuthentication(token, false);
+            XmlDocument doc = new XmlDocument();
+            doc.Load(FILEPATH);
+            XmlNodeList anosNode = doc.SelectNodes("/Projeto/Anos/PessoalAoServico");
+            List<Funcionario> funcionarios = new List<Funcionario>();
+
+
+            switch (categoria)
+            {
+                case "Medicos":
+
+                    foreach (XmlNode anoNode in anosNode)
+                    {
+
+
+                        XmlNode catMedNode = anoNode.SelectSingleNode("Medicos");
+
+                        var += Int32.Parse(catMedNode.InnerText);
+                        Funcionario func = new Funcionario(categoria, var);
+
+                        funcionarios.Add(func);
+
+                    }
+
+                    break;
+
+
+                case "PessoalDeEnfermagem":
+
+                    foreach (XmlNode anoNode in anosNode)
+                    {
+
+
+                        XmlNode catEnfNode = anoNode.SelectSingleNode("PessoalDeEnfermagem");
+
+                        var += Int32.Parse(catEnfNode.InnerText);
+                        Funcionario func = new Funcionario(categoria, var);
+
+                        funcionarios.Add(func);
+
+                    }
+
+                    break;
+
+
+                case "Enfermeiros":
+
+                    foreach (XmlNode anoNode in anosNode)
+                    {
+
+
+                        XmlNode catEnferNode = anoNode.SelectSingleNode("Enfermeiros");
+
+                        var += Int32.Parse(catEnferNode.InnerText);
+                        Funcionario func = new Funcionario(categoria, var);
+
+                        funcionarios.Add(func);
+
+                    }
+
+                    break;
+
+
+                case "TecnicosDiagnosticoTerapeutica":
+
+                    foreach (XmlNode anoNode in anosNode)
+                    {
+
+
+                        XmlNode catTerNode = anoNode.SelectSingleNode("TecnicosDiagnosticoTerapeutica");
+
+                        var += Int32.Parse(catTerNode.InnerText);
+                        Funcionario func = new Funcionario(categoria, var);
+
+                        funcionarios.Add(func);
+
+                    }
+
+                    break;
+
+
+
+
+                default:
+                    throw new ArgumentNullException("Erro");
+                    
+                    
+
+
+                    
+            }
+
+            /*foreach (XmlNode anoNode in anosNode)
+            {
+
+               
+                XmlNode catMedNode = anoNode.SelectSingleNode("Medicos");
+                XmlNode catEnfNode = anoNode.SelectSingleNode("PessoalDeEnfermagem");
+                XmlNode catEnferNode = anoNode.SelectSingleNode("Enfermeiros");
+                XmlNode catTerNode = anoNode.SelectSingleNode("TecnicosDiagnosticoTerapeutica");
+                //  var += Int32.Parse(catMedNode.InnerText) + Int32.Parse(catEnferNode.InnerText) + Int32.Parse(catEnferNode.InnerText) + 
+                //   Int32.Parse(catTerNode.InnerText) ;
+                var += Int32.Parse(catMedNode.InnerText);
+                var1 += Int32.Parse(catEnfNode.InnerText);
+                var2 += Int32.Parse(catEnferNode.InnerText);
+                var3 += Int32.Parse(catTerNode.InnerText);
+                soma = var + var1 + var2 + var3;
+                Funcionario func = new Funcionario(soma);
+
+                funcionarios.Add(func);
+            }*/
+            return funcionarios;
+
+
+        }
+
+
+
 
         /*public string GetData(int value)
         {

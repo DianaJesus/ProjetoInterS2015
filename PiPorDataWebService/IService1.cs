@@ -74,7 +74,13 @@ namespace PiPorDataWebService
         [OperationContract(Name = "GetNumFuncionarios")]
         [WebInvoke(Method = "GET", UriTemplate = "/funcionarios/token={token}")]
         List<Funcionario> GetNumFunc(string token);
-        
+
+
+
+        [OperationContract(Name = "GetNumFuncionario")]
+        [WebInvoke(Method = "GET", UriTemplate = "/funcionarios/{categoria}&token={token}")]
+        List<Funcionario> GetNumFunc(string categoria, string token);
+
 
     }
 
@@ -121,15 +127,12 @@ namespace PiPorDataWebService
         private int soma;
         private string categoria;
 
-        public Funcionario(string categoria)
+        public Funcionario(string categoria, int soma)
         {
             this.categoria = categoria;
-        }
-        public Funcionario(int soma)
-        {
             this.soma = soma;
-
         }
+        
 
         [DataMember]
         public string Categoria

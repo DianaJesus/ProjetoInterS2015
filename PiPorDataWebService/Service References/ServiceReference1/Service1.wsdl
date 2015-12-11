@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://projetointerswebservice.apphb.com/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://projetointerswebservice.apphb.com/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://projetointerswebservice.apphb.com/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PiPorDataWebService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_SignUp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SignUp" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SignUp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SignUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LogIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogIn" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LogIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogInResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LogOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogOut" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LogOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_IsAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_IsAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_IsLoggedIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsLoggedIn" />
+  </wsdl:message>
+  <wsdl:message name="IService1_IsLoggedIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsLoggedInResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNumFuncionarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumFuncionarios" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNumFuncionarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumFuncionariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNumFuncionario_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumFuncionario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNumFuncionario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumFuncionarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNumFuncionarioPorData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumFuncionarioPorData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNumFuncionarioPorData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumFuncionarioPorDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="SignUp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SignUp" message="tns:IService1_SignUp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SignUpResponse" message="tns:IService1_SignUp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogIn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/LogIn" message="tns:IService1_LogIn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LogInResponse" message="tns:IService1_LogIn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogOut">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/LogOut" message="tns:IService1_LogOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LogOutResponse" message="tns:IService1_LogOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/IsAdmin" message="tns:IService1_IsAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/IsAdminResponse" message="tns:IService1_IsAdmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsLoggedIn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/IsLoggedIn" message="tns:IService1_IsLoggedIn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/IsLoggedInResponse" message="tns:IService1_IsLoggedIn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumFuncionarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNumFuncionarios" message="tns:IService1_GetNumFuncionarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNumFuncionariosResponse" message="tns:IService1_GetNumFuncionarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumFuncionario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNumFuncionario" message="tns:IService1_GetNumFuncionario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNumFuncionarioResponse" message="tns:IService1_GetNumFuncionario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumFuncionarioPorData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNumFuncionarioPorData" message="tns:IService1_GetNumFuncionarioPorData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNumFuncionarioPorDataResponse" message="tns:IService1_GetNumFuncionarioPorData_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SignUp">
+      <soap:operation soapAction="http://tempuri.org/IService1/SignUp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogIn">
+      <soap:operation soapAction="http://tempuri.org/IService1/LogIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOut">
+      <soap:operation soapAction="http://tempuri.org/IService1/LogOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAdmin">
+      <soap:operation soapAction="http://tempuri.org/IService1/IsAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsLoggedIn">
+      <soap:operation soapAction="http://tempuri.org/IService1/IsLoggedIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumFuncionarios">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetNumFuncionarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumFuncionario">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetNumFuncionario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumFuncionarioPorData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetNumFuncionarioPorData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://projetointerswebservice.apphb.com/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

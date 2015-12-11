@@ -50,37 +50,48 @@ namespace PiPorDataWebService
     public interface IService1
     {
         // AUTHENTICATION
+        //REST
         [WebInvoke(Method = "POST", UriTemplate = "/signup?token={token}")]
+        //SOAP
         [OperationContract]
         void SignUp(Utilizador utilizador, string token);
-
+        //REST
         [WebInvoke(Method = "POST", UriTemplate = "/login?username={username}&password={password}")]
+        //SOAP
         [OperationContract]
         string LogIn(string username, string password);
-
+        //REST
         [WebInvoke(Method = "POST", UriTemplate = "/logout")]
+        //SOAP
         [OperationContract]
         void LogOut(string token);
-
-        [OperationContract]
+        //REST
         [WebInvoke(Method = "GET", UriTemplate = "/isadmin?token={token}")]
-        bool IsAdmin(string token);
-
+        //SOAP
         [OperationContract]
+        bool IsAdmin(string token);
+        //REST
         [WebInvoke(Method = "GET", UriTemplate = "/isloggedin?token={token}")]
+        //SOAP
+        [OperationContract]
         bool IsLoggedIn(string token);
-
-
+        //REST
+        [WebInvoke(Method = "GET", UriTemplate = "/funcionarios?token={token}")]
+        //SOAP
         [OperationContract(Name = "GetNumFuncionarios")]
-        [WebInvoke(Method = "GET", UriTemplate = "/funcionarios/token={token}")]
-        List<Funcionario> GetNumFunc(string token);
+        int GetNumFunc(string token);
 
-
-
+        //REST
+        [WebInvoke(Method = "GET", UriTemplate = "/funcionarios/{categoria}?token={token}")]
+        //SOAP
         [OperationContract(Name = "GetNumFuncionario")]
-        [WebInvoke(Method = "GET", UriTemplate = "/funcionarios/{categoria}&token={token}")]
-        List<Funcionario> GetNumFunc(string categoria, string token);
-
+        int GetNumFunc(string categoria, string token);
+        //REST
+        [WebInvoke(Method = "GET", UriTemplate = "/funcionarios/dataInicio={dataInicio}&dataFim={dataFim}?token={token}")]
+        //SOAP
+        [OperationContract(Name = "GetNumFuncionarioPorData")]
+        List<Funcionario> GetNumFunc(string dataInicio, string dataFim, string token);
+       
 
     }
 
@@ -126,6 +137,8 @@ namespace PiPorDataWebService
     {
         private int soma;
         private string categoria;
+        private DateTime dataInicio;
+        private DateTime dataFim;
 
         public Funcionario(string categoria, int soma)
         {
@@ -146,6 +159,22 @@ namespace PiPorDataWebService
             get { return soma; }
             set { soma = value; }
         }
+
+        [DataMember]
+        public DateTime DataInicio
+        {
+            get { return dataInicio; }
+            set { dataInicio = value; }
+        }
+
+        [DataMember]
+        public DateTime DataFim
+        {
+            get { return dataFim; }
+            set { dataFim = value; }
+        }
+
+
     }
 }
 

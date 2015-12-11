@@ -167,70 +167,81 @@ namespace PiPorDataWebService
             return tokenObject;
         }
 
-        public List<Funcionario> GetNumFunc(string token)
+        public int GetNumFunc(string token)
         {
             var soma = 0;
-            var var = 0;
-            var var1 = 0;
-            var var2 = 0;
-            var var3 = 0;
             checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
-            XmlNodeList anosNode = doc.SelectNodes("/Projeto/Anos/PessoalAoServico");
-            List<Funcionario> funcionarios = new List<Funcionario>();
-            foreach (XmlNode anoNode in anosNode)
+           // List<Funcionario> funcionarios = new List<Funcionario>();
+            foreach (XmlNode anosNode in doc.SelectNodes("//PessoalAoServico"))
             {
-                XmlNode catMedNode = anoNode.SelectSingleNode("Medicos");
-                    XmlNode catEnfNode = anoNode.SelectSingleNode("PessoalDeEnfermagem");
-                XmlNode catEnferNode = anoNode.SelectSingleNode("Enfermeiros");
-                  XmlNode catTerNode = anoNode.SelectSingleNode("TecnicosDiagnosticoTerapeutica");
-                 //  var += Int32.Parse(catMedNode.InnerText) + Int32.Parse(catEnferNode.InnerText) + Int32.Parse(catEnferNode.InnerText) + 
-                 //   Int32.Parse(catTerNode.InnerText) ;
-                var += Int32.Parse(catMedNode.InnerText);
-                var1 += Int32.Parse(catEnfNode.InnerText);
-                var2 += Int32.Parse(catEnferNode.InnerText);
-                var3 += Int32.Parse(catTerNode.InnerText);
-                soma = var + var1 + var2 + var3;
+                foreach (XmlNode item in anosNode.ChildNodes)
+                {
+                    soma += Int32.Parse(item.InnerText);
+                }
+              //  Funcionario func = new Funcionario(null,soma);
+              //  funcionarios.Add(func);
+            }
+            return soma;
+        }
+
+        public List<Funcionario> GetNumFunc(string dataInicio, string dataFim, string token)
+        {
+            var soma = 0;
+            checkAuthentication(token, false);
+            XmlDocument doc = new XmlDocument();
+            doc.Load(FILEPATH);
+            List<Funcionario> funcionarios = new List<Funcionario>();
+            List<int> numeros = new List<int>();
+            foreach (XmlNode anosNode in doc.SelectNodes("//PessoalAoServico"))
+            {
+                numeros.Add(Int32.Parse(anosNode.InnerText));
+                foreach (var item in numeros)
+                {
+                    if(item.Equals(dataInicio) && item.Equals(dataFim))
+                    {
+                        foreach (XmlNode item1 in anosNode.ChildNodes)
+                        {
+                            soma += Int32.Parse(item1.InnerText);
+                        }
+                    }
+                }
+                /*if (Int32.Parse(anosNode.ChildNodes.ToString()).Equals(dataInicio) && Int32.Parse(anosNode.ChildNodes.ToString()).Equals(dataFim))
+                {
+                    foreach (XmlNode item in anosNode.ChildNodes)
+                    {
+                        soma += Int32.Parse(item.InnerText);
+                    }
+
+                }*/
                 Funcionario func = new Funcionario(null, soma);
-                 
                 funcionarios.Add(func);
             }
             return funcionarios;
-         
-
         }
 
 
 
-
-        public List<Funcionario> GetNumFunc(string categoria, string token)
+        public int GetNumFunc(string categoria, string token)
         {
            
-            var var = 0;
+            int var = 0;
            
             checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
-            XmlNodeList anosNode = doc.SelectNodes("/Projeto/Anos/PessoalAoServico");
-            List<Funcionario> funcionarios = new List<Funcionario>();
-
 
             switch (categoria)
             {
                 case "Medicos":
 
-                    foreach (XmlNode anoNode in anosNode)
+                    foreach (XmlNode anoNode in doc.SelectNodes("//PessoalAoServico"))
                     {
-
-
-                        XmlNode catMedNode = anoNode.SelectSingleNode("Medicos");
-
-                        var += Int32.Parse(catMedNode.InnerText);
-                        Funcionario func = new Funcionario(categoria, var);
-
-                        funcionarios.Add(func);
-
+                        foreach (XmlNode item in anoNode.SelectSingleNode("Medicos"))
+                        {
+                            var += Int32.Parse(item.InnerText);
+                        }
                     }
 
                     break;
@@ -238,17 +249,12 @@ namespace PiPorDataWebService
 
                 case "PessoalDeEnfermagem":
 
-                    foreach (XmlNode anoNode in anosNode)
+                    foreach (XmlNode anoNode in doc.SelectNodes("//PessoalAoServico"))
                     {
-
-
-                        XmlNode catEnfNode = anoNode.SelectSingleNode("PessoalDeEnfermagem");
-
-                        var += Int32.Parse(catEnfNode.InnerText);
-                        Funcionario func = new Funcionario(categoria, var);
-
-                        funcionarios.Add(func);
-
+                        foreach (XmlNode item in anoNode.SelectSingleNode("PessoalDeEnfermagem"))
+                        {
+                            var += Int32.Parse(item.InnerText);
+                        }
                     }
 
                     break;
@@ -256,41 +262,24 @@ namespace PiPorDataWebService
 
                 case "Enfermeiros":
 
-                    foreach (XmlNode anoNode in anosNode)
+                    foreach (XmlNode anoNode in doc.SelectNodes("//PessoalAoServico"))
                     {
-
-
-                        XmlNode catEnferNode = anoNode.SelectSingleNode("Enfermeiros");
-
-                        var += Int32.Parse(catEnferNode.InnerText);
-                        Funcionario func = new Funcionario(categoria, var);
-
-                        funcionarios.Add(func);
-
+                        foreach (XmlNode item in anoNode.SelectSingleNode("Enfermeiros"))
+                        {
+                            var += Int32.Parse(item.InnerText);
+                        }
                     }
-
                     break;
-
 
                 case "TecnicosDiagnosticoTerapeutica":
-
-                    foreach (XmlNode anoNode in anosNode)
+                    foreach (XmlNode anoNode in doc.SelectNodes("//PessoalAoServico"))
                     {
-
-
-                        XmlNode catTerNode = anoNode.SelectSingleNode("TecnicosDiagnosticoTerapeutica");
-
-                        var += Int32.Parse(catTerNode.InnerText);
-                        Funcionario func = new Funcionario(categoria, var);
-
-                        funcionarios.Add(func);
-
+                        foreach (XmlNode item in anoNode.SelectSingleNode("TecnicosDiagnosticoTerapeutica"))
+                        {
+                            var += Int32.Parse(item.InnerText);
+                        }
                     }
-
                     break;
-
-
-
 
                 default:
                     throw new ArgumentNullException("Erro");
@@ -320,7 +309,7 @@ namespace PiPorDataWebService
 
                 funcionarios.Add(func);
             }*/
-            return funcionarios;
+            return var;
 
 
         }

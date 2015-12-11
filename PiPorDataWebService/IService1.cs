@@ -137,8 +137,7 @@ namespace PiPorDataWebService
     {
         private int soma;
         private string categoria;
-        private DateTime dataInicio;
-        private DateTime dataFim;
+        
 
         public Funcionario(string categoria, int soma)
         {
@@ -160,20 +159,7 @@ namespace PiPorDataWebService
             set { soma = value; }
         }
 
-        [DataMember]
-        public DateTime DataInicio
-        {
-            get { return dataInicio; }
-            set { dataInicio = value; }
-        }
-
-        [DataMember]
-        public DateTime DataFim
-        {
-            get { return dataFim; }
-            set { dataFim = value; }
-        }
-
+       
 
     }
 }

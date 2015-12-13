@@ -75,11 +75,6 @@ namespace PiPorDataWebService
         //SOAP
         [OperationContract]
         bool IsLoggedIn(string token);
-        //REST
-        [WebInvoke(Method = "GET", UriTemplate = "/funcionarios?token={token}")]
-        //SOAP
-        [OperationContract(Name = "GetNumFuncionarios")]
-        int GetNumFunc(string token);
 
         //REST
         [WebInvoke(Method = "GET", UriTemplate = "/funcionarios/{categoria}?token={token}")]
@@ -87,10 +82,10 @@ namespace PiPorDataWebService
         [OperationContract(Name = "GetNumFuncionario")]
         int GetNumFunc(string categoria, string token);
         //REST
-        [WebInvoke(Method = "GET", UriTemplate = "/funcionarios/dataInicio={dataInicio}&dataFim={dataFim}?token={token}")]
+        [WebInvoke(Method = "GET", UriTemplate = "/funcionarios?dataInicio={dataInicio}&dataFim={dataFim}")]
         //SOAP
         [OperationContract(Name = "GetNumFuncionarioPorData")]
-        List<Funcionario> GetNumFunc(string dataInicio, string dataFim, string token);
+         List<Funcionario> GetNumFunc(int dataInicio, int dataFim);
        
 
     }
@@ -135,15 +130,14 @@ namespace PiPorDataWebService
     [DataContract]
     public class Funcionario
     {
-        private int soma;
+        private int valor;
         private string categoria;
-        private DateTime dataInicio;
-        private DateTime dataFim;
 
-        public Funcionario(string categoria, int soma)
+
+        public Funcionario(string categoria, int valor)
         {
             this.categoria = categoria;
-            this.soma = soma;
+            this.valor = valor;
         }
         
 
@@ -156,24 +150,11 @@ namespace PiPorDataWebService
         [DataMember]
         public int Soma
         {
-            get { return soma; }
-            set { soma = value; }
+            get { return valor; }
+            set { valor = value; }
         }
 
-        [DataMember]
-        public DateTime DataInicio
-        {
-            get { return dataInicio; }
-            set { dataInicio = value; }
-        }
-
-        [DataMember]
-        public DateTime DataFim
-        {
-            get { return dataFim; }
-            set { dataFim = value; }
-        }
-
+       
 
     }
 }

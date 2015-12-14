@@ -173,14 +173,14 @@ namespace PiPorDataWebService
             checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
-           
+     
             foreach (XmlNode anosNode in doc.SelectNodes("//PessoalAoServico"))
             {
                 foreach (XmlNode item in anosNode.ChildNodes)
                 {
                     soma += Int32.Parse(item.InnerText);
                 }
-              
+  
             }
             return soma;
         }
@@ -191,11 +191,16 @@ namespace PiPorDataWebService
             checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
-            List<Funcionario> funcionarios = new List<Funcionario>();
-            List<int> numeros = new List<int>();
-            foreach (XmlNode anosNode in doc.SelectNodes("//PessoalAoServico"))
+            foreach (XmlNode anosNode )
             {
-                numeros.Add(Int32.Parse(anosNode.InnerText));
+
+            }
+            //List<Funcionario> funcionarios = new List<Funcionario>();
+
+
+            /*foreach (XmlNode anosNode in doc.SelectNodes("//PessoalAoServico"))
+            {
+            
                 foreach (var item in numeros)
                 {
                     if(item.Equals(dataInicio) && item.Equals(dataFim))
@@ -206,20 +211,18 @@ namespace PiPorDataWebService
                         }
                     }
                 }
-                
                 Funcionario func = new Funcionario(null, soma);
                 funcionarios.Add(func);
             }
-            return funcionarios;
+            return funcionarios;*/
+            return null;
         }
 
 
 
         public int GetNumFunc(string categoria, string token)
         {
-           
             int var = 0;
-           
             checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
@@ -275,10 +278,12 @@ namespace PiPorDataWebService
 
                 default:
                     throw new ArgumentNullException("Erro");
+                    
+                    
 
+
+                    
             }
-
-          
             return var;
 
 
@@ -287,7 +292,26 @@ namespace PiPorDataWebService
 
 
 
-        
+        /*public string GetData(int value)
+        {
+
+
+            return string.Format("You entered: {0}", value);
+        }
+
+        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        {
+            if (composite == null)
+            {
+                throw new ArgumentNullException("composite");
+            }
+            if (composite.BoolValue)
+            {
+                composite.StringValue += "Suffix";
+            }
+            return composite;
+        }
+    }*/
 
     }
 

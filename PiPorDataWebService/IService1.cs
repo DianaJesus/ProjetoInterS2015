@@ -135,16 +135,31 @@ namespace PiPorDataWebService
     [DataContract]
     public class Funcionario
     {
-        private int soma;
-        private string categoria;
-        
 
-        public Funcionario(string categoria, int soma)
+        private int soma;
+        private int valor;
+        private string categoria;
+        private DateTime dataInicio;
+        private DateTime dataFim;
+
+ 
+
+        public Funcionario(string categoria, int valor)
         {
+
             this.categoria = categoria;
             this.soma = soma;
+            this.valor = valor;
         }
-        
+
+
+        [DataMember]
+        public int Soma
+        {
+-            get { return soma; }
+-            set { soma = value; }
+-        }
+
 
         [DataMember]
         public string Categoria

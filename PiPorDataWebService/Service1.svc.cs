@@ -167,7 +167,7 @@ namespace PiPorDataWebService
             return tokenObject;
         }
 
-        public List<Funcionario> GetNumFunc(int dataInicio, int dataFim)
+       public List<Funcionario> GetNumFunc(int dataInicio, int dataFim)
         {
             int valor = 0;
             // checkAuthentication(token, false);
@@ -179,18 +179,24 @@ namespace PiPorDataWebService
 
 
 
-            foreach (XmlNode item in doc.SelectNodes("//PessoalAoServico"))
+            foreach (XmlNode item in doc.SelectNodes("/Projeto"))
             {
                 for (int i = dataInicio; i <= dataFim; i++)
                 {
-                  
-                        
-                    XmlNode medicos = doc.SelectSingleNode("//Anos[@ano= ' " + i + "']/PessoalAoServico//Medicos");
-                    XmlNode pessoalDeEnfermagem = doc.SelectSingleNode("//Anos[@ano= ' " + i + "']/PessoalAoServico//PessoalDeEnfermagem");
-                    XmlNode enfermeiros = doc.SelectSingleNode("//Anos[@ano= ' " + i + "']/PessoalAoServico//Enfermeiros");
-                    XmlNode tecnicosDiagnosticoTerapeutica = doc.SelectSingleNode("//Anos[@ano= ' " + i + "']/PessoalAoServico//TecnicosDiagnosticoTerapeutica");
-                    valor += Convert.ToInt32(medicos.InnerText) + Convert.ToInt32(pessoalDeEnfermagem.InnerText) 
-                        + Convert.ToInt32(enfermeiros.InnerText) +Convert.ToInt32(tecnicosDiagnosticoTerapeutica.InnerText);
+
+
+                    //string teste = "//Anos[@ano=" + i + "]/PessoalAoServico/Medicos";
+                    XmlNode medicos = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/Medicos");
+                   
+                    XmlNode pessoalDeEnfermagem = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/PessoalDeEnfermagem");
+                   
+                    XmlNode enfermeiros = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/Enfermeiros");
+                    
+                    XmlNode tecnicosDiagnosticoTerapeutica = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/TecnicosDiagnosticoTerapeutica");
+                    
+
+                    valor = Convert.ToInt32(medicos.InnerText) + Convert.ToInt32(pessoalDeEnfermagem.InnerText) + Convert.ToInt32(enfermeiros.InnerText) + Convert.ToInt32(tecnicosDiagnosticoTerapeutica.InnerText);
+
                     Funcionario func = new Funcionario(Convert.ToString(i), valor);
                     funcionarios.Add(func);
 
@@ -198,27 +204,76 @@ namespace PiPorDataWebService
                 }
 
 
-                /*   valor = Int32.Parse(pessoalNode.ChildNodes[1].InnerText);
-                   valor = Int32.Parse(pessoalNode.ChildNodes[2].InnerText);
-                   valor = Int32.Parse(pessoalNode.ChildNodes[3].InnerText);*/
-                // Convert.ToString() = doc.SelectSingleNode("//Anos[@ano= ' "+ i + "']").InnerText;
-                //valor += Int32.Parse(item.InnerText);
+                
+                
 
             }
 
 
 
 
-            // }
+            
             return funcionarios;
 
 
         }
-      
-        public int GetNumFunc(string categoria, string token)
+
+
+
+
+
+
+
+        public List<Acao> GetNumAcoes(int dataInicio, int dataFim)
+        {
+
+            double valor = 0;
+            //checkAuthentication(token, false);
+            XmlDocument doc = new XmlDocument();
+            doc.Load(FILEPATH);
+
+            
+                List<Acao> acoes = new List<Acao>();
+
+
+
+
+
+            foreach (XmlNode item in doc.SelectNodes("/Projeto"))
+            {
+
+                for (int i = dataInicio; i <= dataFim; i++)
+                {
+
+                    XmlNode consultas = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Consultas/Hospitais");
+                    XmlNode internamentos = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Internamentos/Hospitais");
+                    XmlNode urgencias = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Urgencias/Hospitais");
+
+                    valor = Convert.ToDouble(consultas.InnerText) + Convert.ToDouble(internamentos.InnerText) + Convert.ToDouble(urgencias.InnerText);
+                    Acao acao = new Acao(Convert.ToString(i), valor);
+                    acoes.Add(acao);
+
+
+                }
+            }
+
+            return acoes;
+        }
+
+
+
+        
+
+       
+
+
+
+
+
+        /*public int GetNumFunc(string dataInicio, string dataFim, string categoria)
         {
             int var = 0;
-            checkAuthentication(token, false);
+            //checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
 
@@ -273,18 +328,18 @@ namespace PiPorDataWebService
 
                 default:
                     throw new ArgumentNullException("Erro");
-                    
-                    
 
 
-                    
+
+
+
             }
             return var;
 
 
-        }
+        }*/
 
-      
+
 
 
         /*public string GetData(int value)
@@ -311,4 +366,4 @@ namespace PiPorDataWebService
     }
 
 
-}
+    }

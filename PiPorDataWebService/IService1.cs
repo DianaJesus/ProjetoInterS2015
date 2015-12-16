@@ -76,17 +76,25 @@ namespace PiPorDataWebService
         [OperationContract]
         bool IsLoggedIn(string token);
 
+        //Metodos de pesquisa para service
+
         //REST
-        [WebInvoke(Method = "GET", UriTemplate = "/funcionarios/{categoria}?token={token}")]
+       // [WebInvoke(Method = "GET", UriTemplate = "/funcionarios/{categoria}?token={token}")]
         //SOAP
-        [OperationContract(Name = "GetNumFuncionario")]
-        int GetNumFunc(string categoria, string token);
+       // [OperationContract(Name = "GetNumFuncionario")]
+       // int GetNumFunc(string categoria, string token);
         //REST
         [WebInvoke(Method = "GET", UriTemplate = "/funcionarios?dataInicio={dataInicio}&dataFim={dataFim}")]
         //SOAP
         [OperationContract(Name = "GetNumFuncionarioPorData")]
-         List<Funcionario> GetNumFunc(int dataInicio, int dataFim);
-       
+        List<Funcionario> GetNumFunc(int dataInicio, int dataFim);
+        //REST
+        [WebInvoke(Method = "GET", UriTemplate = "/acoes?dataInicio={dataInicio}&dataFim={dataFim}")]
+        //SOAP
+        [OperationContract(Name = "GetNumAcoesPorData")]
+        List<Acao> GetNumAcoes(int dataInicio, int dataFim);
+
+
 
     }
 
@@ -130,16 +138,24 @@ namespace PiPorDataWebService
     [DataContract]
     public class Funcionario
     {
-        private int valor;
+        private int soma;
         private string categoria;
 
-
-        public Funcionario(string categoria, int valor)
+        public Funcionario(string categoria, int soma)
         {
+
             this.categoria = categoria;
-            this.valor = valor;
+            this.soma = soma;
         }
         
+
+        [DataMember]
+        public int Soma
+        {
+            get { return soma; }
+            set { soma = value; }
+       }
+
 
         [DataMember]
         public string Categoria
@@ -147,15 +163,165 @@ namespace PiPorDataWebService
             get { return categoria; }
             set { categoria= value; }
         }
-        [DataMember]
-        public int Soma
-        {
-            get { return valor; }
-            set { valor = value; }
-        }
-
        
 
+
     }
+
+
+
+    /* [DataContract]
+      public class Consulta
+      {
+
+          private int soma;
+          private string estabelecimento;
+
+          public Consulta(String estabelecimento, int soma)
+          {
+
+              this.estabelecimento = estabelecimento;
+              this.soma = soma;
+
+          }
+
+
+          [DataMember]
+          public int Soma
+          {
+              get { return soma; }
+              set { soma = value; }
+
+          }
+
+
+
+          [DataMember]
+          public string Estabelecimento
+          {
+              get { return estabelecimento; }
+              set { estabelecimento = value; }
+          }
+
+
+
+      }
+
+
+      [DataContract]
+      public class Internamento
+      {
+
+          private int soma;
+          private string estabelecimento;
+
+          public Internamento(String estabelecimento, int soma)
+          {
+
+              this.estabelecimento = estabelecimento;
+              this.soma = soma;
+
+          }
+
+
+          [DataMember]
+          public int Soma
+          {
+              get { return soma; }
+              set { soma = value; }
+
+          }
+
+
+
+          [DataMember]
+          public string Estabelecimento
+          {
+              get { return estabelecimento; }
+              set { estabelecimento = value; }
+          }
+
+
+
+      }
+
+
+      [DataContract]
+      public class Urgencia
+      {
+
+          private int soma;
+          private string estabelecimento;
+
+          public Urgencia(String estabelecimento, int soma)
+          {
+
+              this.estabelecimento = estabelecimento;
+              this.soma = soma;
+
+          }
+
+
+          [DataMember]
+          public int Soma
+          {
+              get { return soma; }
+              set { soma = value; }
+
+          }
+
+
+
+          [DataMember]
+          public string Estabelecimento
+          {
+              get { return estabelecimento; }
+              set { estabelecimento = value; }
+          }
+
+
+
+      }*/
+
+    [DataContract]
+    public class Acao
+    {
+
+        private double soma;
+        private string estabelecimento;
+
+        public Acao(String estabelecimento, double soma)
+        {
+
+            this.estabelecimento = estabelecimento;
+            this.soma = soma;
+
+        }
+
+
+        [DataMember]
+        public double Soma
+        {
+            get { return soma; }
+            set { soma = value; }
+
+        }
+
+
+
+        [DataMember]
+        public string Estabelecimento
+        {
+            get { return estabelecimento; }
+            set { estabelecimento = value; }
+        }
+
+
+
+    }
+
+
+
+
 }
 

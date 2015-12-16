@@ -93,6 +93,21 @@ namespace PiPorDataWebService
         //SOAP
         [OperationContract(Name = "GetNumAcoesPorData")]
         List<Acao> GetNumAcoes(int dataInicio, int dataFim);
+        //REST
+        [WebInvoke(Method = "GET", UriTemplate = "/funcionariosCategoria?dataInicio={dataInicio}&dataFim={dataFim}")]
+        //SOAP
+        [OperationContract(Name = "GetNumFuncCatPorData")]
+        List<Funcionario> GetNumFuncCategoria(int dataInicio, int dataFim);
+        //REST
+        [WebInvoke(Method = "GET", UriTemplate = "/funcionariosCategoriaS?dataInicio={dataInicio}&dataFim={dataFim}&categoria={categoria}")]
+        //SOAP
+        [OperationContract(Name = "GetNumFuncCategoriaPorData")]
+        int GetNumFuncCategoriaS(int dataInicio, int dataFim, string categoria);
+        //REST
+        [WebInvoke(Method = "GET", UriTemplate = "/funcionariosMedia?dataInicio={dataInicio}&dataFim={dataFim}")]
+        //SOAP
+        [OperationContract(Name = "GetMediaFuncionarioPorData")]
+        double GetMediaFuncionario(int dataInicio, int dataFim);
 
 
 
@@ -138,23 +153,49 @@ namespace PiPorDataWebService
     [DataContract]
     public class Funcionario
     {
-        private int soma;
+        private int soma1;
+        private int soma2;
+        private int soma3;
         private string categoria;
 
-        public Funcionario(string categoria, int soma)
+        public Funcionario(string categoria, int soma1)
         {
 
             this.categoria = categoria;
-            this.soma = soma;
+            this.soma1 = soma1;
         }
-        
+
+
+        public Funcionario(string categoria, int soma1, int soma2, int soma3)
+        {
+
+            this.categoria = categoria;
+            this.soma1 = soma1;
+            this.soma2 = soma2;
+            this.soma3 = soma3;
+        }
+
 
         [DataMember]
-        public int Soma
+        public int Soma1
         {
-            get { return soma; }
-            set { soma = value; }
+            get { return soma1; }
+            set { soma1 = value; }
        }
+
+        [DataMember]
+        public int Soma2
+        {
+            get { return soma2; }
+            set { soma2 = value; }
+        }
+
+        [DataMember]
+        public int Soma3
+        {
+            get { return soma3; }
+            set { soma3 = value; }
+        }
 
 
         [DataMember]

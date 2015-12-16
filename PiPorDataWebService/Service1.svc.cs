@@ -262,17 +262,68 @@ namespace PiPorDataWebService
 
 
 
-        
-
-       
 
 
 
 
 
-        /*public int GetNumFunc(string dataInicio, string dataFim, string categoria)
+        public List<Funcionario> GetNumFuncCategoria(int dataInicio, int dataFim)
         {
-            int var = 0;
+            int valorM = 0;
+            int valorE = 0;
+            int valorT = 0;
+            
+            // checkAuthentication(token, false);
+            XmlDocument doc = new XmlDocument();
+            doc.Load(FILEPATH);
+
+            
+            List<Funcionario> funcionarios = new List<Funcionario>();
+
+
+            foreach (XmlNode item in doc.SelectNodes("/Projeto"))
+            {
+                for (int i = dataInicio; i <= dataFim; i++)
+                {
+
+
+                    //string teste = "//Anos[@ano=" + i + "]/PessoalAoServico/Medicos";
+                    XmlNode medicos = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/Medicos");
+
+                    XmlNode enfermeiros = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/Enfermeiros");
+
+                    XmlNode tecnicos = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/TecnicosDiagnosticoTerapeutica");
+
+
+                    valorM = Convert.ToInt32(medicos.InnerText);
+                    valorE = Convert.ToInt32(enfermeiros.InnerText);
+                    valorT = Convert.ToInt32(tecnicos.InnerText);
+
+                    
+
+                    
+                    Funcionario funcionario = new Funcionario(Convert.ToString(i), valorM, valorE, valorT);
+                    funcionarios.Add(funcionario);
+                    
+
+
+                }
+
+            }
+
+
+
+
+
+            return funcionarios;
+
+
+        }
+
+
+        public int GetNumFuncCategoriaS(int dataInicio, int dataFim, string categoria)
+        {
+            int valor = 0;
             //checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
@@ -281,11 +332,13 @@ namespace PiPorDataWebService
             {
                 case "Medicos":
 
-                    foreach (XmlNode anoNode in doc.SelectNodes("//PessoalAoServico"))
+                    foreach (XmlNode item in doc.SelectNodes("/Projeto"))
                     {
-                        foreach (XmlNode item in anoNode.SelectSingleNode("Medicos"))
+                        for (int i = dataInicio; i <= dataFim; i++)
                         {
-                            var += Int32.Parse(item.InnerText);
+                            XmlNode medicos = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/Medicos");
+                           
+                            valor += Convert.ToInt32(medicos.InnerText);
                         }
                     }
 
@@ -294,11 +347,13 @@ namespace PiPorDataWebService
 
                 case "PessoalDeEnfermagem":
 
-                    foreach (XmlNode anoNode in doc.SelectNodes("//PessoalAoServico"))
+                    foreach (XmlNode item in doc.SelectNodes("/Projeto"))
                     {
-                        foreach (XmlNode item in anoNode.SelectSingleNode("PessoalDeEnfermagem"))
+                        for (int i = dataInicio; i <= dataFim; i++)
                         {
-                            var += Int32.Parse(item.InnerText);
+                            XmlNode pessoalDeEnfermagem = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/PessoalDeEnfermagem");
+
+                            valor += Convert.ToInt32(pessoalDeEnfermagem.InnerText);
                         }
                     }
 
@@ -307,23 +362,30 @@ namespace PiPorDataWebService
 
                 case "Enfermeiros":
 
-                    foreach (XmlNode anoNode in doc.SelectNodes("//PessoalAoServico"))
+                    foreach (XmlNode item in doc.SelectNodes("/Projeto"))
                     {
-                        foreach (XmlNode item in anoNode.SelectSingleNode("Enfermeiros"))
+                        for (int i = dataInicio; i <= dataFim; i++)
                         {
-                            var += Int32.Parse(item.InnerText);
+                            XmlNode enfermeiros = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/Enfermeiros");
+
+                            valor += Convert.ToInt32(enfermeiros.InnerText);
                         }
                     }
+
                     break;
 
                 case "TecnicosDiagnosticoTerapeutica":
-                    foreach (XmlNode anoNode in doc.SelectNodes("//PessoalAoServico"))
+
+                    foreach (XmlNode item in doc.SelectNodes("/Projeto"))
                     {
-                        foreach (XmlNode item in anoNode.SelectSingleNode("TecnicosDiagnosticoTerapeutica"))
+                        for (int i = dataInicio; i <= dataFim; i++)
                         {
-                            var += Int32.Parse(item.InnerText);
+                            XmlNode tecnicos = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/TecnicosDiagnosticoTerapeutica");
+
+                            valor += Convert.ToInt32(tecnicos.InnerText);
                         }
                     }
+
                     break;
 
                 default:
@@ -334,10 +396,64 @@ namespace PiPorDataWebService
 
 
             }
-            return var;
+            return valor;
 
 
-        }*/
+        }
+
+
+
+        public double GetMediaFuncionario(int dataInicio, int dataFim)
+        {
+            double valor = 0.0;
+            double funcionariosTotal = 0.0;
+            double despesaTotal = 0.0;
+            
+
+            // checkAuthentication(token, false);
+            XmlDocument doc = new XmlDocument();
+            doc.Load(FILEPATH);
+
+
+            
+
+
+            foreach (XmlNode item in doc.SelectNodes("/Projeto"))
+            {
+                for (int i = dataInicio; i <= dataFim; i++)
+                {
+
+
+                    
+                    XmlNode funcionarios = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico");
+                    XmlNode total = doc.SelectSingleNode("//Anos[@ano=" + i + "]/DespesaSns/Total");
+
+
+                    funcionariosTotal += Convert.ToDouble(funcionarios.InnerText);
+                    despesaTotal += Convert.ToDouble(total.InnerText);
+
+
+
+
+                    valor += despesaTotal / funcionariosTotal;
+
+
+
+                    
+
+
+                }
+
+            }
+
+
+
+
+
+            return valor;
+
+
+        }
 
 
 

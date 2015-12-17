@@ -407,7 +407,7 @@ namespace PiPorDataWebService
         {
             double valor = 0.0;
             double funcionariosTotal = 0.0;
-            double despesaTotal = 0.0;
+            double despesaPessoal = 0.0;
             
 
             // checkAuthentication(token, false);
@@ -425,17 +425,20 @@ namespace PiPorDataWebService
 
 
                     
-                    XmlNode funcionarios = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico");
-                    XmlNode total = doc.SelectSingleNode("//Anos[@ano=" + i + "]/DespesaSns/Total");
+                    XmlNode medicos = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/Medicos");
+                    XmlNode pessoalEnfermagem = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/PessoalDeEnfermagem");
+                    XmlNode enfermeiros = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/Enfermeiros");
+                    XmlNode tecnicos = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/TecnicosDiagnosticoTerapeutica");
+                    XmlNode comPessoal = doc.SelectSingleNode("//Anos[@ano=" + i + "]/DespesaSns/ComPessoal");
 
 
-                    funcionariosTotal += Convert.ToDouble(funcionarios.InnerText);
-                    despesaTotal += Convert.ToDouble(total.InnerText);
+                    funcionariosTotal += Convert.ToDouble(medicos.InnerText) + Convert.ToDouble(pessoalEnfermagem.InnerText) + Convert.ToDouble(enfermeiros.InnerText) + Convert.ToDouble(tecnicos.InnerText);
+                    despesaPessoal += Convert.ToDouble(comPessoal.InnerText);
 
 
 
 
-                    valor += despesaTotal / funcionariosTotal;
+                    valor += despesaPessoal / funcionariosTotal;
 
 
 
@@ -454,6 +457,124 @@ namespace PiPorDataWebService
 
 
         }
+
+
+
+        public double GetPercentagemPessoal(int dataInicio, int dataFim)
+        {
+            double valor = 0.0;
+            double despesaPessoal = 0.0;
+            double despesaTotal = 0.0;
+            double valorPercentagem = 0.0;
+
+
+            // checkAuthentication(token, false);
+            XmlDocument doc = new XmlDocument();
+            doc.Load(FILEPATH);
+
+
+
+
+
+            foreach (XmlNode item in doc.SelectNodes("/Projeto"))
+            {
+                for (int i = dataInicio; i <= dataFim; i++)
+                {
+
+
+
+                    XmlNode pessoal = doc.SelectSingleNode("//Anos[@ano=" + i + "]/DespesaSns/ComPessoal");
+                    XmlNode total = doc.SelectSingleNode("//Anos[@ano=" + i + "]/DespesaSns/Total");
+
+
+                    despesaPessoal += Convert.ToDouble(pessoal.InnerText);
+                    despesaTotal += Convert.ToDouble(total.InnerText);
+
+
+
+
+                    valor += despesaPessoal / despesaTotal;
+
+                    valorPercentagem = valor * 100;
+
+
+
+
+
+
+                }
+
+            }
+
+
+
+
+
+            return valorPercentagem;
+
+
+        }
+
+
+        public double GetPercentagemMedicamentos(int dataInicio, int dataFim)
+        {
+            double valor = 0.0;
+            double despesaMedicamentos = 0.0;
+            double despesaTotal = 0.0;
+            double valorPercentagem = 0.0;
+
+
+            // checkAuthentication(token, false);
+            XmlDocument doc = new XmlDocument();
+            doc.Load(FILEPATH);
+
+
+
+
+
+            foreach (XmlNode item in doc.SelectNodes("/Projeto"))
+            {
+                for (int i = dataInicio; i <= dataFim; i++)
+                {
+
+
+
+                    XmlNode medicamentosSns = doc.SelectSingleNode("//Anos[@ano=" + i + "]/EncargosComMedicamentos/DoSns");
+                    XmlNode medicamentosUtente = doc.SelectSingleNode("//Anos[@ano=" + i + "]/EncargosComMedicamentos/DoUtente");
+                    XmlNode total = doc.SelectSingleNode("//Anos[@ano=" + i + "]/DespesaSns/Total");
+
+
+                    despesaMedicamentos += Convert.ToDouble(medicamentosSns.InnerText) + Convert.ToDouble(medicamentosUtente.InnerText);
+
+                    despesaTotal += Convert.ToDouble(total.InnerText);
+
+
+
+
+                    valor += despesaMedicamentos / despesaTotal;
+
+                    valorPercentagem = valor * 100;
+
+
+
+
+
+
+                }
+
+            }
+
+
+
+
+
+            return valorPercentagem;
+
+
+        }
+
+
+
 
 
 
@@ -482,4 +603,4 @@ namespace PiPorDataWebService
     }
 
 
-    }
+}

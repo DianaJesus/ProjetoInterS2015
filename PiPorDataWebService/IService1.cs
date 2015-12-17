@@ -118,6 +118,16 @@ namespace PiPorDataWebService
         //SOAP
         [OperationContract(Name = "GetPercentagemMedicamentosPorData")]
         double GetPercentagemMedicamentos(int dataInicio, int dataFim);
+        //REST
+        [WebInvoke(Method = "GET", UriTemplate = "/mediaCamas?dataInicio={dataInicio}&dataFim={dataFim}")]
+        //SOAP
+        [OperationContract(Name = "GetMediaCamasPorData")]
+        double GetMediaCamas(int dataInicio, int dataFim);
+        //REST
+        [WebInvoke(Method = "GET", UriTemplate = "/racioFuncionarios?dataInicio={dataInicio}&dataFim={dataFim}")]
+        //SOAP
+        [OperationContract(Name = "GetRacioFuncionariosPorData")]
+        double GetRacioFuncionariosEstabelecimentos(int dataInicio, int dataFim);
 
 
 

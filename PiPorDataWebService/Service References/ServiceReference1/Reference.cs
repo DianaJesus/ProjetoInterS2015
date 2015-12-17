@@ -103,13 +103,13 @@ namespace PiPorDataWebService.ServiceReference1 {
         private string CategoriaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime DataFimField;
+        private int Soma1Field;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime DataInicioField;
+        private int Soma2Field;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int SomaField;
+        private int Soma3Field;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -135,33 +135,94 @@ namespace PiPorDataWebService.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime DataFim {
+        public int Soma1 {
             get {
-                return this.DataFimField;
+                return this.Soma1Field;
             }
             set {
-                if ((this.DataFimField.Equals(value) != true)) {
-                    this.DataFimField = value;
-                    this.RaisePropertyChanged("DataFim");
+                if ((this.Soma1Field.Equals(value) != true)) {
+                    this.Soma1Field = value;
+                    this.RaisePropertyChanged("Soma1");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime DataInicio {
+        public int Soma2 {
             get {
-                return this.DataInicioField;
+                return this.Soma2Field;
             }
             set {
-                if ((this.DataInicioField.Equals(value) != true)) {
-                    this.DataInicioField = value;
-                    this.RaisePropertyChanged("DataInicio");
+                if ((this.Soma2Field.Equals(value) != true)) {
+                    this.Soma2Field = value;
+                    this.RaisePropertyChanged("Soma2");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Soma {
+        public int Soma3 {
+            get {
+                return this.Soma3Field;
+            }
+            set {
+                if ((this.Soma3Field.Equals(value) != true)) {
+                    this.Soma3Field = value;
+                    this.RaisePropertyChanged("Soma3");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Acao", Namespace="http://schemas.datacontract.org/2004/07/PiPorDataWebService")]
+    [System.SerializableAttribute()]
+    public partial class Acao : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EstabelecimentoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double SomaField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Estabelecimento {
+            get {
+                return this.EstabelecimentoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EstabelecimentoField, value) != true)) {
+                    this.EstabelecimentoField = value;
+                    this.RaisePropertyChanged("Estabelecimento");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Soma {
             get {
                 return this.SomaField;
             }
@@ -217,23 +278,47 @@ namespace PiPorDataWebService.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/IsLoggedIn", ReplyAction="http://tempuri.org/IService1/IsLoggedInResponse")]
         System.Threading.Tasks.Task<bool> IsLoggedInAsync(string token);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetNumFuncionarios", ReplyAction="http://tempuri.org/IService1/GetNumFuncionariosResponse")]
-        int GetNumFuncionarios(string token);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetNumFuncionarios", ReplyAction="http://tempuri.org/IService1/GetNumFuncionariosResponse")]
-        System.Threading.Tasks.Task<int> GetNumFuncionariosAsync(string token);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetNumFuncionario", ReplyAction="http://tempuri.org/IService1/GetNumFuncionarioResponse")]
-        int GetNumFuncionario(string categoria, string token);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetNumFuncionario", ReplyAction="http://tempuri.org/IService1/GetNumFuncionarioResponse")]
-        System.Threading.Tasks.Task<int> GetNumFuncionarioAsync(string categoria, string token);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetNumFuncionarioPorData", ReplyAction="http://tempuri.org/IService1/GetNumFuncionarioPorDataResponse")]
+        PiPorDataWebService.ServiceReference1.Funcionario[] GetNumFuncionarioPorData(int dataInicio, int dataFim);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetNumFuncionarioPorData", ReplyAction="http://tempuri.org/IService1/GetNumFuncionarioPorDataResponse")]
-        PiPorDataWebService.ServiceReference1.Funcionario[] GetNumFuncionarioPorData(string dataInicio, string dataFim, string token);
+        System.Threading.Tasks.Task<PiPorDataWebService.ServiceReference1.Funcionario[]> GetNumFuncionarioPorDataAsync(int dataInicio, int dataFim);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetNumFuncionarioPorData", ReplyAction="http://tempuri.org/IService1/GetNumFuncionarioPorDataResponse")]
-        System.Threading.Tasks.Task<PiPorDataWebService.ServiceReference1.Funcionario[]> GetNumFuncionarioPorDataAsync(string dataInicio, string dataFim, string token);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetNumAcoesPorData", ReplyAction="http://tempuri.org/IService1/GetNumAcoesPorDataResponse")]
+        PiPorDataWebService.ServiceReference1.Acao[] GetNumAcoesPorData(int dataInicio, int dataFim);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetNumAcoesPorData", ReplyAction="http://tempuri.org/IService1/GetNumAcoesPorDataResponse")]
+        System.Threading.Tasks.Task<PiPorDataWebService.ServiceReference1.Acao[]> GetNumAcoesPorDataAsync(int dataInicio, int dataFim);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetNumFuncCatPorData", ReplyAction="http://tempuri.org/IService1/GetNumFuncCatPorDataResponse")]
+        PiPorDataWebService.ServiceReference1.Funcionario[] GetNumFuncCatPorData(int dataInicio, int dataFim);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetNumFuncCatPorData", ReplyAction="http://tempuri.org/IService1/GetNumFuncCatPorDataResponse")]
+        System.Threading.Tasks.Task<PiPorDataWebService.ServiceReference1.Funcionario[]> GetNumFuncCatPorDataAsync(int dataInicio, int dataFim);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetNumFuncCategoriaPorData", ReplyAction="http://tempuri.org/IService1/GetNumFuncCategoriaPorDataResponse")]
+        int GetNumFuncCategoriaPorData(int dataInicio, int dataFim, string categoria);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetNumFuncCategoriaPorData", ReplyAction="http://tempuri.org/IService1/GetNumFuncCategoriaPorDataResponse")]
+        System.Threading.Tasks.Task<int> GetNumFuncCategoriaPorDataAsync(int dataInicio, int dataFim, string categoria);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetMediaFuncionarioPorData", ReplyAction="http://tempuri.org/IService1/GetMediaFuncionarioPorDataResponse")]
+        double GetMediaFuncionarioPorData(int dataInicio, int dataFim);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetMediaFuncionarioPorData", ReplyAction="http://tempuri.org/IService1/GetMediaFuncionarioPorDataResponse")]
+        System.Threading.Tasks.Task<double> GetMediaFuncionarioPorDataAsync(int dataInicio, int dataFim);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPercentagemPessoalPorData", ReplyAction="http://tempuri.org/IService1/GetPercentagemPessoalPorDataResponse")]
+        double GetPercentagemPessoalPorData(int dataInicio, int dataFim);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPercentagemPessoalPorData", ReplyAction="http://tempuri.org/IService1/GetPercentagemPessoalPorDataResponse")]
+        System.Threading.Tasks.Task<double> GetPercentagemPessoalPorDataAsync(int dataInicio, int dataFim);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPercentagemMedicamentosPorData", ReplyAction="http://tempuri.org/IService1/GetPercentagemMedicamentosPorDataResponse")]
+        double GetPercentagemMedicamentosPorData(int dataInicio, int dataFim);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPercentagemMedicamentosPorData", ReplyAction="http://tempuri.org/IService1/GetPercentagemMedicamentosPorDataResponse")]
+        System.Threading.Tasks.Task<double> GetPercentagemMedicamentosPorDataAsync(int dataInicio, int dataFim);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -303,28 +388,60 @@ namespace PiPorDataWebService.ServiceReference1 {
             return base.Channel.IsLoggedInAsync(token);
         }
         
-        public int GetNumFuncionarios(string token) {
-            return base.Channel.GetNumFuncionarios(token);
+        public PiPorDataWebService.ServiceReference1.Funcionario[] GetNumFuncionarioPorData(int dataInicio, int dataFim) {
+            return base.Channel.GetNumFuncionarioPorData(dataInicio, dataFim);
         }
         
-        public System.Threading.Tasks.Task<int> GetNumFuncionariosAsync(string token) {
-            return base.Channel.GetNumFuncionariosAsync(token);
+        public System.Threading.Tasks.Task<PiPorDataWebService.ServiceReference1.Funcionario[]> GetNumFuncionarioPorDataAsync(int dataInicio, int dataFim) {
+            return base.Channel.GetNumFuncionarioPorDataAsync(dataInicio, dataFim);
         }
         
-        public int GetNumFuncionario(string categoria, string token) {
-            return base.Channel.GetNumFuncionario(categoria, token);
+        public PiPorDataWebService.ServiceReference1.Acao[] GetNumAcoesPorData(int dataInicio, int dataFim) {
+            return base.Channel.GetNumAcoesPorData(dataInicio, dataFim);
         }
         
-        public System.Threading.Tasks.Task<int> GetNumFuncionarioAsync(string categoria, string token) {
-            return base.Channel.GetNumFuncionarioAsync(categoria, token);
+        public System.Threading.Tasks.Task<PiPorDataWebService.ServiceReference1.Acao[]> GetNumAcoesPorDataAsync(int dataInicio, int dataFim) {
+            return base.Channel.GetNumAcoesPorDataAsync(dataInicio, dataFim);
         }
         
-        public PiPorDataWebService.ServiceReference1.Funcionario[] GetNumFuncionarioPorData(string dataInicio, string dataFim, string token) {
-            return base.Channel.GetNumFuncionarioPorData(dataInicio, dataFim, token);
+        public PiPorDataWebService.ServiceReference1.Funcionario[] GetNumFuncCatPorData(int dataInicio, int dataFim) {
+            return base.Channel.GetNumFuncCatPorData(dataInicio, dataFim);
         }
         
-        public System.Threading.Tasks.Task<PiPorDataWebService.ServiceReference1.Funcionario[]> GetNumFuncionarioPorDataAsync(string dataInicio, string dataFim, string token) {
-            return base.Channel.GetNumFuncionarioPorDataAsync(dataInicio, dataFim, token);
+        public System.Threading.Tasks.Task<PiPorDataWebService.ServiceReference1.Funcionario[]> GetNumFuncCatPorDataAsync(int dataInicio, int dataFim) {
+            return base.Channel.GetNumFuncCatPorDataAsync(dataInicio, dataFim);
+        }
+        
+        public int GetNumFuncCategoriaPorData(int dataInicio, int dataFim, string categoria) {
+            return base.Channel.GetNumFuncCategoriaPorData(dataInicio, dataFim, categoria);
+        }
+        
+        public System.Threading.Tasks.Task<int> GetNumFuncCategoriaPorDataAsync(int dataInicio, int dataFim, string categoria) {
+            return base.Channel.GetNumFuncCategoriaPorDataAsync(dataInicio, dataFim, categoria);
+        }
+        
+        public double GetMediaFuncionarioPorData(int dataInicio, int dataFim) {
+            return base.Channel.GetMediaFuncionarioPorData(dataInicio, dataFim);
+        }
+        
+        public System.Threading.Tasks.Task<double> GetMediaFuncionarioPorDataAsync(int dataInicio, int dataFim) {
+            return base.Channel.GetMediaFuncionarioPorDataAsync(dataInicio, dataFim);
+        }
+        
+        public double GetPercentagemPessoalPorData(int dataInicio, int dataFim) {
+            return base.Channel.GetPercentagemPessoalPorData(dataInicio, dataFim);
+        }
+        
+        public System.Threading.Tasks.Task<double> GetPercentagemPessoalPorDataAsync(int dataInicio, int dataFim) {
+            return base.Channel.GetPercentagemPessoalPorDataAsync(dataInicio, dataFim);
+        }
+        
+        public double GetPercentagemMedicamentosPorData(int dataInicio, int dataFim) {
+            return base.Channel.GetPercentagemMedicamentosPorData(dataInicio, dataFim);
+        }
+        
+        public System.Threading.Tasks.Task<double> GetPercentagemMedicamentosPorDataAsync(int dataInicio, int dataFim) {
+            return base.Channel.GetPercentagemMedicamentosPorDataAsync(dataInicio, dataFim);
         }
     }
 }

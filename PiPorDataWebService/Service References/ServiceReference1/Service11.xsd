@@ -17,10 +17,23 @@
   <xs:complexType name="Funcionario">
     <xs:sequence>
       <xs:element minOccurs="0" name="Categoria" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="DataFim" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="DataInicio" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Soma" type="xs:int" />
+      <xs:element minOccurs="0" name="Soma1" type="xs:int" />
+      <xs:element minOccurs="0" name="Soma2" type="xs:int" />
+      <xs:element minOccurs="0" name="Soma3" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Funcionario" nillable="true" type="tns:Funcionario" />
+  <xs:complexType name="ArrayOfAcao">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Acao" nillable="true" type="tns:Acao" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAcao" nillable="true" type="tns:ArrayOfAcao" />
+  <xs:complexType name="Acao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Estabelecimento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Soma" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Acao" nillable="true" type="tns:Acao" />
 </xs:schema>

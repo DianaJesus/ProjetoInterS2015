@@ -37,23 +37,47 @@
   <wsdl:message name="IService1_IsLoggedIn_OutputMessage">
     <wsdl:part name="parameters" element="tns:IsLoggedInResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_GetNumFuncionarios_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetNumFuncionarios" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetNumFuncionarios_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetNumFuncionariosResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetNumFuncionario_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetNumFuncionario" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetNumFuncionario_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetNumFuncionarioResponse" />
-  </wsdl:message>
   <wsdl:message name="IService1_GetNumFuncionarioPorData_InputMessage">
     <wsdl:part name="parameters" element="tns:GetNumFuncionarioPorData" />
   </wsdl:message>
   <wsdl:message name="IService1_GetNumFuncionarioPorData_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetNumFuncionarioPorDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNumAcoesPorData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumAcoesPorData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNumAcoesPorData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumAcoesPorDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNumFuncCatPorData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumFuncCatPorData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNumFuncCatPorData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumFuncCatPorDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNumFuncCategoriaPorData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumFuncCategoriaPorData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNumFuncCategoriaPorData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumFuncCategoriaPorDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMediaFuncionarioPorData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMediaFuncionarioPorData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMediaFuncionarioPorData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMediaFuncionarioPorDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPercentagemPessoalPorData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPercentagemPessoalPorData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPercentagemPessoalPorData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPercentagemPessoalPorDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPercentagemMedicamentosPorData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPercentagemMedicamentosPorData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPercentagemMedicamentosPorData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPercentagemMedicamentosPorDataResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="SignUp">
@@ -76,17 +100,33 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/IsLoggedIn" message="tns:IService1_IsLoggedIn_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/IsLoggedInResponse" message="tns:IService1_IsLoggedIn_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetNumFuncionarios">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNumFuncionarios" message="tns:IService1_GetNumFuncionarios_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNumFuncionariosResponse" message="tns:IService1_GetNumFuncionarios_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetNumFuncionario">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNumFuncionario" message="tns:IService1_GetNumFuncionario_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNumFuncionarioResponse" message="tns:IService1_GetNumFuncionario_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="GetNumFuncionarioPorData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNumFuncionarioPorData" message="tns:IService1_GetNumFuncionarioPorData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNumFuncionarioPorDataResponse" message="tns:IService1_GetNumFuncionarioPorData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumAcoesPorData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNumAcoesPorData" message="tns:IService1_GetNumAcoesPorData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNumAcoesPorDataResponse" message="tns:IService1_GetNumAcoesPorData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumFuncCatPorData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNumFuncCatPorData" message="tns:IService1_GetNumFuncCatPorData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNumFuncCatPorDataResponse" message="tns:IService1_GetNumFuncCatPorData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumFuncCategoriaPorData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNumFuncCategoriaPorData" message="tns:IService1_GetNumFuncCategoriaPorData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNumFuncCategoriaPorDataResponse" message="tns:IService1_GetNumFuncCategoriaPorData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMediaFuncionarioPorData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMediaFuncionarioPorData" message="tns:IService1_GetMediaFuncionarioPorData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMediaFuncionarioPorDataResponse" message="tns:IService1_GetMediaFuncionarioPorData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPercentagemPessoalPorData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPercentagemPessoalPorData" message="tns:IService1_GetPercentagemPessoalPorData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPercentagemPessoalPorDataResponse" message="tns:IService1_GetPercentagemPessoalPorData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPercentagemMedicamentosPorData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPercentagemMedicamentosPorData" message="tns:IService1_GetPercentagemMedicamentosPorData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPercentagemMedicamentosPorDataResponse" message="tns:IService1_GetPercentagemMedicamentosPorData_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -136,26 +176,62 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetNumFuncionarios">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetNumFuncionarios" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetNumFuncionario">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetNumFuncionario" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="GetNumFuncionarioPorData">
       <soap:operation soapAction="http://tempuri.org/IService1/GetNumFuncionarioPorData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumAcoesPorData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetNumAcoesPorData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumFuncCatPorData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetNumFuncCatPorData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumFuncCategoriaPorData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetNumFuncCategoriaPorData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMediaFuncionarioPorData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetMediaFuncionarioPorData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPercentagemPessoalPorData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetPercentagemPessoalPorData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPercentagemMedicamentosPorData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetPercentagemMedicamentosPorData" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

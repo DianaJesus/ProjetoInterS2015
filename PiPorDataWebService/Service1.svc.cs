@@ -575,6 +575,136 @@ namespace PiPorDataWebService
 
 
 
+        public double GetMediaCamas(int dataInicio, int dataFim)
+        {
+            
+            double hospitais = 0.0;
+            double total = 0.0;
+            double media = 0.0;
+
+
+            // checkAuthentication(token, false);
+            XmlDocument doc = new XmlDocument();
+            doc.Load(FILEPATH);
+
+
+
+
+
+            foreach (XmlNode item in doc.SelectNodes("/Projeto"))
+            {
+                for (int i = dataInicio; i <= dataFim; i++)
+                {
+
+
+
+                    XmlNode hospitaisGerais = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Lotacao/HospitaisGerais");
+                    XmlNode hospitaisEspecializados = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Lotacao/HospitaisEspecialiazados");
+                    XmlNode extensoesCentrosSaude = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Lotacao/ExtensoesCentroSaude");
+
+
+
+
+
+                    
+                    hospitais += Convert.ToDouble(hospitaisGerais.InnerText) + Convert.ToDouble(hospitaisEspecializados.InnerText);
+                    total += Convert.ToDouble(hospitaisGerais.InnerText) + Convert.ToDouble(hospitaisEspecializados.InnerText) + Convert.ToDouble(extensoesCentrosSaude.InnerText);
+
+
+
+
+                    media += hospitais / total;
+
+                   
+
+
+
+
+
+
+                }
+
+            }
+
+
+
+
+
+            return media;
+
+
+        }
+
+
+
+
+        public double GetRacioFuncionariosEstabelecimentos(int dataInicio, int dataFim)
+        {
+            double valor = 0.0;
+            double funcionarios = 0.0;
+            double estabelecimentos = 0.0;
+            double valorPercentagem = 0.0;
+
+
+            // checkAuthentication(token, false);
+            XmlDocument doc = new XmlDocument();
+            doc.Load(FILEPATH);
+
+
+
+
+
+            foreach (XmlNode item in doc.SelectNodes("/Projeto"))
+            {
+                for (int i = dataInicio; i <= dataFim; i++)
+                {
+
+
+
+                    XmlNode medicos = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/Medicos");
+                    XmlNode pessoalEnfermagem = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/PessoalDeEnfermagem");
+                    XmlNode enfermeiros = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/Enfermeiros");
+                    XmlNode tecnicos = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/TecnicosDiagnosticoTerapeutica");
+
+
+                    XmlNode hospitaisGerais = doc.SelectSingleNode("//Anos[@ano=" + i + "]/EstabelecimentosSaude/HospitaisGerais");
+                    XmlNode hospitaisEspecializados = doc.SelectSingleNode("//Anos[@ano=" + i + "]/EstabelecimentosSaude/HospitaisEspecialiazados");
+                    XmlNode centrosSaude = doc.SelectSingleNode("//Anos[@ano=" + i + "]/EstabelecimentosSaude/CentrosDeSaude");
+                    XmlNode extensoes = doc.SelectSingleNode("//Anos[@ano=" + i + "]/EstabelecimentosSaude/ExtensoesCentroSaude");
+
+                    funcionarios += Convert.ToDouble(medicos.InnerText) + Convert.ToDouble(pessoalEnfermagem.InnerText) + Convert.ToDouble(enfermeiros.InnerText) + Convert.ToDouble(tecnicos.InnerText);
+
+                    estabelecimentos += Convert.ToDouble(hospitaisGerais.InnerText) + Convert.ToDouble(hospitaisEspecializados.InnerText) + Convert.ToDouble(centrosSaude.InnerText) + Convert.ToDouble(extensoes.InnerText);
+
+
+
+
+                    valor += funcionarios / estabelecimentos;
+
+                    valorPercentagem = valor * 100;
+
+
+
+
+
+
+                }
+
+            }
+
+
+
+
+
+            return valorPercentagem;
+
+
+        }
+
+
+
+
+
 
 
 

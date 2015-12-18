@@ -197,7 +197,7 @@ namespace PiPorDataWebService
 
                     valor = Convert.ToInt32(medicos.InnerText) + Convert.ToInt32(pessoalDeEnfermagem.InnerText) + Convert.ToInt32(enfermeiros.InnerText) + Convert.ToInt32(tecnicosDiagnosticoTerapeutica.InnerText);
 
-                    Funcionario func = new Funcionario(Convert.ToString(i), valor);
+                    Funcionario func = new Funcionario(i, valor);
                     funcionarios.Add(func);
 
 
@@ -221,45 +221,130 @@ namespace PiPorDataWebService
 
 
 
+        public int GetNumAcoesCategoria(int dataInicio, int dataFim, string categoria)
+        {
+            int valor = 0;
+            //checkAuthentication(token, false);
+            XmlDocument doc = new XmlDocument();
+            doc.Load(FILEPATH);
+
+            switch (categoria)
+            {
+                case "Consultas":
+
+                    foreach (XmlNode item in doc.SelectNodes("/Projeto"))
+                    {
+                        for (int i = dataInicio; i <= dataFim; i++)
+                        {
+                            XmlNode consultas = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Consultas/Hospitais");
+
+                            valor += Convert.ToInt32(consultas.InnerText);
+                        }
+                    }
+
+                    break;
+
+
+                case "Internamentos":
+
+                    foreach (XmlNode item in doc.SelectNodes("/Projeto"))
+                    {
+                        for (int i = dataInicio; i <= dataFim; i++)
+                        {
+                            XmlNode internamentos = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Internamentos/Hospitais");
+
+                            valor += Convert.ToInt32(internamentos.InnerText);
+                        }
+                    }
+
+                    break;
+
+
+                case "Urgencias":
+
+                    foreach (XmlNode item in doc.SelectNodes("/Projeto"))
+                    {
+                        for (int i = dataInicio; i <= dataFim; i++)
+                        {
+                            XmlNode urgencias = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Urgencias/Hospitais");
+
+                            valor += Convert.ToInt32(urgencias.InnerText);
+                        }
+                    }
+
+                    break;
+
+               
+
+                default:
+                    throw new ArgumentNullException("Erro");
+
+
+
+
+
+            }
+            return valor;
+
+
+        }
+
 
 
 
         public List<Acao> GetNumAcoes(int dataInicio, int dataFim)
         {
 
-            double valor = 0;
-            //checkAuthentication(token, false);
+            int valorC = 0;
+            int valorI = 0;
+            int valorU = 0;
+
+            // checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
 
-            
-                List<Acao> acoes = new List<Acao>();
 
-
-
+            List<Acao> acoes = new List<Acao>();
 
 
             foreach (XmlNode item in doc.SelectNodes("/Projeto"))
             {
-
                 for (int i = dataInicio; i <= dataFim; i++)
                 {
 
+
+                    
                     XmlNode consultas = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Consultas/Hospitais");
+
                     XmlNode internamentos = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Internamentos/Hospitais");
+
                     XmlNode urgencias = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Urgencias/Hospitais");
 
-                    valor = Convert.ToDouble(consultas.InnerText) + Convert.ToDouble(internamentos.InnerText) + Convert.ToDouble(urgencias.InnerText);
-                    Acao acao = new Acao(Convert.ToString(i), valor);
+
+                    valorC = Convert.ToInt32(consultas.InnerText);
+                    valorI = Convert.ToInt32(internamentos.InnerText);
+                    valorU = Convert.ToInt32(urgencias.InnerText);
+
+
+
+
+                    Acao acao = new Acao(i, valorC, valorI, valorU);
                     acoes.Add(acao);
 
 
+
                 }
+
             }
 
-            return acoes;
-        }
 
+
+
+
+            return acoes;
+
+
+        }
 
 
 
@@ -302,7 +387,7 @@ namespace PiPorDataWebService
                     
 
                     
-                    Funcionario funcionario = new Funcionario(Convert.ToString(i), valorM, valorE, valorT);
+                    Funcionario funcionario = new Funcionario(i, valorM, valorE, valorT);
                     funcionarios.Add(funcionario);
                     
 
@@ -579,8 +664,8 @@ namespace PiPorDataWebService
         {
             
             double hospitais = 0.0;
-            double total = 0.0;
             double media = 0.0;
+            int count = 0;
 
 
             // checkAuthentication(token, false);
@@ -596,24 +681,23 @@ namespace PiPorDataWebService
                 for (int i = dataInicio; i <= dataFim; i++)
                 {
 
-
+                    count++;
 
                     XmlNode hospitaisGerais = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Lotacao/HospitaisGerais");
                     XmlNode hospitaisEspecializados = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Lotacao/HospitaisEspecialiazados");
-                    XmlNode extensoesCentrosSaude = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Lotacao/ExtensoesCentroSaude");
-
+                    
 
 
 
 
                     
                     hospitais += Convert.ToDouble(hospitaisGerais.InnerText) + Convert.ToDouble(hospitaisEspecializados.InnerText);
-                    total += Convert.ToDouble(hospitaisGerais.InnerText) + Convert.ToDouble(hospitaisEspecializados.InnerText) + Convert.ToDouble(extensoesCentrosSaude.InnerText);
+                    
 
 
 
 
-                    media += hospitais / total;
+                    media += hospitais / count;
 
                    
 
@@ -702,10 +786,21 @@ namespace PiPorDataWebService
         }
 
 
+        //public List<Acao> GetPercentagemAcoes(int )
 
 
 
 
+
+
+
+
+        public void ReceberXml(string xml)
+        {
+            FILEPATH = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, "App_Data", "XmlTestexml.xml");
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.LoadXml(xml);
+        }
 
 
 

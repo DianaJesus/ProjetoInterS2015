@@ -128,6 +128,11 @@ namespace PiPorDataWebService
         //SOAP
         [OperationContract(Name = "GetRacioFuncionariosPorData")]
         double GetRacioFuncionariosEstabelecimentos(int dataInicio, int dataFim);
+        //REST
+        [WebInvoke(Method = "GET", UriTemplate = "/acoesCategoria?dataInicio={dataInicio}&dataFim={dataFim}&categoria={categoria}")]
+        //SOAP
+        [OperationContract(Name = "GetAcoesCategoriaPorData")]
+        int GetNumAcoesCategoria(int dataInicio, int dataFim, string categoria);
 
 
 
@@ -173,27 +178,31 @@ namespace PiPorDataWebService
     [DataContract]
     public class Funcionario
     {
+        private int ano;
         private int soma1;
         private int soma2;
         private int soma3;
-        private string categoria;
 
-        public Funcionario(string categoria, int soma1)
+
+        public Funcionario(int ano, int soma1)
         {
 
-            this.categoria = categoria;
+            this.ano = ano;
             this.soma1 = soma1;
         }
 
 
-        public Funcionario(string categoria, int soma1, int soma2, int soma3)
+        public Funcionario(int ano, int soma1, int soma2, int soma3)
         {
 
-            this.categoria = categoria;
+            this.ano = ano;
             this.soma1 = soma1;
             this.soma2 = soma2;
             this.soma3 = soma3;
         }
+
+
+
 
 
         [DataMember]
@@ -203,12 +212,14 @@ namespace PiPorDataWebService
             set { soma1 = value; }
        }
 
+
         [DataMember]
         public int Soma2
         {
             get { return soma2; }
             set { soma2 = value; }
         }
+
 
         [DataMember]
         public int Soma3
@@ -218,13 +229,15 @@ namespace PiPorDataWebService
         }
 
 
+
+
         [DataMember]
-        public string Categoria
+        public int Ano
         {
-            get { return categoria; }
-            set { categoria= value; }
+            get { return ano; }
+            set { ano = value; }
         }
-       
+
 
 
     }
@@ -347,39 +360,63 @@ namespace PiPorDataWebService
     [DataContract]
     public class Acao
     {
+        private int ano;
+        private double soma1;
+        private double soma2;
+        private double soma3;
 
-        private double soma;
-        private string estabelecimento;
 
-        public Acao(String estabelecimento, double soma)
+        public Acao(int ano, double soma1, double soma2, double soma3)
         {
 
-            this.estabelecimento = estabelecimento;
-            this.soma = soma;
+            this.ano = ano;
+            this.soma1 = soma1;
+            this.soma2 = soma2;
+            this.soma3 = soma3;
 
         }
 
 
         [DataMember]
-        public double Soma
+        public double Soma1
         {
-            get { return soma; }
-            set { soma = value; }
+            get { return soma1; }
+            set { soma1 = value; }
+
+        }
+
+
+        [DataMember]
+        public double Soma2
+        {
+            get { return soma2; }
+            set { soma2 = value; }
 
         }
 
 
 
         [DataMember]
-        public string Estabelecimento
+        public double Soma3
         {
-            get { return estabelecimento; }
-            set { estabelecimento = value; }
+            get { return soma3; }
+            set { soma3 = value; }
+
+        }
+
+
+
+        [DataMember]
+        public int Ano
+        { 
+            get { return ano; }
+            set { ano = value; }
         }
 
 
 
     }
+
 
 
 

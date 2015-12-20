@@ -175,4 +175,34 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetMediaCamasPorData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dataInicio" type="xs:int" />
+        <xs:element minOccurs="0" name="dataFim" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMediaCamasPorDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMediaCamasPorDataResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRacioFuncionariosPorData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dataInicio" type="xs:int" />
+        <xs:element minOccurs="0" name="dataFim" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRacioFuncionariosPorDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRacioFuncionariosPorDataResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

@@ -102,22 +102,22 @@ namespace PiPorDataWebService
         [WebInvoke(Method = "GET", UriTemplate = "/funcionariosCategoriaS?dataInicio={dataInicio}&dataFim={dataFim}&categoria={categoria}")]
         //SOAP
         [OperationContract(Name = "GetNumFuncCategoriaPorData")]
-        int GetNumFuncCategoriaS(int dataInicio, int dataFim, string categoria);
+        List<Funcionario> GetNumFuncCategoriaS(int dataInicio, int dataFim, string categoria);
         //REST
         [WebInvoke(Method = "GET", UriTemplate = "/funcionariosMedia?dataInicio={dataInicio}&dataFim={dataFim}")]
         //SOAP
         [OperationContract(Name = "GetMediaFuncionarioPorData")]
-        double GetMediaFuncionario(int dataInicio, int dataFim);
+        List<Funcionario> GetMediaFuncionario(int dataInicio, int dataFim);
         //REST
         [WebInvoke(Method = "GET", UriTemplate = "/percentagemPessoal?dataInicio={dataInicio}&dataFim={dataFim}")]
         //SOAP
         [OperationContract(Name = "GetPercentagemPessoalPorData")]
-        double GetPercentagemPessoal(int dataInicio, int dataFim);
+        List<Funcionario> GetPercentagemPessoal(int dataInicio, int dataFim);
         //REST
         [WebInvoke(Method = "GET", UriTemplate = "/percentagemMedicamentos?dataInicio={dataInicio}&dataFim={dataFim}")]
         //SOAP
         [OperationContract(Name = "GetPercentagemMedicamentosPorData")]
-        double GetPercentagemMedicamentos(int dataInicio, int dataFim);
+        List<Medicamento> GetPercentagemMedicamentos(int dataInicio, int dataFim);
         //REST
         [WebInvoke(Method = "GET", UriTemplate = "/mediaCamas?dataInicio={dataInicio}&dataFim={dataFim}")]
         //SOAP
@@ -127,19 +127,25 @@ namespace PiPorDataWebService
         [WebInvoke(Method = "GET", UriTemplate = "/racioFuncionarios?dataInicio={dataInicio}&dataFim={dataFim}")]
         //SOAP
         [OperationContract(Name = "GetRacioFuncionariosPorData")]
-        double GetRacioFuncionariosEstabelecimentos(int dataInicio, int dataFim);
+        List<Funcionario> GetRacioFuncionariosEstabelecimentos(int dataInicio, int dataFim);
         //REST
         [WebInvoke(Method = "GET", UriTemplate = "/acoesCategoria?dataInicio={dataInicio}&dataFim={dataFim}&categoria={categoria}")]
         //SOAP
         [OperationContract(Name = "GetAcoesCategoriaPorData")]
-        int GetNumAcoesCategoria(int dataInicio, int dataFim, string categoria);
+        List<Acao> GetNumAcoesCategoria(int dataInicio, int dataFim, string categoria);
+        //REST
+        [WebInvoke(Method = "GET", UriTemplate = "/percentagemAcoes?dataInicio={dataInicio}&dataFim={dataFim}")]
+        //SOAP
+        [OperationContract(Name = "GetPercentagemAcoesPorData")]
+        List<Acao> GetPercentagemAcoes(int dataInicio, int dataFim);
+
 
 
 
     }
 
 
-    
+
 
 
     [DataContract]
@@ -182,6 +188,7 @@ namespace PiPorDataWebService
         private int soma1;
         private int soma2;
         private int soma3;
+        private double valor;
 
 
         public Funcionario(int ano, int soma1)
@@ -201,6 +208,13 @@ namespace PiPorDataWebService
             this.soma3 = soma3;
         }
 
+
+        public Funcionario(int ano, double valor)
+        {
+
+            this.ano = ano;
+            this.valor = valor;
+        }
 
 
 
@@ -239,123 +253,20 @@ namespace PiPorDataWebService
         }
 
 
+        [DataMember]
+        public double Valor
+        {
+            get { return valor; }
+            set { valor = value; }
+        }
+
+
 
     }
 
 
 
-    /* [DataContract]
-      public class Consulta
-      {
-
-          private int soma;
-          private string estabelecimento;
-
-          public Consulta(String estabelecimento, int soma)
-          {
-
-              this.estabelecimento = estabelecimento;
-              this.soma = soma;
-
-          }
-
-
-          [DataMember]
-          public int Soma
-          {
-              get { return soma; }
-              set { soma = value; }
-
-          }
-
-
-
-          [DataMember]
-          public string Estabelecimento
-          {
-              get { return estabelecimento; }
-              set { estabelecimento = value; }
-          }
-
-
-
-      }
-
-
-      [DataContract]
-      public class Internamento
-      {
-
-          private int soma;
-          private string estabelecimento;
-
-          public Internamento(String estabelecimento, int soma)
-          {
-
-              this.estabelecimento = estabelecimento;
-              this.soma = soma;
-
-          }
-
-
-          [DataMember]
-          public int Soma
-          {
-              get { return soma; }
-              set { soma = value; }
-
-          }
-
-
-
-          [DataMember]
-          public string Estabelecimento
-          {
-              get { return estabelecimento; }
-              set { estabelecimento = value; }
-          }
-
-
-
-      }
-
-
-      [DataContract]
-      public class Urgencia
-      {
-
-          private int soma;
-          private string estabelecimento;
-
-          public Urgencia(String estabelecimento, int soma)
-          {
-
-              this.estabelecimento = estabelecimento;
-              this.soma = soma;
-
-          }
-
-
-          [DataMember]
-          public int Soma
-          {
-              get { return soma; }
-              set { soma = value; }
-
-          }
-
-
-
-          [DataMember]
-          public string Estabelecimento
-          {
-              get { return estabelecimento; }
-              set { estabelecimento = value; }
-          }
-
-
-
-      }*/
+    
 
     [DataContract]
     public class Acao
@@ -364,6 +275,14 @@ namespace PiPorDataWebService
         private double soma1;
         private double soma2;
         private double soma3;
+
+
+
+        public Acao(int ano, double soma1)
+        {
+            this.ano = ano;
+            this.soma1 = soma1;
+        }
 
 
         public Acao(int ano, double soma1, double soma2, double soma3)
@@ -412,6 +331,50 @@ namespace PiPorDataWebService
             get { return ano; }
             set { ano = value; }
         }
+
+
+
+    }
+
+
+
+    [DataContract]
+    public class Medicamento
+    {
+        private int ano;
+        private double valor;
+
+
+        public Medicamento(int ano, double valor)
+        {
+
+            this.ano = ano;
+            this.valor = valor;
+        }
+
+
+
+
+        [DataMember]
+        public double Valor
+        {
+            get { return valor; }
+            set { valor = value; }
+        }
+
+
+       
+
+
+        [DataMember]
+        public int Ano
+        {
+            get { return ano; }
+            set { ano = value; }
+        }
+
+
+       
 
 
 

@@ -79,6 +79,18 @@
   <wsdl:message name="IService1_GetPercentagemMedicamentosPorData_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetPercentagemMedicamentosPorDataResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_GetMediaCamasPorData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMediaCamasPorData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMediaCamasPorData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMediaCamasPorDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRacioFuncionariosPorData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRacioFuncionariosPorData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRacioFuncionariosPorData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRacioFuncionariosPorDataResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="SignUp">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/SignUp" message="tns:IService1_SignUp_InputMessage" />
@@ -127,6 +139,14 @@
     <wsdl:operation name="GetPercentagemMedicamentosPorData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPercentagemMedicamentosPorData" message="tns:IService1_GetPercentagemMedicamentosPorData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPercentagemMedicamentosPorDataResponse" message="tns:IService1_GetPercentagemMedicamentosPorData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMediaCamasPorData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMediaCamasPorData" message="tns:IService1_GetMediaCamasPorData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMediaCamasPorDataResponse" message="tns:IService1_GetMediaCamasPorData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRacioFuncionariosPorData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRacioFuncionariosPorData" message="tns:IService1_GetRacioFuncionariosPorData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRacioFuncionariosPorDataResponse" message="tns:IService1_GetRacioFuncionariosPorData_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -232,6 +252,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetPercentagemMedicamentosPorData">
       <soap:operation soapAction="http://tempuri.org/IService1/GetPercentagemMedicamentosPorData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMediaCamasPorData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetMediaCamasPorData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRacioFuncionariosPorData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRacioFuncionariosPorData" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

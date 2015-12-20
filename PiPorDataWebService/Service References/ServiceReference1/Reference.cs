@@ -319,6 +319,18 @@ namespace PiPorDataWebService.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPercentagemMedicamentosPorData", ReplyAction="http://tempuri.org/IService1/GetPercentagemMedicamentosPorDataResponse")]
         System.Threading.Tasks.Task<double> GetPercentagemMedicamentosPorDataAsync(int dataInicio, int dataFim);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetMediaCamasPorData", ReplyAction="http://tempuri.org/IService1/GetMediaCamasPorDataResponse")]
+        double GetMediaCamasPorData(int dataInicio, int dataFim);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetMediaCamasPorData", ReplyAction="http://tempuri.org/IService1/GetMediaCamasPorDataResponse")]
+        System.Threading.Tasks.Task<double> GetMediaCamasPorDataAsync(int dataInicio, int dataFim);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRacioFuncionariosPorData", ReplyAction="http://tempuri.org/IService1/GetRacioFuncionariosPorDataResponse")]
+        double GetRacioFuncionariosPorData(int dataInicio, int dataFim);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRacioFuncionariosPorData", ReplyAction="http://tempuri.org/IService1/GetRacioFuncionariosPorDataResponse")]
+        System.Threading.Tasks.Task<double> GetRacioFuncionariosPorDataAsync(int dataInicio, int dataFim);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -442,6 +454,22 @@ namespace PiPorDataWebService.ServiceReference1 {
         
         public System.Threading.Tasks.Task<double> GetPercentagemMedicamentosPorDataAsync(int dataInicio, int dataFim) {
             return base.Channel.GetPercentagemMedicamentosPorDataAsync(dataInicio, dataFim);
+        }
+        
+        public double GetMediaCamasPorData(int dataInicio, int dataFim) {
+            return base.Channel.GetMediaCamasPorData(dataInicio, dataFim);
+        }
+        
+        public System.Threading.Tasks.Task<double> GetMediaCamasPorDataAsync(int dataInicio, int dataFim) {
+            return base.Channel.GetMediaCamasPorDataAsync(dataInicio, dataFim);
+        }
+        
+        public double GetRacioFuncionariosPorData(int dataInicio, int dataFim) {
+            return base.Channel.GetRacioFuncionariosPorData(dataInicio, dataFim);
+        }
+        
+        public System.Threading.Tasks.Task<double> GetRacioFuncionariosPorDataAsync(int dataInicio, int dataFim) {
+            return base.Channel.GetRacioFuncionariosPorDataAsync(dataInicio, dataFim);
         }
     }
 }

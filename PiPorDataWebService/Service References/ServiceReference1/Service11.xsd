@@ -20,6 +20,7 @@
       <xs:element minOccurs="0" name="Soma1" type="xs:int" />
       <xs:element minOccurs="0" name="Soma2" type="xs:int" />
       <xs:element minOccurs="0" name="Soma3" type="xs:int" />
+      <xs:element minOccurs="0" name="Valor" type="xs:double" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Funcionario" nillable="true" type="tns:Funcionario" />
@@ -38,4 +39,17 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Acao" nillable="true" type="tns:Acao" />
+  <xs:complexType name="ArrayOfMedicamento">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Medicamento" nillable="true" type="tns:Medicamento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMedicamento" nillable="true" type="tns:ArrayOfMedicamento" />
+  <xs:complexType name="Medicamento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ano" type="xs:int" />
+      <xs:element minOccurs="0" name="Valor" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Medicamento" nillable="true" type="tns:Medicamento" />
 </xs:schema>

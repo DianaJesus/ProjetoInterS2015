@@ -97,6 +97,12 @@
   <wsdl:message name="IService1_GetAcoesCategoriaPorData_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAcoesCategoriaPorDataResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_GetPercentagemAcoesPorData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPercentagemAcoesPorData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPercentagemAcoesPorData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPercentagemAcoesPorDataResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="SignUp">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/SignUp" message="tns:IService1_SignUp_InputMessage" />
@@ -157,6 +163,10 @@
     <wsdl:operation name="GetAcoesCategoriaPorData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAcoesCategoriaPorData" message="tns:IService1_GetAcoesCategoriaPorData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAcoesCategoriaPorDataResponse" message="tns:IService1_GetAcoesCategoriaPorData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPercentagemAcoesPorData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPercentagemAcoesPorData" message="tns:IService1_GetPercentagemAcoesPorData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPercentagemAcoesPorDataResponse" message="tns:IService1_GetPercentagemAcoesPorData_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -289,6 +299,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetAcoesCategoriaPorData">
       <soap:operation soapAction="http://tempuri.org/IService1/GetAcoesCategoriaPorData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPercentagemAcoesPorData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetPercentagemAcoesPorData" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -79,62 +79,57 @@ namespace PiPorDataWebService
         //Metodos de pesquisa para service
 
         //REST
-       // [WebInvoke(Method = "GET", UriTemplate = "/funcionarios/{categoria}?token={token}")]
-        //SOAP
-       // [OperationContract(Name = "GetNumFuncionario")]
-       // int GetNumFunc(string categoria, string token);
-        //REST
-        [WebInvoke(Method = "GET", UriTemplate = "/funcionarios?dataInicio={dataInicio}&dataFim={dataFim}?token={token}")]
+        [WebInvoke(Method = "GET", UriTemplate = "/funcionarios?dataInicio={dataInicio}&dataFim={dataFim}&token={token}")]
         //SOAP
         [OperationContract(Name = "GetNumFuncionarioPorData")]
         List<Funcionario> GetNumFunc(int dataInicio, int dataFim, string token);
         //REST
-        [WebInvoke(Method = "GET", UriTemplate = "/acoes?dataInicio={dataInicio}&dataFim={dataFim}?token={token}")]
+        [WebInvoke(Method = "GET", UriTemplate = "/acoes?dataInicio={dataInicio}&dataFim={dataFim}&token={token}")]
         //SOAP
         [OperationContract(Name = "GetNumAcoesPorData")]
         List<Acao> GetNumAcoes(int dataInicio, int dataFim, string token);
         //REST
-        [WebInvoke(Method = "GET", UriTemplate = "/funcionariosCategoria?dataInicio={dataInicio}&dataFim={dataFim}?token={token}")]
+        [WebInvoke(Method = "GET", UriTemplate = "/funcionariosCategoria?dataInicio={dataInicio}&dataFim={dataFim}&token={token}")]
         //SOAP
         [OperationContract(Name = "GetNumFuncCatPorData")]
         List<Funcionario> GetNumFuncCategoria(int dataInicio, int dataFim, string token);
         //REST
-        [WebInvoke(Method = "GET", UriTemplate = "/funcionariosCategoriaS?dataInicio={dataInicio}&dataFim={dataFim}&categoria={categoria}?token={token}")]
+        [WebInvoke(Method = "GET", UriTemplate = "/funcionariosCategoriaS?dataInicio={dataInicio}&dataFim={dataFim}&categoria={categoria}&token={token}")]
         //SOAP
         [OperationContract(Name = "GetNumFuncCategoriaPorData")]
         List<Funcionario> GetNumFuncCategoriaS(int dataInicio, int dataFim, string categoria, string token);
         //REST
-        [WebInvoke(Method = "GET", UriTemplate = "/funcionariosMedia?dataInicio={dataInicio}&dataFim={dataFim}?token={token}")]
+        [WebInvoke(Method = "GET", UriTemplate = "/funcionariosMedia?dataInicio={dataInicio}&dataFim={dataFim}&token={token}")]
         //SOAP
         [OperationContract(Name = "GetMediaFuncionarioPorData")]
         List<Funcionario> GetMediaFuncionario(int dataInicio, int dataFim, string token);
         //REST
-        [WebInvoke(Method = "GET", UriTemplate = "/percentagemPessoal?dataInicio={dataInicio}&dataFim={dataFim}?token={token}")]
+        [WebInvoke(Method = "GET", UriTemplate = "/percentagemPessoal?dataInicio={dataInicio}&dataFim={dataFim}&token={token}")]
         //SOAP
         [OperationContract(Name = "GetPercentagemPessoalPorData")]
         List<Funcionario> GetPercentagemPessoal(int dataInicio, int dataFim, string token);
         //REST
-        [WebInvoke(Method = "GET", UriTemplate = "/percentagemMedicamentos?dataInicio={dataInicio}&dataFim={dataFim}?token={token}")]
+        [WebInvoke(Method = "GET", UriTemplate = "/percentagemMedicamentos?dataInicio={dataInicio}&dataFim={dataFim}&token={token}")]
         //SOAP
         [OperationContract(Name = "GetPercentagemMedicamentosPorData")]
         List<Medicamento> GetPercentagemMedicamentos(int dataInicio, int dataFim, string token);
         //REST
-        [WebInvoke(Method = "GET", UriTemplate = "/mediaCamas?dataInicio={dataInicio}&dataFim={dataFim}?token={token}")]
+        [WebInvoke(Method = "GET", UriTemplate = "/mediaCamas?dataInicio={dataInicio}&dataFim={dataFim}&token={token}")]
         //SOAP
         [OperationContract(Name = "GetMediaCamasPorData")]
         double GetMediaCamas(int dataInicio, int dataFim, string token);
         //REST
-        [WebInvoke(Method = "GET", UriTemplate = "/racioFuncionarios?dataInicio={dataInicio}&dataFim={dataFim}?token={token}")]
+        [WebInvoke(Method = "GET", UriTemplate = "/racioFuncionarios?dataInicio={dataInicio}&dataFim={dataFim}&token={token}")]
         //SOAP
         [OperationContract(Name = "GetRacioFuncionariosPorData")]
         List<Funcionario> GetRacioFuncionariosEstabelecimentos(int dataInicio, int dataFim, string token);
         //REST
-        [WebInvoke(Method = "GET", UriTemplate = "/acoesCategoria?dataInicio={dataInicio}&dataFim={dataFim}&categoria={categoria}?token={token}")]
+        [WebInvoke(Method = "GET", UriTemplate = "/acoesCategoria?dataInicio={dataInicio}&dataFim={dataFim}&categoria={categoria}&token={token}")]
         //SOAP
         [OperationContract(Name = "GetAcoesCategoriaPorData")]
         List<Acao> GetNumAcoesCategoria(int dataInicio, int dataFim, string categoria, string token);
         //REST
-        [WebInvoke(Method = "GET", UriTemplate = "/percentagemAcoes?dataInicio={dataInicio}&dataFim={dataFim}?token={token}")]
+        [WebInvoke(Method = "GET", UriTemplate = "/percentagemAcoes?dataInicio={dataInicio}&dataFim={dataFim}&token={token}")]
         //SOAP
         [OperationContract(Name = "GetPercentagemAcoesPorData")]
         List<Acao> GetPercentagemAcoes(int dataInicio, int dataFim, string token);

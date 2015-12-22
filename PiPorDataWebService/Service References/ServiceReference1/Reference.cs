@@ -100,7 +100,7 @@ namespace PiPorDataWebService.ServiceReference1 {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CategoriaField;
+        private int AnoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int Soma1Field;
@@ -122,14 +122,14 @@ namespace PiPorDataWebService.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Categoria {
+        public int Ano {
             get {
-                return this.CategoriaField;
+                return this.AnoField;
             }
             set {
-                if ((object.ReferenceEquals(this.CategoriaField, value) != true)) {
-                    this.CategoriaField = value;
-                    this.RaisePropertyChanged("Categoria");
+                if ((this.AnoField.Equals(value) != true)) {
+                    this.AnoField = value;
+                    this.RaisePropertyChanged("Ano");
                 }
             }
         }
@@ -193,10 +193,16 @@ namespace PiPorDataWebService.ServiceReference1 {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EstabelecimentoField;
+        private int AnoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private double SomaField;
+        private double Soma1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double Soma2Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double Soma3Field;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -209,27 +215,53 @@ namespace PiPorDataWebService.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Estabelecimento {
+        public int Ano {
             get {
-                return this.EstabelecimentoField;
+                return this.AnoField;
             }
             set {
-                if ((object.ReferenceEquals(this.EstabelecimentoField, value) != true)) {
-                    this.EstabelecimentoField = value;
-                    this.RaisePropertyChanged("Estabelecimento");
+                if ((this.AnoField.Equals(value) != true)) {
+                    this.AnoField = value;
+                    this.RaisePropertyChanged("Ano");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public double Soma {
+        public double Soma1 {
             get {
-                return this.SomaField;
+                return this.Soma1Field;
             }
             set {
-                if ((this.SomaField.Equals(value) != true)) {
-                    this.SomaField = value;
-                    this.RaisePropertyChanged("Soma");
+                if ((this.Soma1Field.Equals(value) != true)) {
+                    this.Soma1Field = value;
+                    this.RaisePropertyChanged("Soma1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Soma2 {
+            get {
+                return this.Soma2Field;
+            }
+            set {
+                if ((this.Soma2Field.Equals(value) != true)) {
+                    this.Soma2Field = value;
+                    this.RaisePropertyChanged("Soma2");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Soma3 {
+            get {
+                return this.Soma3Field;
+            }
+            set {
+                if ((this.Soma3Field.Equals(value) != true)) {
+                    this.Soma3Field = value;
+                    this.RaisePropertyChanged("Soma3");
                 }
             }
         }
@@ -331,6 +363,12 @@ namespace PiPorDataWebService.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRacioFuncionariosPorData", ReplyAction="http://tempuri.org/IService1/GetRacioFuncionariosPorDataResponse")]
         System.Threading.Tasks.Task<double> GetRacioFuncionariosPorDataAsync(int dataInicio, int dataFim);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAcoesCategoriaPorData", ReplyAction="http://tempuri.org/IService1/GetAcoesCategoriaPorDataResponse")]
+        int GetAcoesCategoriaPorData(int dataInicio, int dataFim, string categoria);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAcoesCategoriaPorData", ReplyAction="http://tempuri.org/IService1/GetAcoesCategoriaPorDataResponse")]
+        System.Threading.Tasks.Task<int> GetAcoesCategoriaPorDataAsync(int dataInicio, int dataFim, string categoria);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -470,6 +508,14 @@ namespace PiPorDataWebService.ServiceReference1 {
         
         public System.Threading.Tasks.Task<double> GetRacioFuncionariosPorDataAsync(int dataInicio, int dataFim) {
             return base.Channel.GetRacioFuncionariosPorDataAsync(dataInicio, dataFim);
+        }
+        
+        public int GetAcoesCategoriaPorData(int dataInicio, int dataFim, string categoria) {
+            return base.Channel.GetAcoesCategoriaPorData(dataInicio, dataFim, categoria);
+        }
+        
+        public System.Threading.Tasks.Task<int> GetAcoesCategoriaPorDataAsync(int dataInicio, int dataFim, string categoria) {
+            return base.Channel.GetAcoesCategoriaPorDataAsync(dataInicio, dataFim, categoria);
         }
     }
 }

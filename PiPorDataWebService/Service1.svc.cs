@@ -167,10 +167,10 @@ namespace PiPorDataWebService
             return tokenObject;
         }
 
-       public List<Funcionario> GetNumFunc(int dataInicio, int dataFim)
+       public List<Funcionario> GetNumFunc(int dataInicio, int dataFim, string token)
         {
             int valor = 0;
-            // checkAuthentication(token, false);
+            checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
 
@@ -222,10 +222,10 @@ namespace PiPorDataWebService
 
 
         
-        public List<Acao> GetNumAcoesCategoria(int dataInicio, int dataFim, string categoria)
+        public List<Acao> GetNumAcoesCategoria(int dataInicio, int dataFim, string categoria, string token)
         {
             double valor = 0.0;
-            //checkAuthentication(token, false);
+            checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
 
@@ -305,14 +305,14 @@ namespace PiPorDataWebService
 
 
 
-        public List<Acao> GetNumAcoes(int dataInicio, int dataFim)
+        public List<Acao> GetNumAcoes(int dataInicio, int dataFim, string token)
         {
 
             double valorC = 0;
             double valorI = 0;
             double valorU = 0;
 
-            // checkAuthentication(token, false);
+            checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
 
@@ -365,13 +365,13 @@ namespace PiPorDataWebService
 
 
 
-        public List<Funcionario> GetNumFuncCategoria(int dataInicio, int dataFim)
+        public List<Funcionario> GetNumFuncCategoria(int dataInicio, int dataFim, string token)
         {
             int valorM = 0;
             int valorE = 0;
             int valorT = 0;
             
-            // checkAuthentication(token, false);
+            checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
 
@@ -421,10 +421,10 @@ namespace PiPorDataWebService
 
 
         
-        public List<Funcionario> GetNumFuncCategoriaS(int dataInicio, int dataFim, string categoria)
+        public List<Funcionario> GetNumFuncCategoriaS(int dataInicio, int dataFim, string categoria, string token)
         {
             int valor = 0;
-            //checkAuthentication(token, false);
+            checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
 
@@ -517,14 +517,14 @@ namespace PiPorDataWebService
 
         
 
-        public List<Funcionario> GetMediaFuncionario(int dataInicio, int dataFim)
+        public List<Funcionario> GetMediaFuncionario(int dataInicio, int dataFim, string token)
         {
             double valor = 0.0;
             double funcionariosTotal = 0.0;
             double despesaPessoal = 0.0;
             
 
-            // checkAuthentication(token, false);
+            checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
 
@@ -577,7 +577,7 @@ namespace PiPorDataWebService
 
 
         
-        public List<Funcionario> GetPercentagemPessoal(int dataInicio, int dataFim)
+        public List<Funcionario> GetPercentagemPessoal(int dataInicio, int dataFim, string token)
         {
             double valor = 0.0;
             double despesaPessoal = 0.0;
@@ -585,7 +585,7 @@ namespace PiPorDataWebService
             double valorPercentagem = 0.0;
 
 
-            // checkAuthentication(token, false);
+            checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
 
@@ -640,7 +640,7 @@ namespace PiPorDataWebService
 
 
         
-        public List<Medicamento> GetPercentagemMedicamentos(int dataInicio, int dataFim)
+        public List<Medicamento> GetPercentagemMedicamentos(int dataInicio, int dataFim, string token)
         {
             double valor = 0.0;
             double despesaMedicamentos = 0.0;
@@ -648,7 +648,7 @@ namespace PiPorDataWebService
             double valorPercentagem = 0.0;
 
 
-            // checkAuthentication(token, false);
+            checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
 
@@ -705,7 +705,7 @@ namespace PiPorDataWebService
 
 
         //Não está bem (è aquela que não percebi!)
-        public double GetMediaCamas(int dataInicio, int dataFim)
+        public double GetMediaCamas(int dataInicio, int dataFim, string token)
         {
             
             double hospitais = 0.0;
@@ -713,7 +713,7 @@ namespace PiPorDataWebService
             int count = 0;
 
 
-            // checkAuthentication(token, false);
+            checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
 
@@ -767,7 +767,7 @@ namespace PiPorDataWebService
 
 
         
-        public List<Funcionario> GetRacioFuncionariosEstabelecimentos(int dataInicio, int dataFim)
+        public List<Funcionario> GetRacioFuncionariosEstabelecimentos(int dataInicio, int dataFim, string token)
         {
             double valor = 0.0;
             double funcionarios = 0.0;
@@ -775,7 +775,7 @@ namespace PiPorDataWebService
             double valorPercentagem = 0.0;
 
 
-            // checkAuthentication(token, false);
+            checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
 
@@ -834,7 +834,7 @@ namespace PiPorDataWebService
         }
 
 
-        public List<Acao> GetPercentagemAcoes(int dataInicio, int dataFim)
+        public List<Acao> GetPercentagemAcoes(int dataInicio, int dataFim, string token)
         {
 
             double percentagemC = 0.0;
@@ -845,7 +845,7 @@ namespace PiPorDataWebService
             double valorI = 0;
             double valorU = 0;
 
-            // checkAuthentication(token, false);
+            checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
 

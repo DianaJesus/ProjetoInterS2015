@@ -834,17 +834,13 @@ namespace PiPorDataWebService
         }
 
 
-        public List<Acao> GetPercentagemAcoes(int dataInicio, int dataFim, string token)
+       
+
+
+        public List<Acao> GetPercentagemAcoes(int dataInicio, int dataFim, string categoria, string token)
         {
-
-            double percentagemC = 0.0;
-            double percentagemI = 0.0;
-            double percentagemU = 0.0;
-
-            double valorC = 0;
-            double valorI = 0;
-            double valorU = 0;
-
+            double valor = 0.0;
+            double percentagem = 0.0;
             checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
@@ -853,56 +849,81 @@ namespace PiPorDataWebService
             List<Acao> acoes = new List<Acao>();
 
 
-            foreach (XmlNode item in doc.SelectNodes("/Projeto"))
+
+            switch (categoria)
             {
-                for (int i = dataInicio; i <= dataFim; i++)
-                {
+                case "Consultas":
+
+                    foreach (XmlNode item in doc.SelectNodes("/Projeto"))
+                    {
+                        for (int i = dataInicio; i <= dataFim; i++)
+                        {
+                            XmlNode consultas = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Consultas/CentrosSaude");
+                            XmlNode consultasTotal = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Consultas/Total");
+
+                            valor = Convert.ToDouble(consultas.InnerText) / Convert.ToDouble(consultasTotal.InnerText);
+                            percentagem = valor * 100;
+                            Acao acao = new Acao(i, percentagem);
+                            acoes.Add(acao);
+                        }
+                    }
+
+                    break;
 
 
-                   
-                    XmlNode consultas = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Consultas/CentrosSaude");
+                case "Internamentos":
 
-                    XmlNode internamentos = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Internamentos/CentrosSaude");
+                    foreach (XmlNode item in doc.SelectNodes("/Projeto"))
+                    {
+                        for (int i = dataInicio; i <= dataFim; i++)
+                        {
+                            XmlNode internamentos = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Internamentos/CentrosSaude");
+                            XmlNode internamentosTotal = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Internamentos/Total");
 
-                    XmlNode urgencias = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Urgencias/CentrosSaude");
+                            valor = Convert.ToDouble(internamentos.InnerText) / Convert.ToDouble(internamentosTotal.InnerText);
+                            percentagem = valor * 100;
+                            Acao acao = new Acao(i, percentagem);
+                            acoes.Add(acao);
+                        }
+                    }
 
-                    XmlNode consultasTotal = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Consultas/Total");
-
-                    XmlNode internamentosTotal = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Internamentos/Total");
-
-                    XmlNode urgenciasTotal = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Urgencias/Total");
-
-
-
-
-                    valorC += Convert.ToDouble(consultas.InnerText) / Convert.ToDouble(consultasTotal.InnerText);
-                    valorI += Convert.ToDouble(internamentos.InnerText) / Convert.ToDouble(internamentosTotal.InnerText);
-                    valorU += Convert.ToDouble(urgencias.InnerText) / Convert.ToDouble(internamentosTotal.InnerText);
-
-                    percentagemC += valorC * 100;
-                    percentagemI += valorI * 100;
-                    percentagemU += valorU * 100;
+                    break;
 
 
-                    Acao acao = new Acao(i, percentagemC, percentagemI, percentagemU);
-                    acoes.Add(acao);
+                case "Urgencias":
+
+                    foreach (XmlNode item in doc.SelectNodes("/Projeto"))
+                    {
+                        for (int i = dataInicio; i <= dataFim; i++)
+                        {
+                            XmlNode urgencias = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Urgencias/CentrosSaude");
+                            XmlNode urgenciasTotal = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Urgencias/Total");
+
+                            valor = Convert.ToDouble(urgencias.InnerText) / Convert.ToDouble(urgenciasTotal.InnerText);
+                            percentagem = valor * 100;
+                            Acao acao = new Acao(i, percentagem);
+                            acoes.Add(acao);
+                        }
+                    }
+
+                    break;
+
+                
+
+                default:
+                    throw new ArgumentNullException("Erro");
 
 
 
-                }
+
 
             }
-
-
-
-
-
             return acoes;
 
 
-        
+        }
 
-    }
+
 
 
 

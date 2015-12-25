@@ -129,10 +129,10 @@ namespace PiPorDataWebService
         [OperationContract(Name = "GetAcoesCategoriaPorData")]
         List<Acao> GetNumAcoesCategoria(int dataInicio, int dataFim, string categoria, string token);
         //REST
-        [WebInvoke(Method = "GET", UriTemplate = "/percentagemAcoes?dataInicio={dataInicio}&dataFim={dataFim}&token={token}")]
+        [WebInvoke(Method = "GET", UriTemplate = "/percentagemAcoes?dataInicio={dataInicio}&dataFim={dataFim}&categoria={categoria}&token={token}")]
         //SOAP
         [OperationContract(Name = "GetPercentagemAcoesPorData")]
-        List<Acao> GetPercentagemAcoes(int dataInicio, int dataFim, string token);
+        List<Acao> GetPercentagemAcoes(int dataInicio, int dataFim, string categoria, string token);
 
 
 

@@ -117,7 +117,7 @@ namespace PiPorDataWebService
         [WebInvoke(Method = "GET", UriTemplate = "/mediaCamas?dataInicio={dataInicio}&dataFim={dataFim}&token={token}")]
         //SOAP
         [OperationContract(Name = "GetMediaCamasPorData")]
-        double GetMediaCamas(int dataInicio, int dataFim, string token);
+        List<Cama> GetMediaCamas(int dataInicio, int dataFim, string token);
         //REST
         [WebInvoke(Method = "GET", UriTemplate = "/racioFuncionarios?dataInicio={dataInicio}&dataFim={dataFim}&token={token}")]
         //SOAP
@@ -374,6 +374,45 @@ namespace PiPorDataWebService
 
 
     }
+
+
+    [DataContract]
+    public class Cama
+    {
+        private int ano;
+        private double valor;
+        
+
+
+
+        public Cama(int ano, double valor)
+        {
+            this.ano = ano;
+            this.valor = valor;
+        }
+
+
+        
+        [DataMember]
+        public double Valor
+        {
+            get { return valor; }
+            set { valor = value; }
+
+        }
+
+
+        [DataMember]
+        public int Ano
+        {
+            get { return ano; }
+            set { ano = value; }
+        }
+
+
+
+    }
+
 
 
 

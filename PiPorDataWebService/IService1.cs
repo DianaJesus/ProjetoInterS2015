@@ -267,20 +267,21 @@ namespace PiPorDataWebService
     public class Acao
     {
         private int ano;
-        private double soma1;
-        private double soma2;
-        private double soma3;
+        private int soma1;
+        private int soma2;
+        private int soma3;
+        private double valor;
 
 
 
-        public Acao(int ano, double soma1)
+        public Acao(int ano, int soma1)
         {
             this.ano = ano;
             this.soma1 = soma1;
         }
 
 
-        public Acao(int ano, double soma1, double soma2, double soma3)
+        public Acao(int ano, int soma1, int soma2, int soma3)
         {
 
             this.ano = ano;
@@ -290,9 +291,15 @@ namespace PiPorDataWebService
 
         }
 
+        public Acao(int ano, double valor)
+        {
+            this.ano = ano;
+            this.valor = valor;
+        }
+
 
         [DataMember]
-        public double Soma1
+        public int Soma1
         {
             get { return soma1; }
             set { soma1 = value; }
@@ -301,7 +308,7 @@ namespace PiPorDataWebService
 
 
         [DataMember]
-        public double Soma2
+        public int Soma2
         {
             get { return soma2; }
             set { soma2 = value; }
@@ -311,7 +318,7 @@ namespace PiPorDataWebService
 
 
         [DataMember]
-        public double Soma3
+        public int Soma3
         {
             get { return soma3; }
             set { soma3 = value; }
@@ -325,6 +332,15 @@ namespace PiPorDataWebService
         { 
             get { return ano; }
             set { ano = value; }
+        }
+
+
+        [DataMember]
+        public double Valor
+        {
+            get { return valor; }
+            set { valor = value; }
+
         }
 
 

@@ -1296,15 +1296,6 @@ namespace PiPorDataWebService
 
         }
 
-
-
-
-
-
-
-
-
-
         public void ReceberXml(string xml)
         {
             FILEPATH = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, "App_Data", "XmlTestexml.xml");

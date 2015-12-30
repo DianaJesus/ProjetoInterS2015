@@ -223,7 +223,7 @@ namespace PiPorDataWebService
                     {
                         valorTer = Convert.ToDouble(tecnicosDiagnosticoTerapeutica.InnerText);
                     }
-                    valor = valorMedico + valorEnfermagem + valorEnfermeiros + valorTer ;
+                    valor = Math.Round(valorMedico + valorEnfermagem + valorEnfermeiros + valorTer, 0);
 
                     if(valor != 0)
                     {
@@ -277,7 +277,7 @@ namespace PiPorDataWebService
                             }
                             else
                             {
-                                valor = Convert.ToDouble(consultas.InnerText);
+                                valor = Math.Round(Convert.ToDouble(consultas.InnerText), 0);
                             }
 
 
@@ -308,7 +308,7 @@ namespace PiPorDataWebService
                             }
                             else
                             {
-                                valor = Convert.ToDouble(internamentos.InnerText);
+                                valor = Math.Round(Convert.ToDouble(internamentos.InnerText), 0);
                             }
 
 
@@ -339,7 +339,7 @@ namespace PiPorDataWebService
                             }
                             else
                             {
-                                valor = Convert.ToDouble(urgencias.InnerText);
+                                valor = Math.Round(Convert.ToDouble(urgencias.InnerText), 0);
                             }
 
 
@@ -483,7 +483,7 @@ namespace PiPorDataWebService
                             }
                             else
                             {
-                                valor = Convert.ToDouble(medicos.InnerText);
+                                valor = Math.Round(Convert.ToDouble(medicos.InnerText), 0);
                             }
 
 
@@ -514,7 +514,7 @@ namespace PiPorDataWebService
                             }
                             else
                             {
-                                valor = Convert.ToDouble(pessoalDeEnfermagem.InnerText);
+                                valor = Math.Round(Convert.ToDouble(pessoalDeEnfermagem.InnerText), 0);
                             }
 
 
@@ -546,7 +546,7 @@ namespace PiPorDataWebService
                             }
                             else
                             {
-                                valor = Convert.ToDouble(enfermeiros.InnerText);
+                                valor = Math.Round(Convert.ToDouble(enfermeiros.InnerText), 0);
                             }
 
 
@@ -575,7 +575,7 @@ namespace PiPorDataWebService
                             }
                             else
                             {
-                                valor = Convert.ToDouble(tecnicos.InnerText);
+                                valor = Math.Round(Convert.ToDouble(tecnicos.InnerText), 0);
                             }
 
 
@@ -691,7 +691,7 @@ namespace PiPorDataWebService
 
                     if (funcionariosTotal != 0)
                     {
-                        valor = despesaPessoal / funcionariosTotal;
+                        valor = Math.Round(despesaPessoal / funcionariosTotal, 2);
                         Funcionario func = new Funcionario(i, 0.0, valor);
                         funcionarios.Add(func);
                     }
@@ -769,7 +769,7 @@ namespace PiPorDataWebService
                     if (valor != 0)
                     {
                     
-                        valorPercentagem = valor * 100;
+                        valorPercentagem = Math.Round(valor * 100, 2);
                         Funcionario func = new Funcionario(i, 0.0, valorPercentagem);
                         funcionarios.Add(func);
                     }
@@ -865,7 +865,7 @@ namespace PiPorDataWebService
 
                     if (valor != 0)
                     {
-                        valorPercentagem = valor * 100;
+                        valorPercentagem = Math.Round(valor * 100, 2);
                         Medicamento medicamento = new Medicamento(i, valorPercentagem);
                         medicamentos.Add(medicamento);
                     }
@@ -942,7 +942,7 @@ namespace PiPorDataWebService
 
                     hospitais = valorGerais + valorEspecializados;
 
-                    media = hospitais / 2;
+                    media = Math.Round(hospitais / 2, 2);
 
 
                     if (media != 0)
@@ -1105,7 +1105,7 @@ namespace PiPorDataWebService
 
                     if (valor != 0)
                     {
-                        valorPercentagem = valor * 100;
+                        valorPercentagem = Math.Round(valor * 100, 2);
                         Funcionario func = new Funcionario(i, 0.0, valorPercentagem);
                         listaFuncionarios.Add(func);
                     }
@@ -1183,7 +1183,7 @@ namespace PiPorDataWebService
 
                             if (valor != 0)
                             {
-                                percentagem = valor * 100;
+                                percentagem = Math.Round(valor * 100, 2);
                                 Acao acao = new Acao(i, percentagem, 0.0);
                                 acoes.Add(acao);
                             }
@@ -1231,7 +1231,7 @@ namespace PiPorDataWebService
 
                             if (valor != 0)
                             {
-                                percentagem = valor * 100;
+                                percentagem = Math.Round(valor * 100, 2);
                                 Acao acao = new Acao(i, percentagem, 0.0);
                                 acoes.Add(acao);
                             }
@@ -1278,7 +1278,7 @@ namespace PiPorDataWebService
 
                             if (valor != 0)
                             {
-                                percentagem = valor * 100;
+                                percentagem = Math.Round(valor * 100, 2);
                                 Acao acao = new Acao(i, percentagem, 0.0);
                                 acoes.Add(acao);
                             }

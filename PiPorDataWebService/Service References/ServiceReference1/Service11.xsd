@@ -33,9 +33,10 @@
   <xs:complexType name="Acao">
     <xs:sequence>
       <xs:element minOccurs="0" name="Ano" type="xs:int" />
-      <xs:element minOccurs="0" name="Soma1" type="xs:double" />
-      <xs:element minOccurs="0" name="Soma2" type="xs:double" />
-      <xs:element minOccurs="0" name="Soma3" type="xs:double" />
+      <xs:element minOccurs="0" name="Soma1" type="xs:int" />
+      <xs:element minOccurs="0" name="Soma2" type="xs:int" />
+      <xs:element minOccurs="0" name="Soma3" type="xs:int" />
+      <xs:element minOccurs="0" name="Valor" type="xs:double" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Acao" nillable="true" type="tns:Acao" />
@@ -52,4 +53,17 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Medicamento" nillable="true" type="tns:Medicamento" />
+  <xs:complexType name="ArrayOfCama">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cama" nillable="true" type="tns:Cama" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCama" nillable="true" type="tns:ArrayOfCama" />
+  <xs:complexType name="Cama">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ano" type="xs:int" />
+      <xs:element minOccurs="0" name="Valor" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cama" nillable="true" type="tns:Cama" />
 </xs:schema>

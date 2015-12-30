@@ -73,6 +73,9 @@
     <Content Include="Service References\ServiceReference1\PiPorDataWebService.ServiceReference1.Medicamento.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Service References\ServiceReference1\PiPorDataWebService.ServiceReference1.Cama.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\ServiceReference1\Service1.disco" />
     <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
     <None Include="Service References\ServiceReference1\configuration.svcinfo" />

@@ -84,15 +84,15 @@ namespace PiPorDataWebService
         [OperationContract(Name = "GetNumFuncionarioPorData")]
         List<Funcionario> GetNumFunc(int dataInicio, int dataFim, string token);
         //REST
-        [WebInvoke(Method = "GET", UriTemplate = "/acoes?dataInicio={dataInicio}&dataFim={dataFim}&token={token}")]
+        //[WebInvoke(Method = "GET", UriTemplate = "/acoes?dataInicio={dataInicio}&dataFim={dataFim}&token={token}")]
         //SOAP
-        [OperationContract(Name = "GetNumAcoesPorData")]
-        List<Acao> GetNumAcoes(int dataInicio, int dataFim, string token);
+        //[OperationContract(Name = "GetNumAcoesPorData")]
+        //List<Acao> GetNumAcoes(int dataInicio, int dataFim, string token);
         //REST
-        [WebInvoke(Method = "GET", UriTemplate = "/funcionariosCategoria?dataInicio={dataInicio}&dataFim={dataFim}&token={token}")]
+        //[WebInvoke(Method = "GET", UriTemplate = "/funcionariosCategoria?dataInicio={dataInicio}&dataFim={dataFim}&token={token}")]
         //SOAP
-        [OperationContract(Name = "GetNumFuncCatPorData")]
-        List<Funcionario> GetNumFuncCategoria(int dataInicio, int dataFim, string token);
+        //[OperationContract(Name = "GetNumFuncCatPorData")]
+        //List<Funcionario> GetNumFuncCategoria(int dataInicio, int dataFim, string token);
         //REST
         [WebInvoke(Method = "GET", UriTemplate = "/funcionariosCategoriaS?dataInicio={dataInicio}&dataFim={dataFim}&categoria={categoria}&token={token}")]
         //SOAP
@@ -180,34 +180,15 @@ namespace PiPorDataWebService
     public class Funcionario
     {
         private int ano;
-        private int soma1;
-        private int soma2;
-        private int soma3;
+        private double soma1;
         private double valor;
 
 
-        public Funcionario(int ano, int soma1)
+        public Funcionario(int ano, double soma1, double valor)
         {
 
             this.ano = ano;
             this.soma1 = soma1;
-        }
-
-
-        public Funcionario(int ano, int soma1, int soma2, int soma3)
-        {
-
-            this.ano = ano;
-            this.soma1 = soma1;
-            this.soma2 = soma2;
-            this.soma3 = soma3;
-        }
-
-
-        public Funcionario(int ano, double valor)
-        {
-
-            this.ano = ano;
             this.valor = valor;
         }
 
@@ -215,26 +196,17 @@ namespace PiPorDataWebService
 
 
         [DataMember]
-        public int Soma1
+        public double Soma1
         {
             get { return soma1; }
             set { soma1 = value; }
        }
 
-
         [DataMember]
-        public int Soma2
+        public double Valor
         {
-            get { return soma2; }
-            set { soma2 = value; }
-        }
-
-
-        [DataMember]
-        public int Soma3
-        {
-            get { return soma3; }
-            set { soma3 = value; }
+            get { return valor; }
+            set { valor = value; }
         }
 
 
@@ -248,12 +220,7 @@ namespace PiPorDataWebService
         }
 
 
-        [DataMember]
-        public double Valor
-        {
-            get { return valor; }
-            set { valor = value; }
-        }
+        
 
 
 
@@ -267,39 +234,24 @@ namespace PiPorDataWebService
     public class Acao
     {
         private int ano;
-        private int soma1;
-        private int soma2;
-        private int soma3;
+        private double soma1;
         private double valor;
 
 
 
-        public Acao(int ano, int soma1)
+        public Acao(int ano, double valor, double soma1)
         {
             this.ano = ano;
             this.soma1 = soma1;
-        }
-
-
-        public Acao(int ano, int soma1, int soma2, int soma3)
-        {
-
-            this.ano = ano;
-            this.soma1 = soma1;
-            this.soma2 = soma2;
-            this.soma3 = soma3;
-
-        }
-
-        public Acao(int ano, double valor)
-        {
-            this.ano = ano;
             this.valor = valor;
         }
 
 
+      
+
+
         [DataMember]
-        public int Soma1
+        public double Soma1
         {
             get { return soma1; }
             set { soma1 = value; }
@@ -307,25 +259,7 @@ namespace PiPorDataWebService
         }
 
 
-        [DataMember]
-        public int Soma2
-        {
-            get { return soma2; }
-            set { soma2 = value; }
-
-        }
-
-
-
-        [DataMember]
-        public int Soma3
-        {
-            get { return soma3; }
-            set { soma3 = value; }
-
-        }
-
-
+       
 
         [DataMember]
         public int Ano

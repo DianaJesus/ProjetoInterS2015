@@ -134,6 +134,8 @@ namespace PiPorDataWebService
         [OperationContract(Name = "GetPercentagemAcoesPorData")]
         List<Acao> GetPercentagemAcoes(int dataInicio, int dataFim, string categoria, string token);
 
+        [OperationContract(Name = "ReceberXml")]
+        void ReceberXml(string xml);
 
 
 

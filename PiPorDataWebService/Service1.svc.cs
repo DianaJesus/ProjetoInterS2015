@@ -33,6 +33,7 @@ namespace PiPorDataWebService
             // default administrator
             utilizadores.Add("admin", new Utilizador("admin", "admin", true));
             FILEPATH = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, "App_Data", "XmlTestexml.xml");
+  
         }
 
 
@@ -1307,9 +1308,21 @@ namespace PiPorDataWebService
 
         public void ReceberXml(string xml)
         {
-            FILEPATH = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, "App_Data", "XmlTestexml.xml");
-            XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.LoadXml(xml);
+
+            try
+            {
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.LoadXml(xml);
+                xmlDoc.Save(FILEPATH);
+
+            }
+            catch (Exception ex )
+            {
+                return;
+               
+            }
+
+
         }
 
 

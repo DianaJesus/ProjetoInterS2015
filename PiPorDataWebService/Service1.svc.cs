@@ -636,7 +636,7 @@ namespace PiPorDataWebService
                     }
                     else
                     {
-                        valorMedicos = Convert.ToInt32(medicos.InnerText);
+                        valorMedicos = Convert.ToDouble(medicos.InnerText);
                     }
 
 
@@ -648,7 +648,7 @@ namespace PiPorDataWebService
                     }
                     else
                     {
-                        valorEnfermagem = Convert.ToInt32(pessoalEnfermagem.InnerText);
+                        valorEnfermagem = Convert.ToDouble(pessoalEnfermagem.InnerText);
                     }
 
                     XmlNode enfermeiros = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/Enfermeiros");
@@ -659,7 +659,7 @@ namespace PiPorDataWebService
                     }
                     else
                     {
-                        valorEnfermeiros = Convert.ToInt32(enfermeiros.InnerText);
+                        valorEnfermeiros = Convert.ToDouble(enfermeiros.InnerText);
                     }
 
                     XmlNode tecnicos = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/TecnicosDiagnosticoTerapeutica");
@@ -681,7 +681,7 @@ namespace PiPorDataWebService
                     }
                     else
                     {
-                        despesaPessoal = Convert.ToInt32(comPessoal.InnerText);
+                        despesaPessoal = Convert.ToDouble(comPessoal.InnerText);
                     }
 
                     funcionariosTotal = valorMedicos + valorEnfermagem + valorEnfermeiros + valorTerapia;
@@ -744,7 +744,7 @@ namespace PiPorDataWebService
                     }
                     else
                     {
-                        despesaPessoal = Convert.ToInt32(pessoal.InnerText);
+                        despesaPessoal = Convert.ToDouble(pessoal.InnerText);
                     }
 
                     XmlNode total = doc.SelectSingleNode("//Anos[@ano=" + i + "]/DespesaSns/Total");
@@ -755,7 +755,7 @@ namespace PiPorDataWebService
                     }
                     else
                     {
-                        despesaTotal = Convert.ToInt32(total.InnerText);
+                        despesaTotal = Convert.ToDouble(total.InnerText);
                     }
 
 
@@ -825,7 +825,7 @@ namespace PiPorDataWebService
                     }
                     else
                     {
-                        valorSns = Convert.ToInt32(medicamentosSns.InnerText);
+                        valorSns = Convert.ToDouble(medicamentosSns.InnerText);
                     }
 
 
@@ -837,7 +837,7 @@ namespace PiPorDataWebService
                     }
                     else
                     {
-                        valorUtente = Convert.ToInt32(medicamentosUtente.InnerText);
+                        valorUtente = Convert.ToDouble(medicamentosUtente.InnerText);
                     }
 
 
@@ -849,7 +849,7 @@ namespace PiPorDataWebService
                     }
                     else
                     {
-                        despesaTotal = Convert.ToInt32(total.InnerText);
+                        despesaTotal = Convert.ToDouble(total.InnerText);
                     }
 
 

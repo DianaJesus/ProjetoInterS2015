@@ -19,14 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://projetointerswebservice.apphb.com/Service1.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://projetointerswebservice.apphb.com/Service1.svc/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="22665839-9fb7-4436-912a-8fd20c708c4e" SourceId="1" SourceUrl="http://projetointerswebservice.apphb.com/Service1.svc?xsd=xsd0" />
-    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="f51be027-f9ba-4a63-9d97-f31147f693e1" SourceId="1" SourceUrl="http://projetointerswebservice.apphb.com/Service1.svc?xsd=xsd2" />
-    <MetadataFile FileName="Service12.xsd" MetadataType="Schema" ID="c24d36f1-9926-4152-924c-14835b71fb52" SourceId="1" SourceUrl="http://projetointerswebservice.apphb.com/Service1.svc?xsd=xsd1" />
-    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="706ab703-e591-4724-b60c-71f80252954c" SourceId="1" SourceUrl="http://projetointerswebservice.apphb.com/Service1.svc?wsdl" />
-    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="929ed4ec-178e-458b-b018-067354834d24" SourceId="1" SourceUrl="http://projetointerswebservice.apphb.com/Service1.svc?disco" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="00bcc294-0e2f-4983-acf9-44c54075551c" SourceId="1" SourceUrl="http://projetointerswebservice.apphb.com/Service1.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="27a16766-9ef3-4259-863c-2db9336a47b6" SourceId="1" SourceUrl="http://projetointerswebservice.apphb.com/Service1.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="61251597-c6f9-4c62-904c-d745c851b6a2" SourceId="1" SourceUrl="http://projetointerswebservice.apphb.com/Service1.svc/mex" />
+    <MetadataFile FileName="PiPorDataWebService.xsd" MetadataType="Schema" ID="a9c6bc14-4473-482d-89ed-1938589721bb" SourceId="1" SourceUrl="http://projetointerswebservice.apphb.com/Service1.svc/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

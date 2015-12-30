@@ -453,6 +453,12 @@ namespace PiPorDataWebService.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPercentagemAcoesPorData", ReplyAction="http://tempuri.org/IService1/GetPercentagemAcoesPorDataResponse")]
         System.Threading.Tasks.Task<PiPorDataWebService.ServiceReference1.Acao[]> GetPercentagemAcoesPorDataAsync(int dataInicio, int dataFim, string categoria, string token);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ReceberXml", ReplyAction="http://tempuri.org/IService1/ReceberXmlResponse")]
+        void ReceberXml(string xml);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ReceberXml", ReplyAction="http://tempuri.org/IService1/ReceberXmlResponse")]
+        System.Threading.Tasks.Task ReceberXmlAsync(string xml);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -592,6 +598,14 @@ namespace PiPorDataWebService.ServiceReference1 {
         
         public System.Threading.Tasks.Task<PiPorDataWebService.ServiceReference1.Acao[]> GetPercentagemAcoesPorDataAsync(int dataInicio, int dataFim, string categoria, string token) {
             return base.Channel.GetPercentagemAcoesPorDataAsync(dataInicio, dataFim, categoria, token);
+        }
+        
+        public void ReceberXml(string xml) {
+            base.Channel.ReceberXml(xml);
+        }
+        
+        public System.Threading.Tasks.Task ReceberXmlAsync(string xml) {
+            return base.Channel.ReceberXmlAsync(xml);
         }
     }
 }

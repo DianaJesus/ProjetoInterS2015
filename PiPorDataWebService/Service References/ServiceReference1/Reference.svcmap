@@ -19,13 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://projetointerswebservice.apphb.com/Service1.svc/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="http://projetointerswebservice.apphb.com/Service1.svc/mex/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="00bcc294-0e2f-4983-acf9-44c54075551c" SourceId="1" SourceUrl="http://projetointerswebservice.apphb.com/Service1.svc/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="27a16766-9ef3-4259-863c-2db9336a47b6" SourceId="1" SourceUrl="http://projetointerswebservice.apphb.com/Service1.svc/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="61251597-c6f9-4c62-904c-d745c851b6a2" SourceId="1" SourceUrl="http://projetointerswebservice.apphb.com/Service1.svc/mex" />
-    <MetadataFile FileName="PiPorDataWebService.xsd" MetadataType="Schema" ID="a9c6bc14-4473-482d-89ed-1938589721bb" SourceId="1" SourceUrl="http://projetointerswebservice.apphb.com/Service1.svc/mex" />
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="f1f6a661-4263-456f-9f6d-3a45fa3bf593" SourceId="1" SourceUrl="http://projetointerswebservice.apphb.com/Service1.svc/mex/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="3738561f-7383-436e-b1ce-dcecda1836c9" SourceId="1" SourceUrl="http://projetointerswebservice.apphb.com/Service1.svc/mex/mex" />
+    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="1a071153-3257-4a69-9d9c-862cd6f4c229" SourceId="1" SourceUrl="http://projetointerswebservice.apphb.com/Service1.svc/mex/mex" />
+    <MetadataFile FileName="PiPorDataWebService1.xsd" MetadataType="Schema" ID="fce4d245-963b-4d7c-ab5e-7f5b3426f731" SourceId="1" SourceUrl="http://projetointerswebservice.apphb.com/Service1.svc/mex/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

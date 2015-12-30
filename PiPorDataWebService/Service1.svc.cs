@@ -1306,7 +1306,7 @@ namespace PiPorDataWebService
         //cejsdnsjs
 
 
-        public void ReceberXml(string xml)
+        public Boolean ReceberXml(string xml)
         {
 
             try
@@ -1314,11 +1314,11 @@ namespace PiPorDataWebService
                 XmlDocument xmlDoc = new XmlDocument();
                 xmlDoc.LoadXml(xml);
                 xmlDoc.Save(FILEPATH);
-
+                return true;
             }
             catch (Exception ex )
             {
-                return;
+                return false;
                
             }
 

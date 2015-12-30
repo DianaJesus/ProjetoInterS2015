@@ -137,7 +137,7 @@ namespace PiPorDataWebService
 
         //SOAP
         [OperationContract(Name = "ReceberXml")]
-        void ReceberXml(string xml);
+        Boolean ReceberXml(string xml);
 
 
 

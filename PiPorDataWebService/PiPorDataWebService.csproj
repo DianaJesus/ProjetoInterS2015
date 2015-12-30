@@ -78,7 +78,7 @@
     </Content>
     <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
     <None Include="Service References\ServiceReference1\configuration.svcinfo" />
-    <None Include="Service References\ServiceReference1\PiPorDataWebService.xsd">
+    <None Include="Service References\ServiceReference1\PiPorDataWebService1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServiceReference1\Reference.svcmap">
@@ -106,11 +106,11 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ServiceReference1\service.wsdl" />
-    <None Include="Service References\ServiceReference1\service.xsd">
+    <None Include="Service References\ServiceReference1\service1.wsdl" />
+    <None Include="Service References\ServiceReference1\service2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference1\service1.xsd">
+    <None Include="Service References\ServiceReference1\service21.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web.Debug.config">

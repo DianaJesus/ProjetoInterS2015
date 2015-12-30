@@ -251,7 +251,7 @@ namespace PiPorDataWebService
 
 
         
-        public List<Acao> GetNumAcoesCategoria(int dataInicio, int dataFim, string categoria, string token)
+        public List<Acao> GetNumAcoesCategoria(int dataInicio, int dataFim, string categoria, string token) 
         {
             double valor = 0;
             checkAuthentication(token, false);
@@ -720,7 +720,7 @@ namespace PiPorDataWebService
             double valorPercentagem = 0.0;
 
 
-            checkAuthentication(token, false);
+           checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
 
@@ -759,26 +759,17 @@ namespace PiPorDataWebService
                         despesaTotal = Convert.ToDouble(total.InnerText);
                     }
 
+                   
 
-
-                    valor = despesaPessoal / despesaTotal;
-
-
-
-
-                    if (valor != 0)
+                    if (despesaTotal != 0 || despesaPessoal != 0)
                     {
-                    
+
+                        valor = despesaPessoal / despesaTotal;
+
                         valorPercentagem = Math.Round(valor * 100, 2);
                         Funcionario func = new Funcionario(i, 0.0, valorPercentagem);
                         funcionarios.Add(func);
                     }
-                    
-
-
-
-
-
 
                 }
 
@@ -858,13 +849,14 @@ namespace PiPorDataWebService
 
                     despesaMedicamentos = valorSns + valorUtente;
 
-                    valor = despesaMedicamentos / despesaTotal;
-
-                    
 
 
-                    if (valor != 0)
+
+                    if (despesaMedicamentos !=0)
                     {
+                      
+
+                        valor = despesaMedicamentos / despesaTotal;
                         valorPercentagem = Math.Round(valor * 100, 2);
                         Medicamento medicamento = new Medicamento(i, valorPercentagem);
                         medicamentos.Add(medicamento);
@@ -979,7 +971,7 @@ namespace PiPorDataWebService
             double valorGerais = 0.0, valorEspecializados = 0.0, valorCentros = 0.0, valorExtensoes = 0.0;
             double funcionarios = 0.0;
             double estabelecimentos = 0.0;
-            double valorPercentagem = 0.0;
+   
 
 
             checkAuthentication(token, false);
@@ -1098,15 +1090,15 @@ namespace PiPorDataWebService
 
 
 
-                    valor = funcionarios / estabelecimentos;
-
                     
 
 
-                    if (valor != 0)
+                    if (funcionarios != 0 || estabelecimentos != 0)
                     {
-                        valorPercentagem = Math.Round(valor * 100, 2);
-                        Funcionario func = new Funcionario(i, 0.0, valorPercentagem);
+
+                        valor =Math.Round(funcionarios / estabelecimentos, 0);
+                        
+                        Funcionario func = new Funcionario(i, 0.0, valor);
                         listaFuncionarios.Add(func);
                     }
                     
@@ -1178,11 +1170,12 @@ namespace PiPorDataWebService
                             }
 
 
-                            valor = valorConsultas / valorConsultasTotal;
+                          
                             
 
-                            if (valor != 0)
+                            if (valorConsultas != 0 || valorConsultasTotal != 0)
                             {
+                                valor = valorConsultas / valorConsultasTotal;
                                 percentagem = Math.Round(valor * 100, 2);
                                 Acao acao = new Acao(i, percentagem, 0.0);
                                 acoes.Add(acao);
@@ -1225,12 +1218,13 @@ namespace PiPorDataWebService
                             }
 
 
-                            valor = valorInternamentos / valorInternamentosTotal;
+                         
                             
 
 
-                            if (valor != 0)
+                            if (valorInternamentos != 0 || valorConsultasTotal != 0)
                             {
+                                valor = valorInternamentos / valorInternamentosTotal;
                                 percentagem = Math.Round(valor * 100, 2);
                                 Acao acao = new Acao(i, percentagem, 0.0);
                                 acoes.Add(acao);
@@ -1273,11 +1267,13 @@ namespace PiPorDataWebService
                             }
 
 
-                            valor = valorUrgencias / valorUrgenciasTotal;
+                           
                             
 
-                            if (valor != 0)
+                            if (valorUrgencias != 0 || valorUrgenciasTotal != 0)
                             {
+                                valor = valorUrgencias / valorUrgenciasTotal;
+
                                 percentagem = Math.Round(valor * 100, 2);
                                 Acao acao = new Acao(i, percentagem, 0.0);
                                 acoes.Add(acao);

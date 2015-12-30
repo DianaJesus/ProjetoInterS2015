@@ -194,7 +194,7 @@
   <xs:element name="GetMediaCamasPorDataResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="GetMediaCamasPorDataResult" type="xs:double" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetMediaCamasPorDataResult" nillable="true" type="q9:ArrayOfCama" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -210,7 +210,7 @@
   <xs:element name="GetRacioFuncionariosPorDataResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetRacioFuncionariosPorDataResult" nillable="true" type="q9:ArrayOfFuncionario" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetRacioFuncionariosPorDataResult" nillable="true" type="q10:ArrayOfFuncionario" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -227,7 +227,7 @@
   <xs:element name="GetAcoesCategoriaPorDataResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetAcoesCategoriaPorDataResult" nillable="true" type="q10:ArrayOfAcao" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetAcoesCategoriaPorDataResult" nillable="true" type="q11:ArrayOfAcao" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -244,7 +244,7 @@
   <xs:element name="GetPercentagemAcoesPorDataResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetPercentagemAcoesPorDataResult" nillable="true" type="q11:ArrayOfAcao" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetPercentagemAcoesPorDataResult" nillable="true" type="q12:ArrayOfAcao" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

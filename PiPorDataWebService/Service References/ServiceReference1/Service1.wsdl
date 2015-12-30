@@ -43,18 +43,6 @@
   <wsdl:message name="IService1_GetNumFuncionarioPorData_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetNumFuncionarioPorDataResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_GetNumAcoesPorData_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetNumAcoesPorData" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetNumAcoesPorData_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetNumAcoesPorDataResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetNumFuncCatPorData_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetNumFuncCatPorData" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetNumFuncCatPorData_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetNumFuncCatPorDataResponse" />
-  </wsdl:message>
   <wsdl:message name="IService1_GetNumFuncCategoriaPorData_InputMessage">
     <wsdl:part name="parameters" element="tns:GetNumFuncCategoriaPorData" />
   </wsdl:message>
@@ -127,14 +115,6 @@
     <wsdl:operation name="GetNumFuncionarioPorData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNumFuncionarioPorData" message="tns:IService1_GetNumFuncionarioPorData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNumFuncionarioPorDataResponse" message="tns:IService1_GetNumFuncionarioPorData_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetNumAcoesPorData">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNumAcoesPorData" message="tns:IService1_GetNumAcoesPorData_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNumAcoesPorDataResponse" message="tns:IService1_GetNumAcoesPorData_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetNumFuncCatPorData">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNumFuncCatPorData" message="tns:IService1_GetNumFuncCatPorData_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNumFuncCatPorDataResponse" message="tns:IService1_GetNumFuncCatPorData_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetNumFuncCategoriaPorData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNumFuncCategoriaPorData" message="tns:IService1_GetNumFuncCategoriaPorData_InputMessage" />
@@ -218,24 +198,6 @@
     </wsdl:operation>
     <wsdl:operation name="GetNumFuncionarioPorData">
       <soap:operation soapAction="http://tempuri.org/IService1/GetNumFuncionarioPorData" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetNumAcoesPorData">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetNumAcoesPorData" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetNumFuncCatPorData">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetNumFuncCatPorData" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

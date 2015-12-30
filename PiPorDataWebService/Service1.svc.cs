@@ -169,8 +169,8 @@ namespace PiPorDataWebService
 
        public List<Funcionario> GetNumFunc(int dataInicio, int dataFim, string token)
         {
-            int valor = 0;
-            int valorMedico = 0, valorEnfermagem = 0, valorEnfermeiros = 0, valorTer = 0;
+            double valor = 0;
+            double valorMedico = 0, valorEnfermagem = 0, valorEnfermeiros = 0, valorTer = 0;
             checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
@@ -193,7 +193,7 @@ namespace PiPorDataWebService
                         valorMedico = 0;
                     }else
                     {
-                        valorMedico = Convert.ToInt32(medicos.InnerText);
+                        valorMedico = Convert.ToDouble(medicos.InnerText);
                     }
                     XmlNode pessoalDeEnfermagem = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/PessoalDeEnfermagem");
 
@@ -202,7 +202,7 @@ namespace PiPorDataWebService
                         valorEnfermagem = 0;
                     }else
                     {
-                        valorEnfermagem = Convert.ToInt32(pessoalDeEnfermagem.InnerText);
+                        valorEnfermagem = Convert.ToDouble(pessoalDeEnfermagem.InnerText);
                     }
                 
                     XmlNode enfermeiros = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/Enfermeiros");
@@ -213,7 +213,7 @@ namespace PiPorDataWebService
                     }
                     else
                     {
-                        valorEnfermeiros = Convert.ToInt32(enfermeiros.InnerText);
+                        valorEnfermeiros = Convert.ToDouble(enfermeiros.InnerText);
                     }
                     XmlNode tecnicosDiagnosticoTerapeutica = doc.SelectSingleNode("//Anos[@ano=" + i + "]/PessoalAoServico/TecnicosDiagnosticoTerapeutica");
                     if(tecnicosDiagnosticoTerapeutica  == null)
@@ -221,13 +221,13 @@ namespace PiPorDataWebService
                         valorTer = 0;
                     }else
                     {
-                        valorTer = Convert.ToInt32(tecnicosDiagnosticoTerapeutica.InnerText);
+                        valorTer = Convert.ToDouble(tecnicosDiagnosticoTerapeutica.InnerText);
                     }
-                    valor = valorMedico + valorEnfermagem + valorEnfermeiros + valorTer ;
+                    valor = Math.Round(valorMedico + valorEnfermagem + valorEnfermeiros + valorTer, 0);
 
                     if(valor != 0)
                     {
-                        Funcionario func = new Funcionario(i, valor);
+                        Funcionario func = new Funcionario(i, valor, 0.0);
                         funcionarios.Add(func);
                     }
                    
@@ -251,9 +251,9 @@ namespace PiPorDataWebService
 
 
         
-        public List<Acao> GetNumAcoesCategoria(int dataInicio, int dataFim, string categoria, string token)
+        public List<Acao> GetNumAcoesCategoria(int dataInicio, int dataFim, string categoria, string token) 
         {
-            int valor = 0;
+            double valor = 0;
             checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
@@ -277,13 +277,13 @@ namespace PiPorDataWebService
                             }
                             else
                             {
-                                valor = Convert.ToInt32(consultas.InnerText);
+                                valor = Math.Round(Convert.ToDouble(consultas.InnerText), 0);
                             }
 
 
                             if (valor != 0)
                             {
-                                Acao acao = new Acao(i, valor);
+                                Acao acao = new Acao(i, 0.0, valor);
                                 acoes.Add(acao);
                             }
                             
@@ -308,13 +308,13 @@ namespace PiPorDataWebService
                             }
                             else
                             {
-                                valor = Convert.ToInt32(internamentos.InnerText);
+                                valor = Math.Round(Convert.ToDouble(internamentos.InnerText), 0);
                             }
 
 
                             if (valor != 0)
                             {
-                                Acao acao = new Acao(i, valor);
+                                Acao acao = new Acao(i, 0.0, valor);
                                 acoes.Add(acao);
                             }
                             
@@ -339,13 +339,13 @@ namespace PiPorDataWebService
                             }
                             else
                             {
-                                valor = Convert.ToInt32(urgencias.InnerText);
+                                valor = Math.Round(Convert.ToDouble(urgencias.InnerText), 0);
                             }
 
 
                             if (valor != 0)
                             {
-                                Acao acao = new Acao(i, valor);
+                                Acao acao = new Acao(i, 0.0, valor);
                                 acoes.Add(acao);
                             }
                             
@@ -373,7 +373,7 @@ namespace PiPorDataWebService
 
 
 
-        public List<Acao> GetNumAcoes(int dataInicio, int dataFim, string token)
+       /* public List<Acao> GetNumAcoes(int dataInicio, int dataFim, string token)
         {
 
             int valorC = 0;
@@ -402,9 +402,9 @@ namespace PiPorDataWebService
             return acoes;
 
 
-        }
+        }*/
        
-        public List<Funcionario> GetNumFuncCategoria(int dataInicio, int dataFim, string token)
+        /*public List<Funcionario> GetNumFuncCategoria(int dataInicio, int dataFim, string token)
         {
             int valorM = 0;
             int valorE = 0;
@@ -449,14 +449,14 @@ namespace PiPorDataWebService
             return funcionarios;
 
 
-        }
+        }*/
 
 
 
         
         public List<Funcionario> GetNumFuncCategoriaS(int dataInicio, int dataFim, string categoria, string token)
         {
-            int valor = 0;
+            double valor = 0;
             checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
@@ -483,13 +483,13 @@ namespace PiPorDataWebService
                             }
                             else
                             {
-                                valor = Convert.ToInt32(medicos.InnerText);
+                                valor = Math.Round(Convert.ToDouble(medicos.InnerText), 0);
                             }
 
 
                             if (valor != 0)
                             {
-                                Funcionario func = new Funcionario(i, valor);
+                                Funcionario func = new Funcionario(i, valor, 0.0);
                                 funcionarios.Add(func);
                             }
                             
@@ -514,13 +514,13 @@ namespace PiPorDataWebService
                             }
                             else
                             {
-                                valor = Convert.ToInt32(pessoalDeEnfermagem.InnerText);
+                                valor = Math.Round(Convert.ToDouble(pessoalDeEnfermagem.InnerText), 0);
                             }
 
 
                             if (valor != 0)
                             {
-                                Funcionario func = new Funcionario(i, valor);
+                                Funcionario func = new Funcionario(i, valor, 0.0);
                                 funcionarios.Add(func);
                             }
 
@@ -546,13 +546,13 @@ namespace PiPorDataWebService
                             }
                             else
                             {
-                                valor = Convert.ToInt32(enfermeiros.InnerText);
+                                valor = Math.Round(Convert.ToDouble(enfermeiros.InnerText), 0);
                             }
 
 
                             if (valor != 0)
                             {
-                                Funcionario func = new Funcionario(i, valor);
+                                Funcionario func = new Funcionario(i, valor, 0.0);
                                 funcionarios.Add(func);
                             }
                             
@@ -575,13 +575,13 @@ namespace PiPorDataWebService
                             }
                             else
                             {
-                                valor = Convert.ToInt32(tecnicos.InnerText);
+                                valor = Math.Round(Convert.ToDouble(tecnicos.InnerText), 0);
                             }
 
 
                             if (valor != 0)
                             {
-                                Funcionario func = new Funcionario(i, valor);
+                                Funcionario func = new Funcionario(i, valor, 0.0);
                                 funcionarios.Add(func);
                             }
                             
@@ -686,12 +686,13 @@ namespace PiPorDataWebService
 
                     funcionariosTotal = valorMedicos + valorEnfermagem + valorEnfermeiros + valorTerapia;
 
-                    valor = despesaPessoal / funcionariosTotal;
+                   
 
 
-                    if (valor != 0)
+                    if (funcionariosTotal != 0)
                     {
-                        Funcionario func = new Funcionario(i, valor);
+                        valor = Math.Round(despesaPessoal / funcionariosTotal, 2);
+                        Funcionario func = new Funcionario(i, 0.0, valor);
                         funcionarios.Add(func);
                     }
 
@@ -719,7 +720,7 @@ namespace PiPorDataWebService
             double valorPercentagem = 0.0;
 
 
-            checkAuthentication(token, false);
+           checkAuthentication(token, false);
             XmlDocument doc = new XmlDocument();
             doc.Load(FILEPATH);
 
@@ -758,24 +759,17 @@ namespace PiPorDataWebService
                         despesaTotal = Convert.ToDouble(total.InnerText);
                     }
 
+                   
 
-
-
-                    valor = despesaPessoal / despesaTotal;
-
-                    valorPercentagem = valor * 100;
-
-                    if (valorPercentagem != 0)
+                    if (despesaTotal != 0 || despesaPessoal != 0)
                     {
-                        Funcionario func = new Funcionario(i, valorPercentagem);
+
+                        valor = despesaPessoal / despesaTotal;
+
+                        valorPercentagem = Math.Round(valor * 100, 2);
+                        Funcionario func = new Funcionario(i, 0.0, valorPercentagem);
                         funcionarios.Add(func);
                     }
-                    
-
-
-
-
-
 
                 }
 
@@ -855,13 +849,15 @@ namespace PiPorDataWebService
 
                     despesaMedicamentos = valorSns + valorUtente;
 
-                    valor = despesaMedicamentos / despesaTotal;
-
-                    valorPercentagem = valor * 100;
 
 
-                    if (valorPercentagem != 0)
+
+                    if (despesaMedicamentos !=0)
                     {
+                      
+
+                        valor = despesaMedicamentos / despesaTotal;
+                        valorPercentagem = Math.Round(valor * 100, 2);
                         Medicamento medicamento = new Medicamento(i, valorPercentagem);
                         medicamentos.Add(medicamento);
                     }
@@ -890,7 +886,7 @@ namespace PiPorDataWebService
         public List<Cama> GetMediaCamas(int dataInicio, int dataFim, string token)
         {
 
-            int hospitais = 0, valorGerais = 0, valorEspecializados = 0;
+            double hospitais = 0, valorGerais = 0, valorEspecializados = 0;
             double media = 0.0;
             
 
@@ -918,7 +914,7 @@ namespace PiPorDataWebService
                     }
                     else
                     {
-                        valorGerais = Convert.ToInt32(hospitaisGerais.InnerText);
+                        valorGerais = Convert.ToDouble(hospitaisGerais.InnerText);
                     }
 
                     XmlNode hospitaisEspecializados = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Lotacao/HospitaisEspecialiazados");
@@ -929,7 +925,7 @@ namespace PiPorDataWebService
                     }
                     else
                     {
-                        valorEspecializados = Convert.ToInt32(hospitaisEspecializados.InnerText);
+                        valorEspecializados = Convert.ToDouble(hospitaisEspecializados.InnerText);
                     }
 
 
@@ -938,7 +934,7 @@ namespace PiPorDataWebService
 
                     hospitais = valorGerais + valorEspecializados;
 
-                    media = hospitais / 2;
+                    media = Math.Round(hospitais / 2, 2);
 
 
                     if (media != 0)
@@ -975,7 +971,7 @@ namespace PiPorDataWebService
             double valorGerais = 0.0, valorEspecializados = 0.0, valorCentros = 0.0, valorExtensoes = 0.0;
             double funcionarios = 0.0;
             double estabelecimentos = 0.0;
-            double valorPercentagem = 0.0;
+   
 
 
             checkAuthentication(token, false);
@@ -1050,7 +1046,7 @@ namespace PiPorDataWebService
                     }
                     else
                     {
-                        valorGerais = Convert.ToInt32(hospitaisGerais.InnerText);
+                        valorGerais = Convert.ToDouble(hospitaisGerais.InnerText);
                     }
 
                     XmlNode hospitaisEspecializados = doc.SelectSingleNode("//Anos[@ano=" + i + "]/EstabelecimentosSaude/HospitaisEspecialiazados");
@@ -1061,7 +1057,7 @@ namespace PiPorDataWebService
                     }
                     else
                     {
-                        valorEspecializados = Convert.ToInt32(hospitaisEspecializados.InnerText);
+                        valorEspecializados = Convert.ToDouble(hospitaisEspecializados.InnerText);
                     }
 
                     XmlNode centrosSaude = doc.SelectSingleNode("//Anos[@ano=" + i + "]/EstabelecimentosSaude/CentrosDeSaude");
@@ -1072,7 +1068,7 @@ namespace PiPorDataWebService
                     }
                     else
                     {
-                        valorCentros = Convert.ToInt32(centrosSaude.InnerText);
+                        valorCentros = Convert.ToDouble(centrosSaude.InnerText);
                     }
 
                     XmlNode extensoes = doc.SelectSingleNode("//Anos[@ano=" + i + "]/EstabelecimentosSaude/ExtensoesCentroSaude");
@@ -1083,7 +1079,7 @@ namespace PiPorDataWebService
                     }
                     else
                     {
-                        valorExtensoes = Convert.ToInt32(extensoes.InnerText);
+                        valorExtensoes = Convert.ToDouble(extensoes.InnerText);
                     }
 
 
@@ -1094,14 +1090,15 @@ namespace PiPorDataWebService
 
 
 
-                    valor = funcionarios / estabelecimentos;
-
-                    valorPercentagem = valor * 100;
+                    
 
 
-                    if (valorPercentagem != 0)
+                    if (funcionarios != 0 || estabelecimentos != 0)
                     {
-                        Funcionario func = new Funcionario(i, valorPercentagem);
+
+                        valor =Math.Round(funcionarios / estabelecimentos, 0);
+                        
+                        Funcionario func = new Funcionario(i, 0.0, valor);
                         listaFuncionarios.Add(func);
                     }
                     
@@ -1173,12 +1170,14 @@ namespace PiPorDataWebService
                             }
 
 
-                            valor = valorConsultas / valorConsultasTotal;
-                            percentagem = valor * 100;
+                          
+                            
 
-                            if (percentagem != 0)
+                            if (valorConsultas != 0 || valorConsultasTotal != 0)
                             {
-                                Acao acao = new Acao(i, percentagem);
+                                valor = valorConsultas / valorConsultasTotal;
+                                percentagem = Math.Round(valor * 100, 2);
+                                Acao acao = new Acao(i, percentagem, 0.0);
                                 acoes.Add(acao);
                             }
                            
@@ -1219,13 +1218,15 @@ namespace PiPorDataWebService
                             }
 
 
-                            valor = valorInternamentos / valorInternamentosTotal;
-                            percentagem = valor * 100;
+                         
+                            
 
 
-                            if (percentagem != 0)
+                            if (valorInternamentos != 0 || valorConsultasTotal != 0)
                             {
-                                Acao acao = new Acao(i, percentagem);
+                                valor = valorInternamentos / valorInternamentosTotal;
+                                percentagem = Math.Round(valor * 100, 2);
+                                Acao acao = new Acao(i, percentagem, 0.0);
                                 acoes.Add(acao);
                             }
                             
@@ -1266,12 +1267,15 @@ namespace PiPorDataWebService
                             }
 
 
-                            valor = valorUrgencias / valorUrgenciasTotal;
-                            percentagem = valor * 100;
+                           
+                            
 
-                            if (percentagem != 0)
+                            if (valorUrgencias != 0 || valorUrgenciasTotal != 0)
                             {
-                                Acao acao = new Acao(i, percentagem);
+                                valor = valorUrgencias / valorUrgenciasTotal;
+
+                                percentagem = Math.Round(valor * 100, 2);
+                                Acao acao = new Acao(i, percentagem, 0.0);
                                 acoes.Add(acao);
                             }
 
@@ -1295,6 +1299,11 @@ namespace PiPorDataWebService
 
 
         }
+
+
+
+
+
 
         public void ReceberXml(string xml)
         {

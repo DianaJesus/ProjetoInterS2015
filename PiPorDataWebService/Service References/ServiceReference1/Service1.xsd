@@ -85,38 +85,6 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetNumAcoesPorData">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="dataInicio" type="xs:int" />
-        <xs:element minOccurs="0" name="dataFim" type="xs:int" />
-        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetNumAcoesPorDataResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetNumAcoesPorDataResult" nillable="true" type="q3:ArrayOfAcao" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetNumFuncCatPorData">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="dataInicio" type="xs:int" />
-        <xs:element minOccurs="0" name="dataFim" type="xs:int" />
-        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetNumFuncCatPorDataResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetNumFuncCatPorDataResult" nillable="true" type="q4:ArrayOfFuncionario" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="GetNumFuncCategoriaPorData">
     <xs:complexType>
       <xs:sequence>
@@ -130,7 +98,7 @@
   <xs:element name="GetNumFuncCategoriaPorDataResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetNumFuncCategoriaPorDataResult" nillable="true" type="q5:ArrayOfFuncionario" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetNumFuncCategoriaPorDataResult" nillable="true" type="q3:ArrayOfFuncionario" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -146,7 +114,7 @@
   <xs:element name="GetMediaFuncionarioPorDataResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetMediaFuncionarioPorDataResult" nillable="true" type="q6:ArrayOfFuncionario" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetMediaFuncionarioPorDataResult" nillable="true" type="q4:ArrayOfFuncionario" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -162,7 +130,7 @@
   <xs:element name="GetPercentagemPessoalPorDataResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetPercentagemPessoalPorDataResult" nillable="true" type="q7:ArrayOfFuncionario" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetPercentagemPessoalPorDataResult" nillable="true" type="q5:ArrayOfFuncionario" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -178,7 +146,7 @@
   <xs:element name="GetPercentagemMedicamentosPorDataResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetPercentagemMedicamentosPorDataResult" nillable="true" type="q8:ArrayOfMedicamento" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetPercentagemMedicamentosPorDataResult" nillable="true" type="q6:ArrayOfMedicamento" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -194,7 +162,7 @@
   <xs:element name="GetMediaCamasPorDataResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetMediaCamasPorDataResult" nillable="true" type="q9:ArrayOfCama" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetMediaCamasPorDataResult" nillable="true" type="q7:ArrayOfCama" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -210,7 +178,7 @@
   <xs:element name="GetRacioFuncionariosPorDataResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetRacioFuncionariosPorDataResult" nillable="true" type="q10:ArrayOfFuncionario" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetRacioFuncionariosPorDataResult" nillable="true" type="q8:ArrayOfFuncionario" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -227,7 +195,7 @@
   <xs:element name="GetAcoesCategoriaPorDataResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetAcoesCategoriaPorDataResult" nillable="true" type="q11:ArrayOfAcao" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetAcoesCategoriaPorDataResult" nillable="true" type="q9:ArrayOfAcao" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -244,7 +212,7 @@
   <xs:element name="GetPercentagemAcoesPorDataResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetPercentagemAcoesPorDataResult" nillable="true" type="q12:ArrayOfAcao" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/PiPorDataWebService" minOccurs="0" name="GetPercentagemAcoesPorDataResult" nillable="true" type="q10:ArrayOfAcao" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

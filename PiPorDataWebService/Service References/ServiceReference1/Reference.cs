@@ -103,13 +103,7 @@ namespace PiPorDataWebService.ServiceReference1 {
         private int AnoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int Soma1Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int Soma2Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int Soma3Field;
+        private double Soma1Field;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private double ValorField;
@@ -138,7 +132,7 @@ namespace PiPorDataWebService.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Soma1 {
+        public double Soma1 {
             get {
                 return this.Soma1Field;
             }
@@ -146,141 +140,6 @@ namespace PiPorDataWebService.ServiceReference1 {
                 if ((this.Soma1Field.Equals(value) != true)) {
                     this.Soma1Field = value;
                     this.RaisePropertyChanged("Soma1");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Soma2 {
-            get {
-                return this.Soma2Field;
-            }
-            set {
-                if ((this.Soma2Field.Equals(value) != true)) {
-                    this.Soma2Field = value;
-                    this.RaisePropertyChanged("Soma2");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Soma3 {
-            get {
-                return this.Soma3Field;
-            }
-            set {
-                if ((this.Soma3Field.Equals(value) != true)) {
-                    this.Soma3Field = value;
-                    this.RaisePropertyChanged("Soma3");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public double Valor {
-            get {
-                return this.ValorField;
-            }
-            set {
-                if ((this.ValorField.Equals(value) != true)) {
-                    this.ValorField = value;
-                    this.RaisePropertyChanged("Valor");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Acao", Namespace="http://schemas.datacontract.org/2004/07/PiPorDataWebService")]
-    [System.SerializableAttribute()]
-    public partial class Acao : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int AnoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int Soma1Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int Soma2Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int Soma3Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private double ValorField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Ano {
-            get {
-                return this.AnoField;
-            }
-            set {
-                if ((this.AnoField.Equals(value) != true)) {
-                    this.AnoField = value;
-                    this.RaisePropertyChanged("Ano");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Soma1 {
-            get {
-                return this.Soma1Field;
-            }
-            set {
-                if ((this.Soma1Field.Equals(value) != true)) {
-                    this.Soma1Field = value;
-                    this.RaisePropertyChanged("Soma1");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Soma2 {
-            get {
-                return this.Soma2Field;
-            }
-            set {
-                if ((this.Soma2Field.Equals(value) != true)) {
-                    this.Soma2Field = value;
-                    this.RaisePropertyChanged("Soma2");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Soma3 {
-            get {
-                return this.Soma3Field;
-            }
-            set {
-                if ((this.Soma3Field.Equals(value) != true)) {
-                    this.Soma3Field = value;
-                    this.RaisePropertyChanged("Soma3");
                 }
             }
         }
@@ -430,6 +289,83 @@ namespace PiPorDataWebService.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Acao", Namespace="http://schemas.datacontract.org/2004/07/PiPorDataWebService")]
+    [System.SerializableAttribute()]
+    public partial class Acao : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int AnoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double Soma1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double ValorField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Ano {
+            get {
+                return this.AnoField;
+            }
+            set {
+                if ((this.AnoField.Equals(value) != true)) {
+                    this.AnoField = value;
+                    this.RaisePropertyChanged("Ano");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Soma1 {
+            get {
+                return this.Soma1Field;
+            }
+            set {
+                if ((this.Soma1Field.Equals(value) != true)) {
+                    this.Soma1Field = value;
+                    this.RaisePropertyChanged("Soma1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Valor {
+            get {
+                return this.ValorField;
+            }
+            set {
+                if ((this.ValorField.Equals(value) != true)) {
+                    this.ValorField = value;
+                    this.RaisePropertyChanged("Valor");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
@@ -469,18 +405,6 @@ namespace PiPorDataWebService.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetNumFuncionarioPorData", ReplyAction="http://tempuri.org/IService1/GetNumFuncionarioPorDataResponse")]
         System.Threading.Tasks.Task<PiPorDataWebService.ServiceReference1.Funcionario[]> GetNumFuncionarioPorDataAsync(int dataInicio, int dataFim, string token);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetNumAcoesPorData", ReplyAction="http://tempuri.org/IService1/GetNumAcoesPorDataResponse")]
-        PiPorDataWebService.ServiceReference1.Acao[] GetNumAcoesPorData(int dataInicio, int dataFim, string token);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetNumAcoesPorData", ReplyAction="http://tempuri.org/IService1/GetNumAcoesPorDataResponse")]
-        System.Threading.Tasks.Task<PiPorDataWebService.ServiceReference1.Acao[]> GetNumAcoesPorDataAsync(int dataInicio, int dataFim, string token);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetNumFuncCatPorData", ReplyAction="http://tempuri.org/IService1/GetNumFuncCatPorDataResponse")]
-        PiPorDataWebService.ServiceReference1.Funcionario[] GetNumFuncCatPorData(int dataInicio, int dataFim, string token);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetNumFuncCatPorData", ReplyAction="http://tempuri.org/IService1/GetNumFuncCatPorDataResponse")]
-        System.Threading.Tasks.Task<PiPorDataWebService.ServiceReference1.Funcionario[]> GetNumFuncCatPorDataAsync(int dataInicio, int dataFim, string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetNumFuncCategoriaPorData", ReplyAction="http://tempuri.org/IService1/GetNumFuncCategoriaPorDataResponse")]
         PiPorDataWebService.ServiceReference1.Funcionario[] GetNumFuncCategoriaPorData(int dataInicio, int dataFim, string categoria, string token);
@@ -604,22 +528,6 @@ namespace PiPorDataWebService.ServiceReference1 {
         
         public System.Threading.Tasks.Task<PiPorDataWebService.ServiceReference1.Funcionario[]> GetNumFuncionarioPorDataAsync(int dataInicio, int dataFim, string token) {
             return base.Channel.GetNumFuncionarioPorDataAsync(dataInicio, dataFim, token);
-        }
-        
-        public PiPorDataWebService.ServiceReference1.Acao[] GetNumAcoesPorData(int dataInicio, int dataFim, string token) {
-            return base.Channel.GetNumAcoesPorData(dataInicio, dataFim, token);
-        }
-        
-        public System.Threading.Tasks.Task<PiPorDataWebService.ServiceReference1.Acao[]> GetNumAcoesPorDataAsync(int dataInicio, int dataFim, string token) {
-            return base.Channel.GetNumAcoesPorDataAsync(dataInicio, dataFim, token);
-        }
-        
-        public PiPorDataWebService.ServiceReference1.Funcionario[] GetNumFuncCatPorData(int dataInicio, int dataFim, string token) {
-            return base.Channel.GetNumFuncCatPorData(dataInicio, dataFim, token);
-        }
-        
-        public System.Threading.Tasks.Task<PiPorDataWebService.ServiceReference1.Funcionario[]> GetNumFuncCatPorDataAsync(int dataInicio, int dataFim, string token) {
-            return base.Channel.GetNumFuncCatPorDataAsync(dataInicio, dataFim, token);
         }
         
         public PiPorDataWebService.ServiceReference1.Funcionario[] GetNumFuncCategoriaPorData(int dataInicio, int dataFim, string categoria, string token) {

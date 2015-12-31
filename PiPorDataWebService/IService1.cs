@@ -184,33 +184,52 @@ namespace PiPorDataWebService
     public class Funcionario
     {
         private int ano;
-        private double soma1;
-        private double valor;
+        private double media;
+        private double numFun;
+        private double percenPessoal;
+        private double percenFun;
 
 
-        public Funcionario(int ano, double soma1, double valor)
+
+        public Funcionario(int ano, double media,  double numFun, double percenPessoal, double percenFun)
         {
 
             this.ano = ano;
-            this.soma1 = soma1;
-            this.valor = valor;
+            this.media = media;
+            this.numFun = numFun;
+            this.percenPessoal = percenPessoal;
+            this.percenFun = percenFun;
         }
 
 
 
-
+        
         [DataMember]
-        public double Soma1
+        public double Media
         {
-            get { return soma1; }
-            set { soma1 = value; }
+            get { return media; }
+            set { media = value; }
        }
 
         [DataMember]
-        public double Valor
+        public double NumFun
         {
-            get { return valor; }
-            set { valor = value; }
+            get { return numFun; }
+            set { numFun = value; }
+
+        }
+        [DataMember]
+        public double PercenPessoal
+        {
+            get { return percenPessoal; }
+            set { percenPessoal = value; }
+
+        }
+        [DataMember]
+        public double PercenFun
+        {
+            get { return percenFun; }
+            set { percenFun = value; }
         }
 
 

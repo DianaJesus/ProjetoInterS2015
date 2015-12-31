@@ -228,7 +228,7 @@ namespace PiPorDataWebService
 
                     if(valor != 0)
                     {
-                        Funcionario func = new Funcionario(i, valor, 0.0);
+                        Funcionario func = new Funcionario(i, 0.0, valor, 0.0, 0.0);
                         funcionarios.Add(func);
                     }
                    
@@ -490,7 +490,7 @@ namespace PiPorDataWebService
 
                             if (valor != 0)
                             {
-                                Funcionario func = new Funcionario(i, valor, 0.0);
+                                Funcionario func = new Funcionario(i,0.0,valor, 0.0,0.0);
                                 funcionarios.Add(func);
                             }
                             
@@ -521,7 +521,7 @@ namespace PiPorDataWebService
 
                             if (valor != 0)
                             {
-                                Funcionario func = new Funcionario(i, valor, 0.0);
+                                Funcionario func = new Funcionario(i, 0.0, valor, 0.0, 0.0);
                                 funcionarios.Add(func);
                             }
 
@@ -553,7 +553,7 @@ namespace PiPorDataWebService
 
                             if (valor != 0)
                             {
-                                Funcionario func = new Funcionario(i, valor, 0.0);
+                                Funcionario func = new Funcionario(i, 0.0, valor, 0.0, 0.0);
                                 funcionarios.Add(func);
                             }
                             
@@ -582,7 +582,7 @@ namespace PiPorDataWebService
 
                             if (valor != 0)
                             {
-                                Funcionario func = new Funcionario(i, valor, 0.0);
+                                Funcionario func = new Funcionario(i, 0.0, valor, 0.0, 0.0);
                                 funcionarios.Add(func);
                             }
                             
@@ -693,7 +693,7 @@ namespace PiPorDataWebService
                     if (funcionariosTotal != 0)
                     {
                         valor = Math.Round(despesaPessoal / funcionariosTotal, 2);
-                        Funcionario func = new Funcionario(i, 0.0, valor);
+                        Funcionario func = new Funcionario(i, valor,0.0,0.0,0.0);
                         funcionarios.Add(func);
                     }
 
@@ -768,7 +768,7 @@ namespace PiPorDataWebService
                         valor = despesaPessoal / despesaTotal;
 
                         valorPercentagem = Math.Round(valor * 100, 2);
-                        Funcionario func = new Funcionario(i, 0.0, valorPercentagem);
+                        Funcionario func = new Funcionario(i, 0.0,0.0,valorPercentagem,0.0);
                         funcionarios.Add(func);
                     }
 
@@ -1099,7 +1099,7 @@ namespace PiPorDataWebService
 
                         valor =Math.Round(funcionarios / estabelecimentos, 0);
                         
-                        Funcionario func = new Funcionario(i, 0.0, valor);
+                        Funcionario func = new Funcionario(i, 0.0, 0.0,0.0,valor);
                         listaFuncionarios.Add(func);
                     }
                     

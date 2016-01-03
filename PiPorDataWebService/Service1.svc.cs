@@ -500,7 +500,7 @@ namespace PiPorDataWebService
                     break;
 
 
-                case "Pessoal de Enfermagem":
+                case "PessoaldeEnfermagem":
 
                     foreach (XmlNode item in doc.SelectNodes("/Projeto"))
                     {
@@ -562,7 +562,7 @@ namespace PiPorDataWebService
 
                     break;
 
-                case "Técnicos de Diagnostico Terapeutica":
+                case "TécnicosdeDiagnosticoTerapeutica":
 
                     foreach (XmlNode item in doc.SelectNodes("/Projeto"))
                     {

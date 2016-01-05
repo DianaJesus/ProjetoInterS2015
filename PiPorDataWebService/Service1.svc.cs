@@ -309,7 +309,7 @@ namespace PiPorDataWebService
                     break;
 
 
-                case "Urgências":
+                case "Urgencias":
 
                     foreach (XmlNode item in doc.SelectNodes("/Projeto"))
                     {

@@ -873,7 +873,7 @@ namespace PiPorDataWebService
                     contaHospitais = contaGerais + contaEspecializados;
 
 
-                    media = Math.Round(hospitais / contaHospitais, 2);
+                    media = Math.Round(hospitais / contaHospitais, 0);
 
 
                     if (media != 0)

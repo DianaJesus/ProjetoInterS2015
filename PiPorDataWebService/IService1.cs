@@ -135,6 +135,10 @@ namespace PiPorDataWebService
         List<Acao> GetPercentagemAcoes(int dataInicio, int dataFim, string categoria, string token);
 
 
+        //SOAP
+        [OperationContract(Name = "ReceberXml")]
+        Boolean ReceberXml(string xml);
+
 
 
     }

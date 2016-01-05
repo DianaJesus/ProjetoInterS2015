@@ -33,8 +33,9 @@ namespace PiPorDataWebService
             // default administrator
             utilizadores.Add("admin", new Utilizador("admin", "admin", true));
             FILEPATH = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, "App_Data", "XmlTestexml.xml");
+  
         }
-
+        //ceijfeijfiejfeijfije
 
         private class Token
         {
@@ -928,6 +929,8 @@ namespace PiPorDataWebService
                         valorEspecializados = Convert.ToDouble(hospitaisEspecializados.InnerText);
                     }
 
+                    
+
 
 
 
@@ -1302,14 +1305,26 @@ namespace PiPorDataWebService
 
 
 
+        //cejsdnsjs
 
 
-
-        public void ReceberXml(string xml)
+        public Boolean ReceberXml(string xml)
         {
-            FILEPATH = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, "App_Data", "XmlTestexml.xml");
-            XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.LoadXml(xml);
+
+            try
+            {
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.LoadXml(xml);
+                xmlDoc.Save(FILEPATH);
+                return true;
+            }
+            catch (Exception ex )
+            {
+                return false;
+               
+            }
+
+
         }
 
 

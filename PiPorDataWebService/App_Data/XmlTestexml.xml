@@ -1,3059 +1,1400 @@
-﻿<?xml version="1.0"?>
-
 <Projeto>
-
-
-  -<Anos ano="1985">
-
-
-    -<Camas>
-
-      <CamasHospitalGeral>-</CamasHospitalGeral>
-
-      <CamasHospitalEspecializados>-</CamasHospitalEspecializados>
-
+  <Anos ano="1985">
+    <Camas>
+      <CamasHospitalGeral>
+      </CamasHospitalGeral>
+      <CamasHospitalEspecializados>
+      </CamasHospitalEspecializados>
       <CamasCentrodeSaude>46,6</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>0</Total>
-
       <Hospitais>0</Hospitais>
-
       <CentrosSaude>17620</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>660</Total>
-
       <Hospitais>600</Hospitais>
-
       <CentrosSaude>59,5</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>5901</Total>
-
       <Hospitais>3968</Hospitais>
-
       <CentrosSaude>1933</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>70</HospitaisGerais>
-
       <HospitaisEspecialiazados>24</HospitaisEspecialiazados>
-
       <CentrosDeSaude>329</CentrosDeSaude>
-
       <ExtensoesCentroSaude>1860</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>0</HospitaisGerais>
-
       <HospitaisEspecialiazados>0</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>4430</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>648,3</Total>
-
       <ComPessoal>308,3</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>648,3</Total>
-
       <ComPessoal>308,3</ComPessoal>
-
     </DespesaSns>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>21275</Medicos>
-
       <PessoalDeEnfermagem>19289</PessoalDeEnfermagem>
-
       <Enfermeiros>0</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>2977</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="1986">
-
-
-    -<Camas>
-
-      <CamasHospitalGeral>-</CamasHospitalGeral>
-
-      <CamasHospitalEspecializados>-</CamasHospitalEspecializados>
-
-      <CamasCentrodeSaude>-</CamasCentrodeSaude>
-
+  <Anos ano="1986">
+    <Camas>
+      <CamasHospitalGeral>
+      </CamasHospitalGeral>
+      <CamasHospitalEspecializados>
+      </CamasHospitalEspecializados>
+      <CamasCentrodeSaude>
+      </CamasCentrodeSaude>
     </Camas>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>793,4</Total>
-
       <ComPessoal>0</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>793,4</Total>
-
       <ComPessoal>0</ComPessoal>
-
     </DespesaSns>
-
   </Anos>
-
-
-  -<Anos ano="1987">
-
-
-    -<Camas>
-
-      <CamasHospitalGeral>-</CamasHospitalGeral>
-
-      <CamasHospitalEspecializados>-</CamasHospitalEspecializados>
-
-      <CamasCentrodeSaude>-</CamasCentrodeSaude>
-
+  <Anos ano="1987">
+    <Camas>
+      <CamasHospitalGeral>
+      </CamasHospitalGeral>
+      <CamasHospitalEspecializados>
+      </CamasHospitalEspecializados>
+      <CamasCentrodeSaude>
+      </CamasCentrodeSaude>
     </Camas>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>954</Total>
-
       <ComPessoal>0</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>954</Total>
-
       <ComPessoal>0</ComPessoal>
-
     </DespesaSns>
-
   </Anos>
-
-
-  -<Anos ano="1988">
-
-
-    -<Camas>
-
-      <CamasHospitalGeral>-</CamasHospitalGeral>
-
-      <CamasHospitalEspecializados>-</CamasHospitalEspecializados>
-
-      <CamasCentrodeSaude>-</CamasCentrodeSaude>
-
+  <Anos ano="1988">
+    <Camas>
+      <CamasHospitalGeral>
+      </CamasHospitalGeral>
+      <CamasHospitalEspecializados>
+      </CamasHospitalEspecializados>
+      <CamasCentrodeSaude>
+      </CamasCentrodeSaude>
     </Camas>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>1163,3</Total>
-
       <ComPessoal>0</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>1163,3</Total>
-
       <ComPessoal>0</ComPessoal>
-
     </DespesaSns>
-
   </Anos>
-
-
-  -<Anos ano="1989">
-
-
-    -<Camas>
-
-      <CamasHospitalGeral>-</CamasHospitalGeral>
-
-      <CamasHospitalEspecializados>-</CamasHospitalEspecializados>
-
-      <CamasCentrodeSaude>-</CamasCentrodeSaude>
-
+  <Anos ano="1989">
+    <Camas>
+      <CamasHospitalGeral>
+      </CamasHospitalGeral>
+      <CamasHospitalEspecializados>
+      </CamasHospitalEspecializados>
+      <CamasCentrodeSaude>
+      </CamasCentrodeSaude>
     </Camas>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>1362,9</Total>
-
       <ComPessoal>0</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>1362,9</Total>
-
       <ComPessoal>0</ComPessoal>
-
     </DespesaSns>
-
   </Anos>
-
-
-  -<Anos ano="1990">
-
-
-    -<Camas>
-
-      <CamasHospitalGeral>-</CamasHospitalGeral>
-
-      <CamasHospitalEspecializados>-</CamasHospitalEspecializados>
-
+  <Anos ano="1990">
+    <Camas>
+      <CamasHospitalGeral>
+      </CamasHospitalGeral>
+      <CamasHospitalEspecializados>
+      </CamasHospitalEspecializados>
       <CamasCentrodeSaude>29,8</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>0</Total>
-
       <Hospitais>0</Hospitais>
-
       <CentrosSaude>24082</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>894</Total>
-
       <Hospitais>849</Hospitais>
-
       <CentrosSaude>45,4</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>8701</Total>
-
       <Hospitais>5387</Hospitais>
-
       <CentrosSaude>3314</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>81</HospitaisGerais>
-
       <HospitaisEspecialiazados>43</HospitaisEspecialiazados>
-
       <CentrosDeSaude>354</CentrosDeSaude>
-
       <ExtensoesCentroSaude>1898</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>0</HospitaisGerais>
-
       <HospitaisEspecialiazados>0</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>2831</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>1721,6</Total>
-
       <ComPessoal>911,6</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>1721,6</Total>
-
       <ComPessoal>911,6</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>305,9</DoSns>
-
       <DoUtente>140</DoUtente>
-
     </EncargosComMedicamentos>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>21029</Medicos>
-
       <PessoalDeEnfermagem>23243</PessoalDeEnfermagem>
-
       <Enfermeiros>0</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>3964</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="1991">
-
-
-    -<Camas>
-
-      <CamasHospitalGeral>-</CamasHospitalGeral>
-
-      <CamasHospitalEspecializados>-</CamasHospitalEspecializados>
-
+  <Anos ano="1991">
+    <Camas>
+      <CamasHospitalGeral>
+      </CamasHospitalGeral>
+      <CamasHospitalEspecializados>
+      </CamasHospitalEspecializados>
       <CamasCentrodeSaude>27</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>0</Total>
-
       <Hospitais>0</Hospitais>
-
       <CentrosSaude>24028</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>898</Total>
-
       <Hospitais>858</Hospitais>
-
       <CentrosSaude>40,1</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>9164</Total>
-
       <Hospitais>5284</Hospitais>
-
       <CentrosSaude>3880</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>80</HospitaisGerais>
-
       <HospitaisEspecialiazados>47</HospitaisEspecialiazados>
-
       <CentrosDeSaude>356</CentrosDeSaude>
-
       <ExtensoesCentroSaude>1876</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>0</HospitaisGerais>
-
       <HospitaisEspecialiazados>0</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>2552</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>2208,2</Total>
-
       <ComPessoal>1181,6</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>2208,2</Total>
-
       <ComPessoal>1181,6</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>382,8</DoSns>
-
       <DoUtente>172</DoUtente>
-
     </EncargosComMedicamentos>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>21118</Medicos>
-
       <PessoalDeEnfermagem>24897</PessoalDeEnfermagem>
-
       <Enfermeiros>0</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>3926</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="1992">
-
-
-    -<Camas>
-
-      <CamasHospitalGeral>-</CamasHospitalGeral>
-
-      <CamasHospitalEspecializados>-</CamasHospitalEspecializados>
-
+  <Anos ano="1992">
+    <Camas>
+      <CamasHospitalGeral>
+      </CamasHospitalGeral>
+      <CamasHospitalEspecializados>
+      </CamasHospitalEspecializados>
       <CamasCentrodeSaude>24,1</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>0</Total>
-
       <Hospitais>0</Hospitais>
-
       <CentrosSaude>24163</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>919,4</Total>
-
       <Hospitais>886</Hospitais>
-
       <CentrosSaude>33,4</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>8202</Total>
-
       <Hospitais>4579</Hospitais>
-
       <CentrosSaude>3623</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>79</HospitaisGerais>
-
       <HospitaisEspecialiazados>28</HospitaisEspecialiazados>
-
       <CentrosDeSaude>356</CentrosDeSaude>
-
       <ExtensoesCentroSaude>1879</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>0</HospitaisGerais>
-
       <HospitaisEspecialiazados>0</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>2276</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>2564,2</Total>
-
       <ComPessoal>1366</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>2564,2</Total>
-
       <ComPessoal>1366</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>433,1</DoSns>
-
       <DoUtente>205</DoUtente>
-
     </EncargosComMedicamentos>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>21435</Medicos>
-
       <PessoalDeEnfermagem>25015</PessoalDeEnfermagem>
-
       <Enfermeiros>0</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>4008</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="1993">
-
-
-    -<Camas>
-
-      <CamasHospitalGeral>-</CamasHospitalGeral>
-
-      <CamasHospitalEspecializados>-</CamasHospitalEspecializados>
-
+  <Anos ano="1993">
+    <Camas>
+      <CamasHospitalGeral>
+      </CamasHospitalGeral>
+      <CamasHospitalEspecializados>
+      </CamasHospitalEspecializados>
       <CamasCentrodeSaude>21,1</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>0</Total>
-
       <Hospitais>0</Hospitais>
-
       <CentrosSaude>23768</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>959</Total>
-
       <Hospitais>927</Hospitais>
-
       <CentrosSaude>31,5</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>9114</Total>
-
       <Hospitais>5034</Hospitais>
-
       <CentrosSaude>4080</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>78</HospitaisGerais>
-
       <HospitaisEspecialiazados>27</HospitaisEspecialiazados>
-
       <CentrosDeSaude>354</CentrosDeSaude>
-
       <ExtensoesCentroSaude>1917</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>0</HospitaisGerais>
-
       <HospitaisEspecialiazados>0</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>1998</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>2883,7</Total>
-
       <ComPessoal>1437,2</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>2883,7</Total>
-
       <ComPessoal>1437,2</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>488,4</DoSns>
-
       <DoUtente>247</DoUtente>
-
     </EncargosComMedicamentos>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>21189</Medicos>
-
       <PessoalDeEnfermagem>26302</PessoalDeEnfermagem>
-
       <Enfermeiros>0</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>4119</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="1994">
-
-
-    -<Camas>
-
+  <Anos ano="1994">
+    <Camas>
       <CamasHospitalGeral>232,3</CamasHospitalGeral>
-
       <CamasHospitalEspecializados>55,6</CamasHospitalEspecializados>
-
       <CamasCentrodeSaude>19,3</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>29534</Total>
-
       <Hospitais>5384</Hospitais>
-
       <CentrosSaude>24150</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>948</Total>
-
       <Hospitais>919,1</Hospitais>
-
       <CentrosSaude>28,9</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>9189</Total>
-
       <Hospitais>5176</Hospitais>
-
       <CentrosSaude>4013</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>78</HospitaisGerais>
-
       <HospitaisEspecialiazados>26</HospitaisEspecialiazados>
-
       <CentrosDeSaude>359</CentrosDeSaude>
-
       <ExtensoesCentroSaude>1900</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>22082</HospitaisGerais>
-
       <HospitaisEspecialiazados>5280</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>1831</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>3100,9</Total>
-
       <ComPessoal>1468,6</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>3100,9</Total>
-
       <ComPessoal>1468,6</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>533</DoSns>
-
       <DoUtente>264</DoUtente>
-
     </EncargosComMedicamentos>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>21578</Medicos>
-
       <PessoalDeEnfermagem>27188</PessoalDeEnfermagem>
-
       <Enfermeiros>0</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>4411</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="1995">
-
-
-    -<Camas>
-
+  <Anos ano="1995">
+    <Camas>
       <CamasHospitalGeral>232,8</CamasHospitalGeral>
-
       <CamasHospitalEspecializados>55,1</CamasHospitalEspecializados>
-
       <CamasCentrodeSaude>17,8</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>30149</Total>
-
       <Hospitais>5473</Hospitais>
-
       <CentrosSaude>24676</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>951</Total>
-
       <Hospitais>924</Hospitais>
-
       <CentrosSaude>27,4</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>10507</Total>
-
       <Hospitais>5830</Hospitais>
-
       <CentrosSaude>4677</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>79</HospitaisGerais>
-
       <HospitaisEspecialiazados>26</HospitaisEspecialiazados>
-
       <CentrosDeSaude>355</CentrosDeSaude>
-
       <ExtensoesCentroSaude>1869</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>22213</HospitaisGerais>
-
       <HospitaisEspecialiazados>5258</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>1701</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>3397,9</Total>
-
       <ComPessoal>1568</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>3397,9</Total>
-
       <ComPessoal>1568</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>609,8</DoSns>
-
       <DoUtente>303</DoUtente>
-
     </EncargosComMedicamentos>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>21866</Medicos>
-
       <PessoalDeEnfermagem>28548</PessoalDeEnfermagem>
-
       <Enfermeiros>0</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>4657</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="1996">
-
-
-    -<Camas>
-
+  <Anos ano="1996">
+    <Camas>
       <CamasHospitalGeral>233,1</CamasHospitalGeral>
-
       <CamasHospitalEspecializados>57,4</CamasHospitalEspecializados>
-
       <CamasCentrodeSaude>16</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>30118</Total>
-
       <Hospitais>5732</Hospitais>
-
       <CentrosSaude>24386</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>973</Total>
-
       <Hospitais>948</Hospitais>
-
       <CentrosSaude>25,4</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>10847</Total>
-
       <Hospitais>6051</Hospitais>
-
       <CentrosSaude>4796</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>79</HospitaisGerais>
-
       <HospitaisEspecialiazados>29</HospitaisEspecialiazados>
-
       <CentrosDeSaude>354</CentrosDeSaude>
-
       <ExtensoesCentroSaude>1892</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>22332</HospitaisGerais>
-
       <HospitaisEspecialiazados>5501</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>1531</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>3777,4</Total>
-
       <ComPessoal>1683,3</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>3777,4</Total>
-
       <ComPessoal>1683,3</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>697,6</DoSns>
-
       <DoUtente>341</DoUtente>
-
     </EncargosComMedicamentos>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>22254</Medicos>
-
       <PessoalDeEnfermagem>29342</PessoalDeEnfermagem>
-
       <Enfermeiros>0</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>4851</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="1997">
-
-
-    -<Camas>
-
+  <Anos ano="1997">
+    <Camas>
       <CamasHospitalGeral>230,1</CamasHospitalGeral>
-
       <CamasHospitalEspecializados>54,7</CamasHospitalEspecializados>
-
       <CamasCentrodeSaude>15,9</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>31279</Total>
-
       <Hospitais>5915</Hospitais>
-
       <CentrosSaude>25364</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>977</Total>
-
       <Hospitais>954</Hospitais>
-
       <CentrosSaude>23</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>11354</Total>
-
       <Hospitais>6402</Hospitais>
-
       <CentrosSaude>4952</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>79</HospitaisGerais>
-
       <HospitaisEspecialiazados>29</HospitaisEspecialiazados>
-
       <CentrosDeSaude>358</CentrosDeSaude>
-
       <ExtensoesCentroSaude>1922</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>22149</HospitaisGerais>
-
       <HospitaisEspecialiazados>5264</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>1529</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>4208,6</Total>
-
       <ComPessoal>1852,8</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>4208,6</Total>
-
       <ComPessoal>1852,8</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>778,5</DoSns>
-
       <DoUtente>379,7</DoUtente>
-
     </EncargosComMedicamentos>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>22067</Medicos>
-
       <PessoalDeEnfermagem>31138</PessoalDeEnfermagem>
-
       <Enfermeiros>0</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>5192</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="1998">
-
-
-    -<Camas>
-
+  <Anos ano="1998">
+    <Camas>
       <CamasHospitalGeral>228,1</CamasHospitalGeral>
-
       <CamasHospitalEspecializados>50,6</CamasHospitalEspecializados>
-
       <CamasCentrodeSaude>13,9</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>31954</Total>
-
       <Hospitais>6027</Hospitais>
-
       <CentrosSaude>25927</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>1002</Total>
-
       <Hospitais>982</Hospitais>
-
       <CentrosSaude>20,2</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>11079</Total>
-
       <Hospitais>6393</Hospitais>
-
       <CentrosSaude>4686</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>79</HospitaisGerais>
-
       <HospitaisEspecialiazados>29</HospitaisEspecialiazados>
-
       <CentrosDeSaude>360</CentrosDeSaude>
-
       <ExtensoesCentroSaude>1871</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>22077</HospitaisGerais>
-
       <HospitaisEspecialiazados>4897</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>1350</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>4704,4</Total>
-
       <ComPessoal>2069,9</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>4704,4</Total>
-
       <ComPessoal>2069,9</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>848,1</DoSns>
-
       <DoUtente>408,5</DoUtente>
-
     </EncargosComMedicamentos>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>21690</Medicos>
-
       <PessoalDeEnfermagem>32151</PessoalDeEnfermagem>
-
       <Enfermeiros>0</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>5312</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="1999">
-
-
-    -<Camas>
-
+  <Anos ano="1999">
+    <Camas>
       <CamasHospitalGeral>232,1</CamasHospitalGeral>
-
       <CamasHospitalEspecializados>48,7</CamasHospitalEspecializados>
-
       <CamasCentrodeSaude>12,4</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>32758</Total>
-
       <Hospitais>6393</Hospitais>
-
       <CentrosSaude>26365</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>903</Total>
-
       <Hospitais>885</Hospitais>
-
       <CentrosSaude>18,5</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>11144</Total>
-
       <Hospitais>5996</Hospitais>
-
       <CentrosSaude>5148</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>78</HospitaisGerais>
-
       <HospitaisEspecialiazados>32</HospitaisEspecialiazados>
-
       <CentrosDeSaude>361</CentrosDeSaude>
-
       <ExtensoesCentroSaude>1824</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>22590</HospitaisGerais>
-
       <HospitaisEspecialiazados>4737</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>1208</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>5340,6</Total>
-
       <ComPessoal>2342,2</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>5340,6</Total>
-
       <ComPessoal>2342,2</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>944,2</DoSns>
-
       <DoUtente>453,3</DoUtente>
-
     </EncargosComMedicamentos>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>22406</Medicos>
-
       <PessoalDeEnfermagem>33116</PessoalDeEnfermagem>
-
       <Enfermeiros>30118</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>6254</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="2000">
-
-
-    -<Camas>
-
+  <Anos ano="2000">
+    <Camas>
       <CamasHospitalGeral>233</CamasHospitalGeral>
-
       <CamasHospitalEspecializados>44,4</CamasHospitalEspecializados>
-
       <CamasCentrodeSaude>11</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>33218</Total>
-
       <Hospitais>6621</Hospitais>
-
       <CentrosSaude>26597</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>924</Total>
-
       <Hospitais>906</Hospitais>
-
       <CentrosSaude>17,7</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>11413</Total>
-
       <Hospitais>5943</Hospitais>
-
       <CentrosSaude>5470</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>79</HospitaisGerais>
-
       <HospitaisEspecialiazados>31</HospitaisEspecialiazados>
-
       <CentrosDeSaude>364</CentrosDeSaude>
-
       <ExtensoesCentroSaude>1820</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>22842</HospitaisGerais>
-
       <HospitaisEspecialiazados>4358</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>1081</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>5977,7</Total>
-
       <ComPessoal>2596,1</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>5977,7</Total>
-
       <ComPessoal>2596,1</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>1038,9</DoSns>
-
       <DoUtente>482,2</DoUtente>
-
     </EncargosComMedicamentos>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>22879</Medicos>
-
       <PessoalDeEnfermagem>33841</PessoalDeEnfermagem>
-
       <Enfermeiros>31283</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>6380</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="2001">
-
-
-    -<Camas>
-
+  <Anos ano="2001">
+    <Camas>
       <CamasHospitalGeral>229,5</CamasHospitalGeral>
-
       <CamasHospitalEspecializados>43,2</CamasHospitalEspecializados>
-
       <CamasCentrodeSaude>9,5</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>34255</Total>
-
       <Hospitais>7108</Hospitais>
-
       <CentrosSaude>27147</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>942</Total>
-
       <Hospitais>924</Hospitais>
-
       <CentrosSaude>18,4</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>11819</Total>
-
       <Hospitais>6183</Hospitais>
-
       <CentrosSaude>5637</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>78</HospitaisGerais>
-
       <HospitaisEspecialiazados>29</HospitaisEspecialiazados>
-
       <CentrosDeSaude>363</CentrosDeSaude>
-
       <ExtensoesCentroSaude>1813</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>22665</HospitaisGerais>
-
       <HospitaisEspecialiazados>4268</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>940</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>6585,5</Total>
-
       <ComPessoal>2860,1</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>6585,5</Total>
-
       <ComPessoal>2860,1</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>1147</DoSns>
-
       <DoUtente>514,5</DoUtente>
-
     </EncargosComMedicamentos>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>22712</Medicos>
-
       <PessoalDeEnfermagem>34438</PessoalDeEnfermagem>
-
       <Enfermeiros>30680</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>6499</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="2002">
-
-
-    -<Camas>
-
+  <Anos ano="2002">
+    <Camas>
       <CamasHospitalGeral>226,5</CamasHospitalGeral>
-
       <CamasHospitalEspecializados>37,6</CamasHospitalEspecializados>
-
       <CamasCentrodeSaude>8,9</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>35629</Total>
-
       <Hospitais>7480</Hospitais>
-
       <CentrosSaude>28149</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>955</Total>
-
       <Hospitais>936</Hospitais>
-
       <CentrosSaude>18,9</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>12256</Total>
-
       <Hospitais>6321</Hospitais>
-
       <CentrosSaude>5935</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>77</HospitaisGerais>
-
       <HospitaisEspecialiazados>27</HospitaisEspecialiazados>
-
       <CentrosDeSaude>362</CentrosDeSaude>
-
       <ExtensoesCentroSaude>1802</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>22481</HospitaisGerais>
-
       <HospitaisEspecialiazados>3732</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>886</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>7067,2</Total>
-
       <ComPessoal>2991,4</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>7067,2</Total>
-
       <ComPessoal>2991,4</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>1227,3</DoSns>
-
       <DoUtente>534,7</DoUtente>
-
     </EncargosComMedicamentos>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>23542</Medicos>
-
       <PessoalDeEnfermagem>34862</PessoalDeEnfermagem>
-
       <Enfermeiros>31190</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>6694</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="2003">
-
-
-    -<Camas>
-
+  <Anos ano="2003">
+    <Camas>
       <CamasHospitalGeral>226,6</CamasHospitalGeral>
-
       <CamasHospitalEspecializados>34,6</CamasHospitalEspecializados>
-
       <CamasCentrodeSaude>8,4</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>35898</Total>
-
       <Hospitais>7994</Hospitais>
-
       <CentrosSaude>27904</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>964</Total>
-
       <Hospitais>950</Hospitais>
-
       <CentrosSaude>13,6</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>12590</Total>
-
       <Hospitais>6466</Hospitais>
-
       <CentrosSaude>6124</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>74</HospitaisGerais>
-
       <HospitaisEspecialiazados>25</HospitaisEspecialiazados>
-
       <CentrosDeSaude>363</CentrosDeSaude>
-
       <ExtensoesCentroSaude>1804</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>22574</HospitaisGerais>
-
       <HospitaisEspecialiazados>3447</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>835</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>7704,7</Total>
-
       <ComPessoal>3169,2</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>7704,7</Total>
-
       <ComPessoal>3169,2</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>1272,9</DoSns>
-
       <DoUtente>560</DoUtente>
-
     </EncargosComMedicamentos>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>23031</Medicos>
-
       <PessoalDeEnfermagem>35128</PessoalDeEnfermagem>
-
       <Enfermeiros>30512</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>7157</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="2004">
-
-
-    -<Camas>
-
+  <Anos ano="2004">
+    <Camas>
       <CamasHospitalGeral>220,8</CamasHospitalGeral>
-
       <CamasHospitalEspecializados>39,4</CamasHospitalEspecializados>
-
       <CamasCentrodeSaude>7,8</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>36469</Total>
-
       <Hospitais>8498</Hospitais>
-
       <CentrosSaude>27971</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>954</Total>
-
       <Hospitais>942</Hospitais>
-
       <CentrosSaude>11,9</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>11994</Total>
-
       <Hospitais>6211</Hospitais>
-
       <CentrosSaude>5783</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>73</HospitaisGerais>
-
       <HospitaisEspecialiazados>29</HospitaisEspecialiazados>
-
       <CentrosDeSaude>346</CentrosDeSaude>
-
       <ExtensoesCentroSaude>1799</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>22047</HospitaisGerais>
-
       <HospitaisEspecialiazados>3932</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>779</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>8554,3</Total>
-
       <ComPessoal>3308,9</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>8554,3</Total>
-
       <ComPessoal>3308,9</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>1394,1</DoSns>
-
       <DoUtente>627,7</DoUtente>
-
     </EncargosComMedicamentos>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>23262</Medicos>
-
       <PessoalDeEnfermagem>36343</PessoalDeEnfermagem>
-
       <Enfermeiros>32632</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>7068</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="2005">
-
-
-    -<Camas>
-
+  <Anos ano="2005">
+    <Camas>
       <CamasHospitalGeral>223,4</CamasHospitalGeral>
-
       <CamasHospitalEspecializados>34,5</CamasHospitalEspecializados>
-
       <CamasCentrodeSaude>6,8</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>37015</Total>
-
       <Hospitais>8898</Hospitais>
-
       <CentrosSaude>28117</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>970</Total>
-
       <Hospitais>959</Hospitais>
-
       <CentrosSaude>10,9</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>12425</Total>
-
       <Hospitais>6447</Hospitais>
-
       <CentrosSaude>5978</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>70</HospitaisGerais>
-
       <HospitaisEspecialiazados>27</HospitaisEspecialiazados>
-
       <CentrosDeSaude>348</CentrosDeSaude>
-
       <ExtensoesCentroSaude>1789</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>22339</HospitaisGerais>
-
       <HospitaisEspecialiazados>3454</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>678</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>9267,4</Total>
-
       <ComPessoal>3503,5</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>9267,4</Total>
-
       <ComPessoal>3503,5</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>1446,2</DoSns>
-
       <DoUtente>670,3</DoUtente>
-
     </EncargosComMedicamentos>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>23402</Medicos>
-
       <PessoalDeEnfermagem>37235</PessoalDeEnfermagem>
-
       <Enfermeiros>33980</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>7186</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="2006">
-
-
-    -<Camas>
-
+  <Anos ano="2006">
+    <Camas>
       <CamasHospitalGeral>219,2</CamasHospitalGeral>
-
       <CamasHospitalEspecializados>32,2</CamasHospitalEspecializados>
-
       <CamasCentrodeSaude>5,7</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>37457</Total>
-
       <Hospitais>9257</Hospitais>
-
       <CentrosSaude>28200</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>956</Total>
-
       <Hospitais>948</Hospitais>
-
       <CentrosSaude>7,6</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>12022</Total>
-
       <Hospitais>6366</Hospitais>
-
       <CentrosSaude>5656</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>65</HospitaisGerais>
-
       <HospitaisEspecialiazados>27</HospitaisEspecialiazados>
-
       <CentrosDeSaude>347</CentrosDeSaude>
-
       <ExtensoesCentroSaude>1774</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>21953</HospitaisGerais>
-
       <HospitaisEspecialiazados>3227</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>573</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>9018,8</Total>
-
       <ComPessoal>3600,3</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>9018,8</Total>
-
       <ComPessoal>3600,3</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>1422,9</DoSns>
-
       <DoUtente>710</DoUtente>
-
     </EncargosComMedicamentos>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>23604</Medicos>
-
       <PessoalDeEnfermagem>37365</PessoalDeEnfermagem>
-
       <Enfermeiros>35160</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>7235</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="2007">
-
-
-    -<Camas>
-
+  <Anos ano="2007">
+    <Camas>
       <CamasHospitalGeral>218</CamasHospitalGeral>
-
       <CamasHospitalEspecializados>29,6</CamasHospitalEspecializados>
-
       <CamasCentrodeSaude>3,5</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>38712</Total>
-
       <Hospitais>9725</Hospitais>
-
       <CentrosSaude>28987</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>953</Total>
-
       <Hospitais>949</Hospitais>
-
       <CentrosSaude>3,9</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>11633</Total>
-
       <Hospitais>6595</Hospitais>
-
       <CentrosSaude>5038</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>59</HospitaisGerais>
-
       <HospitaisEspecialiazados>25</HospitaisEspecialiazados>
-
       <CentrosDeSaude>346</CentrosDeSaude>
-
       <ExtensoesCentroSaude>1733</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>21878</HospitaisGerais>
-
       <HospitaisEspecialiazados>2969</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>355</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>9111,8</Total>
-
       <ComPessoal>3679,2</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>9111,8</Total>
-
       <ComPessoal>3679,2</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>1398</DoSns>
-
       <DoUtente>765,8</DoUtente>
-
     </EncargosComMedicamentos>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>23524</Medicos>
-
       <PessoalDeEnfermagem>39070</PessoalDeEnfermagem>
-
       <Enfermeiros>34506</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>7342</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="2008">
-
-
-    -<Camas>
-
+  <Anos ano="2008">
+    <Camas>
       <CamasHospitalGeral>214,9</CamasHospitalGeral>
-
       <CamasHospitalEspecializados>26,1</CamasHospitalEspecializados>
-
       <CamasCentrodeSaude>2,5</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>41220</Total>
-
       <Hospitais>10212</Hospitais>
-
       <CentrosSaude>31008</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>931</Total>
-
       <Hospitais>929</Hospitais>
-
       <CentrosSaude>2,2</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>9805</Total>
-
       <Hospitais>6409</Hospitais>
-
       <CentrosSaude>3396</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>57</HospitaisGerais>
-
       <HospitaisEspecialiazados>20</HospitaisEspecialiazados>
-
       <CentrosDeSaude>346</CentrosDeSaude>
-
       <ExtensoesCentroSaude>1638</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>21594</HospitaisGerais>
-
       <HospitaisEspecialiazados>2620</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>253</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>9296,7</Total>
-
       <ComPessoal>3693,8</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>9296,7</Total>
-
       <ComPessoal>3693,8</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>1467,4</DoSns>
-
       <DoUtente>767,5</DoUtente>
-
     </EncargosComMedicamentos>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>23633</Medicos>
-
       <PessoalDeEnfermagem>0</PessoalDeEnfermagem>
-
       <Enfermeiros>35897</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>7521</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="2009">
-
-
-    -<Camas>
-
+  <Anos ano="2009">
+    <Camas>
       <CamasHospitalGeral>213,2</CamasHospitalGeral>
-
       <CamasHospitalEspecializados>24,1</CamasHospitalEspecializados>
-
       <CamasCentrodeSaude>1,8</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>37792</Total>
-
       <Hospitais>10683</Hospitais>
-
       <CentrosSaude>27109</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>910</Total>
-
       <Hospitais>909</Hospitais>
-
       <CentrosSaude>1,4</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>10151</Total>
-
       <Hospitais>6376</Hospitais>
-
       <CentrosSaude>3775</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>52</HospitaisGerais>
-
       <HospitaisEspecialiazados>20</HospitaisEspecialiazados>
-
       <CentrosDeSaude>345</CentrosDeSaude>
-
       <ExtensoesCentroSaude>1180</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>21443</HospitaisGerais>
-
       <HospitaisEspecialiazados>2424</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>186</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>9852,4</Total>
-
       <ComPessoal>3983,1</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>9852,4</Total>
-
       <ComPessoal>3983,1</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>1559</DoSns>
-
       <DoUtente>723,5</DoUtente>
-
     </EncargosComMedicamentos>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>23693</Medicos>
-
       <PessoalDeEnfermagem>0</PessoalDeEnfermagem>
-
       <Enfermeiros>37790</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>7656</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="2010">
-
-
-    -<Camas>
-
+  <Anos ano="2010">
+    <Camas>
       <CamasHospitalGeral>208,2</CamasHospitalGeral>
-
       <CamasHospitalEspecializados>29</CamasHospitalEspecializados>
-
       <CamasCentrodeSaude>1</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>38330</Total>
-
       <Hospitais>10998</Hospitais>
-
       <CentrosSaude>27332</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>907,8</Total>
-
       <Hospitais>906,9</Hospitais>
-
       <CentrosSaude>0,8</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>8904</Total>
-
       <Hospitais>6450</Hospitais>
-
       <CentrosSaude>2454</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>80</HospitaisGerais>
-
       <HospitaisEspecialiazados>31</HospitaisEspecialiazados>
-
       <CentrosDeSaude>346</CentrosDeSaude>
-
       <ExtensoesCentroSaude>1087</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>20946</HospitaisGerais>
-
       <HospitaisEspecialiazados>2916</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>97</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>10271,2</Total>
-
       <ComPessoal>3935</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>10271,2</Total>
-
       <ComPessoal>3935</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>1640,7</DoSns>
-
       <DoUtente>708,7</DoUtente>
-
     </EncargosComMedicamentos>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>24710</Medicos>
-
       <PessoalDeEnfermagem>0</PessoalDeEnfermagem>
-
       <Enfermeiros>39814</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>7774</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="2011">
-
-
-    -<Camas>
-
+  <Anos ano="2011">
+    <Camas>
       <CamasHospitalGeral>205,1</CamasHospitalGeral>
-
       <CamasHospitalEspecializados>29,8</CamasHospitalEspecializados>
-
       <CamasCentrodeSaude>0,4</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>38394</Total>
-
       <Hospitais>11167</Hospitais>
-
       <CentrosSaude>27227</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>881,5</Total>
-
       <Hospitais>881,3</Hospitais>
-
       <CentrosSaude>0,2</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>8123</Total>
-
       <Hospitais>6341</Hospitais>
-
       <CentrosSaude>1783</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>80</HospitaisGerais>
-
       <HospitaisEspecialiazados>29</HospitaisEspecialiazados>
-
       <CentrosDeSaude>358</CentrosDeSaude>
-
       <ExtensoesCentroSaude>1063</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>20598</HospitaisGerais>
-
       <HospitaisEspecialiazados>2995</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>43</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>9590,7</Total>
-
       <ComPessoal>3507,9</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>9590,7</Total>
-
       <ComPessoal>3507,9</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>1326,2</DoSns>
-
       <DoUtente>774,5</DoUtente>
-
     </EncargosComMedicamentos>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>24271</Medicos>
-
       <PessoalDeEnfermagem>0</PessoalDeEnfermagem>
-
       <Enfermeiros>39270</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>7488</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="2012">
-
-
-    -<Camas>
-
+  <Anos ano="2012">
+    <Camas>
       <CamasHospitalGeral>215,2</CamasHospitalGeral>
-
       <CamasHospitalEspecializados>20,9</CamasHospitalEspecializados>
-
       <CamasCentrodeSaude>0,2</CamasCentrodeSaude>
-
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>36933</Total>
-
       <Hospitais>11319</Hospitais>
-
       <CentrosSaude>25614</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>887,5</Total>
-
       <Hospitais>887,3</Hospitais>
-
       <CentrosSaude>0,2</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>7204</Total>
-
       <Hospitais>5914</Hospitais>
-
       <CentrosSaude>1289</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>82</HospitaisGerais>
-
       <HospitaisEspecialiazados>27</HospitaisEspecialiazados>
-
       <CentrosDeSaude>357</CentrosDeSaude>
-
       <ExtensoesCentroSaude>0</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>21526</HospitaisGerais>
-
       <HospitaisEspecialiazados>2092</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>24</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>8947,7</Total>
-
       <ComPessoal>3345,8</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>8947,7</Total>
-
       <ComPessoal>3345,8</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>1173,2</DoSns>
-
       <DoUtente>649,5</DoUtente>
-
     </EncargosComMedicamentos>
-
-
-    -<PessoalAoServico>
-
+    <PessoalAoServico>
       <Medicos>25224</Medicos>
-
       <PessoalDeEnfermagem>0</PessoalDeEnfermagem>
-
       <Enfermeiros>39797</Enfermeiros>
-
       <TecnicosDiagnosticoTerapeutica>7587</TecnicosDiagnosticoTerapeutica>
-
     </PessoalAoServico>
-
   </Anos>
-
-
-  -<Anos ano="2013">
-
-
-    -<Camas>
-
+  <Anos ano="2013">
+    <Camas>
       <CamasHospitalGeral>208,6</CamasHospitalGeral>
-
       <CamasHospitalEspecializados>22,2</CamasHospitalEspecializados>
-
-      <CamasCentrodeSaude>-</CamasCentrodeSaude>
-
+      <CamasCentrodeSaude>
+      </CamasCentrodeSaude>
     </Camas>
-
-
-    -<Consultas>
-
+    <Consultas>
       <Total>0</Total>
-
       <Hospitais>11669</Hospitais>
-
       <CentrosSaude>0</CentrosSaude>
-
     </Consultas>
-
-
-    -<Internamentos>
-
+    <Internamentos>
       <Total>0</Total>
-
       <Hospitais>881,9</Hospitais>
-
       <CentrosSaude>0</CentrosSaude>
-
     </Internamentos>
-
-
-    -<Urgencias>
-
+    <Urgencias>
       <Total>0</Total>
-
       <Hospitais>5966</Hospitais>
-
       <CentrosSaude>0</CentrosSaude>
-
     </Urgencias>
-
-
-    -<EstabelecimentosSaude>
-
+    <EstabelecimentosSaude>
       <HospitaisGerais>82</HospitaisGerais>
-
       <HospitaisEspecialiazados>25</HospitaisEspecialiazados>
-
       <CentrosDeSaude>0</CentrosDeSaude>
-
       <ExtensoesCentroSaude>0</ExtensoesCentroSaude>
-
     </EstabelecimentosSaude>
-
-
-    -<Lotacao>
-
+    <Lotacao>
       <HospitaisGerais>20746</HospitaisGerais>
-
       <HospitaisEspecialiazados>2204</HospitaisEspecialiazados>
-
       <ExtensoesCentroSaude>0</ExtensoesCentroSaude>
-
     </Lotacao>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>8906,2</Total>
-
       <ComPessoal>3467</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>8906,2</Total>
-
       <ComPessoal>3467</ComPessoal>
-
     </DespesaSns>
-
-
-    -<EncargosComMedicamentos>
-
+    <EncargosComMedicamentos>
       <DoSns>1160,2</DoSns>
-
       <DoUtente>665</DoUtente>
-
     </EncargosComMedicamentos>
-
   </Anos>
-
-
-  -<Anos ano="1980">
-
-
-    -<DespesaSns>
-
+  <Anos ano="1980">
+    <DespesaSns>
       <Total>219,1</Total>
-
       <ComPessoal>0</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>219,1</Total>
-
       <ComPessoal>0</ComPessoal>
-
     </DespesaSns>
-
   </Anos>
-
-
-  -<Anos ano="1981">
-
-
-    -<DespesaSns>
-
+  <Anos ano="1981">
+    <DespesaSns>
       <Total>288,1</Total>
-
       <ComPessoal>0</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>288,1</Total>
-
       <ComPessoal>0</ComPessoal>
-
     </DespesaSns>
-
   </Anos>
-
-
-  -<Anos ano="1982">
-
-
-    -<DespesaSns>
-
+  <Anos ano="1982">
+    <DespesaSns>
       <Total>321,7</Total>
-
       <ComPessoal>0</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>321,7</Total>
-
       <ComPessoal>0</ComPessoal>
-
     </DespesaSns>
-
   </Anos>
-
-
-  -<Anos ano="1983">
-
-
-    -<DespesaSns>
-
+  <Anos ano="1983">
+    <DespesaSns>
       <Total>401,1</Total>
-
       <ComPessoal>0</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>401,1</Total>
-
       <ComPessoal>0</ComPessoal>
-
     </DespesaSns>
-
   </Anos>
-
-
-  -<Anos ano="1984">
-
-
-    -<DespesaSns>
-
+  <Anos ano="1984">
+    <DespesaSns>
       <Total>494,2</Total>
-
       <ComPessoal>0</ComPessoal>
-
     </DespesaSns>
-
-
-    -<DespesaSns>
-
+    <DespesaSns>
       <Total>494,2</Total>
-
       <ComPessoal>0</ComPessoal>
-
     </DespesaSns>
-
   </Anos>
-
 </Projeto>

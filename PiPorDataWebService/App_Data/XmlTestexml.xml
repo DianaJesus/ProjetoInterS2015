@@ -44,7 +44,7 @@
     <PessoalAoServico>
       <Medicos>21275</Medicos>
       <PessoalDeEnfermagem>19289</PessoalDeEnfermagem>
-      <Enfermeiros>10</Enfermeiros>
+      <Enfermeiros>0</Enfermeiros>
       <TecnicosDiagnosticoTerapeutica>2977</TecnicosDiagnosticoTerapeutica>
     </PessoalAoServico>
   </Anos>

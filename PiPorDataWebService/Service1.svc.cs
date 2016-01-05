@@ -649,7 +649,7 @@ namespace PiPorDataWebService
 
                     if (funcionariosTotal != 0)
                     {
-                        valor = Math.Round(despesaPessoal / funcionariosTotal, 2);
+                        valor = Math.Round((despesaPessoal / funcionariosTotal) * 1000000, 2);
                         Funcionario func = new Funcionario(i, valor,0.0,0.0,0.0);
                         funcionarios.Add(func);
                     }
@@ -804,7 +804,7 @@ namespace PiPorDataWebService
         public List<Cama> GetMediaCamas(int dataInicio, int dataFim, string token)
         {
 
-            double hospitais = 0, valorGerais = 0, valorEspecializados = 0;
+            double hospitais = 0, valorGerais = 0, valorEspecializados = 0, contaGerais = 0, contaEspecializados = 0, contaHospitais = 0;
             double media = 0.0;
             
 
@@ -845,10 +845,35 @@ namespace PiPorDataWebService
                     {
                         valorEspecializados = Convert.ToDouble(hospitaisEspecializados.InnerText);
                     }
-                    
-                    hospitais = valorGerais + valorEspecializados;
 
-                    media = Math.Round(hospitais / 2, 2);
+
+                    XmlNode hospitaisGeraisConta = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Lotacao/HospitaisGerais");
+
+                    if (hospitaisGeraisConta == null)
+                    {
+                        contaGerais = 0;
+                    }
+                    else
+                    {
+                        contaGerais = Convert.ToDouble(hospitaisGeraisConta.InnerText);
+                    }
+
+                    XmlNode hospitaisEspecializadosConta = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Lotacao/HospitaisEspecialiazados");
+
+                    if (hospitaisEspecializadosConta == null)
+                    {
+                        contaEspecializados = 0;
+                    }
+                    else
+                    {
+                        contaEspecializados = Convert.ToDouble(hospitaisEspecializadosConta.InnerText);
+                    }
+
+                    hospitais = valorGerais + valorEspecializados;
+                    contaHospitais = contaGerais + contaEspecializados;
+
+
+                    media = Math.Round(hospitais / contaHospitais, 2);
 
 
                     if (media != 0)

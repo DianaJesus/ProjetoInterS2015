@@ -847,7 +847,7 @@ namespace PiPorDataWebService
                     }
 
 
-                    XmlNode hospitaisGeraisConta = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Lotacao/HospitaisGerais");
+                    XmlNode hospitaisGeraisConta = doc.SelectSingleNode("//Anos[@ano=" + i + "]/EstabelecimentosSaude/HospitaisGerais");
 
                     if (hospitaisGeraisConta == null)
                     {
@@ -858,7 +858,7 @@ namespace PiPorDataWebService
                         contaGerais = Convert.ToDouble(hospitaisGeraisConta.InnerText);
                     }
 
-                    XmlNode hospitaisEspecializadosConta = doc.SelectSingleNode("//Anos[@ano=" + i + "]/Lotacao/HospitaisEspecialiazados");
+                    XmlNode hospitaisEspecializadosConta = doc.SelectSingleNode("//Anos[@ano=" + i + "]/EstabelecimentosSaude/HospitaisEspecialiazados");
 
                     if (hospitaisEspecializadosConta == null)
                     {

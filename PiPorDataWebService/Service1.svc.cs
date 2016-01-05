@@ -649,7 +649,7 @@ namespace PiPorDataWebService
 
                     if (funcionariosTotal != 0)
                     {
-                        valor = Math.Round((despesaPessoal / funcionariosTotal) * 1000000, 2);
+                        valor = Math.Round((despesaPessoal / funcionariosTotal) * 100000, 2);
                         Funcionario func = new Funcionario(i, valor,0.0,0.0,0.0);
                         funcionarios.Add(func);
                     }
